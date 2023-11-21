@@ -7,7 +7,6 @@ export const LOCATION = {
   INTERIOR_DESIGN: '/thiet-ke-noi-that',
   INSPIRATION: '/cam-hung-nha-xinh-y-tuong',
   SHOP: '/cua-hang',
-  PRODUCTS: '/san-pham',
   LIVING_ROOM: '/phong-khach',
   DINING_ROOM: '/phong-an',
   BEDROOM: '/phong-ngu',
