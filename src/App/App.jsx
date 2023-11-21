@@ -21,6 +21,7 @@ import DiningRoomPage from 'pages/Rooms/DiningRoom/DiningRoomPage';
 import BedroomPage from 'pages/Rooms/BedRoom/BedRoomPage';
 import ProductCategoryPage from 'pages/ProductCategory/ProductCategoryPage';
 import PromotionPage from 'pages/Promotion/PromotionPage';
+import ShowroomPage from 'pages/Showroom/ShowroomPage';
 
 import LoginPage from 'components/Login/LoginPage';
 import RegisterPage from 'components/Register/RegisterPage';
@@ -46,6 +47,7 @@ function App() {
           <Route path={LOCATION.PRODUCT_CATEGORY} element={<ProductCategoryPage />} />
           <Route path={`${LOCATION.PRODUCT_CATEGORY}/:id`} element={<ProductPage />} />
           <Route path={LOCATION.PROMOTION} element={<PromotionPage />} />
+          <Route path={LOCATION.SHOWROOM} element={<ShowroomPage />} />
         </Route>
 
         <Route path={LOCATION.LOGIN} element={<LoginPage />} />

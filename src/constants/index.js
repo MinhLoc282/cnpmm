@@ -12,6 +12,7 @@ export const LOCATION = {
   BEDROOM: '/phong-ngu',
   PRODUCT_CATEGORY: '/danh-muc',
   PROMOTION: '/khuyen-mai',
+  SHOWROOM: '/showroom-ao',
 
   LOGIN: '/login',
   REGISTER: '/register',
