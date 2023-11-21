@@ -1,12 +1,8 @@
 import React from 'react';
 
-import BannerSlider from 'components/BannerSlider/BannerSlider';
-
 function AboutPage() {
   return (
     <>
-      <BannerSlider title="About us" />
-
       <section className="layout_padding what_we_do">
         <div className="container">
           <div className="row">

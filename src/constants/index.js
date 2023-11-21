@@ -1,12 +1,18 @@
 /* eslint-disable no-useless-escape */
 export const LOCATION = {
   HOME: '/',
-  ABOUT: '/about',
-  COLLECTION: '/bo-suu-tap',
+  ABOUT: '/gioi-thieu',
+  COLLECTIONS: '/bo-suu-tap',
   CONTACT: '/contact',
   INTERIOR_DESIGN: '/thiet-ke-noi-that',
+  INSPIRATION: '/cam-hung-nha-xinh-y-tuong',
   SHOP: '/cua-hang',
-  ITEM: '/san-pham',
+  PRODUCTS: '/san-pham',
+  LIVING_ROOM: '/phong-khach',
+  DINING_ROOM: '/phong-an',
+  BEDROOM: '/phong-ngu',
+  PRODUCT_CATEGORY: '/danh-muc',
+  PROMOTION: '/khuyen-mai',
 
   LOGIN: '/login',
   REGISTER: '/register',

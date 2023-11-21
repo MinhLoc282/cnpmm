@@ -1,12 +1,8 @@
 import React from 'react';
 
-import BannerSlider from 'components/BannerSlider/BannerSlider';
-
 function ContactPage() {
   return (
     <>
-      <BannerSlider title="Contact us" />
-
       <section>
         <div className="container">
           <div className="row margin_top_50">
