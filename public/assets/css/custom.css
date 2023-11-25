@@ -32,3 +32,39 @@
 .bg-loaded {
   opacity: 1;
 }
+
+.cart-button {
+  vertical-align: top;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 0;
+  padding-right: 0;
+  margin: 0;
+}
+
+.cart-button i {
+  font-size: 1.45em;
+  vertical-align: middle;
+  line-height: 1.2;
+}
+
+.wishlist-button {
+  vertical-align: top;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 0;
+  padding-right: 0;
+  margin: 0;
+  top: 0;
+  color: rgba(102,102,102,.85);
+  transition: all .2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wishlist-button i {
+  font-size: 1.45em;
+  vertical-align: middle;
+  line-height: 1.2;
+}
