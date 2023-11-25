@@ -7,6 +7,13 @@ import CorrLogo from 'assets/images/aa-corporation-logo-2311.png';
 import AkaLogo from 'assets/images/aka-logo-2311.png';
 import NhaXinhLogo from 'assets/images/nha-xinh-logo-2311.png';
 import Image15 from 'assets/images/image-15.png';
+import BoconceptLogo from 'assets/images/Boconcept-logo-2311.png';
+import BellavitaLogo from 'assets/images/bellavita-luxury-logo-2311.png';
+import ValligarisLogo from 'assets/images/calligaris-logo-2311.png';
+import BaxterLogo from 'assets/images/baxter-logo-2311.png';
+import LignerosetLogo from 'assets/images/ligneroset-logo-2311.png';
+import LagoLogo from 'assets/images/lago-logo-2311.png';
+import AdamosLogo from 'assets/images/adamos-logo-2311.png';
 
 function Footer() {
   return (
@@ -179,7 +186,7 @@ function Footer() {
                       {' '}
                       <div className="box has-hover gallery-box box-none">
                         <div className="box-image" style={{ width: '71%' }}>
-                          <LazyLoadImage width="100" height="30" className="slider_gallary_logo" alt="" ids="28916,28920,28932,28924,28922,28926,28934,28930,28928,28918" style={{ display: 'none' }} lightbox="false" type="slider" columns="6" auto_slide="3000" image_width="71" text_align="center" decoding="async" data-lazy-src="wp-content/uploads/2021/11/Boconcept-logo-2311.png" />
+                          <LazyLoadImage width="100" height="30" className="slider_gallary_logo" alt="" ids="28916,28920,28932,28924,28922,28926,28934,28930,28928,28918" style={{ display: 'none' }} lightbox="false" type="slider" columns="6" auto_slide="3000" image_width="71" text_align="center" decoding="async" src={BoconceptLogo} />
                           {' '}
 
                         </div>
@@ -198,7 +205,7 @@ function Footer() {
                       {' '}
                       <div className="box has-hover gallery-box box-none">
                         <div className="box-image" style={{ width: '71%' }}>
-                          <LazyLoadImage width="100" height="30" className="slider_gallary_logo" alt="" ids="28916,28920,28932,28924,28922,28926,28934,28930,28928,28918" style={{ display: 'none' }} lightbox="false" type="slider" columns="6" auto_slide="3000" image_width="71" text_align="center" decoding="async" data-lazy-src="wp-content/uploads/2021/11/bellavita-luxury-logo-2311.png" />
+                          <LazyLoadImage width="100" height="30" className="slider_gallary_logo" alt="" ids="28916,28920,28932,28924,28922,28926,28934,28930,28928,28918" style={{ display: 'none' }} lightbox="false" type="slider" columns="6" auto_slide="3000" image_width="71" text_align="center" decoding="async" src={BellavitaLogo} />
                           {' '}
 
                         </div>
@@ -217,7 +224,7 @@ function Footer() {
                       {' '}
                       <div className="box has-hover gallery-box box-none">
                         <div className="box-image" style={{ width: '71%' }}>
-                          <LazyLoadImage width="100" height="30" className="slider_gallary_logo" alt="" ids="28916,28920,28932,28924,28922,28926,28934,28930,28928,28918" style={{ display: 'none' }} lightbox="false" type="slider" columns="6" auto_slide="3000" image_width="71" text_align="center" decoding="async" data-lazy-src="wp-content/uploads/2021/11/calligaris-logo-2311.png" />
+                          <LazyLoadImage width="100" height="30" className="slider_gallary_logo" alt="" ids="28916,28920,28932,28924,28922,28926,28934,28930,28928,28918" style={{ display: 'none' }} lightbox="false" type="slider" columns="6" auto_slide="3000" image_width="71" text_align="center" decoding="async" src={ValligarisLogo} />
                           {' '}
 
                         </div>
@@ -236,7 +243,7 @@ function Footer() {
                       {' '}
                       <div className="box has-hover gallery-box box-none">
                         <div className="box-image" style={{ width: '71%' }}>
-                          <LazyLoadImage width="100" height="30" className="slider_gallary_logo" alt="" ids="28916,28920,28932,28924,28922,28926,28934,28930,28928,28918" style={{ display: 'none' }} lightbox="false" type="slider" columns="6" auto_slide="3000" image_width="71" text_align="center" decoding="async" data-lazy-src="wp-content/uploads/2021/11/baxter-logo-2311.png" />
+                          <LazyLoadImage width="100" height="30" className="slider_gallary_logo" alt="" ids="28916,28920,28932,28924,28922,28926,28934,28930,28928,28918" style={{ display: 'none' }} lightbox="false" type="slider" columns="6" auto_slide="3000" image_width="71" text_align="center" decoding="async" data-lazy-src={BaxterLogo} />
                           {' '}
 
                         </div>
@@ -255,7 +262,7 @@ function Footer() {
                       {' '}
                       <div className="box has-hover gallery-box box-none">
                         <div className="box-image" style={{ width: '71%' }}>
-                          <LazyLoadImage width="100" height="30" className="slider_gallary_logo" alt="" ids="28916,28920,28932,28924,28922,28926,28934,28930,28928,28918" style={{ display: 'none' }} lightbox="false" type="slider" columns="6" auto_slide="3000" image_width="71" text_align="center" decoding="async" data-lazy-src="wp-content/uploads/2021/11/ligneroset-logo-2311.png" />
+                          <LazyLoadImage width="100" height="30" className="slider_gallary_logo" alt="" ids="28916,28920,28932,28924,28922,28926,28934,28930,28928,28918" style={{ display: 'none' }} lightbox="false" type="slider" columns="6" auto_slide="3000" image_width="71" text_align="center" decoding="async" src={LignerosetLogo} />
                           {' '}
 
                         </div>
@@ -274,7 +281,7 @@ function Footer() {
                       {' '}
                       <div className="box has-hover gallery-box box-none">
                         <div className="box-image" style={{ width: '71%' }}>
-                          <LazyLoadImage width="100" height="30" className="slider_gallary_logo" alt="" ids="28916,28920,28932,28924,28922,28926,28934,28930,28928,28918" style={{ display: 'none' }} lightbox="false" type="slider" columns="6" auto_slide="3000" image_width="71" text_align="center" decoding="async" data-lazy-src="wp-content/uploads/2021/11/lago-logo-2311.png" />
+                          <LazyLoadImage width="100" height="30" className="slider_gallary_logo" alt="" ids="28916,28920,28932,28924,28922,28926,28934,28930,28928,28918" style={{ display: 'none' }} lightbox="false" type="slider" columns="6" auto_slide="3000" image_width="71" text_align="center" decoding="async" src={LagoLogo} />
                           {' '}
 
                         </div>
@@ -293,7 +300,7 @@ function Footer() {
                       {' '}
                       <div className="box has-hover gallery-box box-none">
                         <div className="box-image" style={{ width: '71%' }}>
-                          <LazyLoadImage width="100" height="30" className="slider_gallary_logo" alt="" ids="28916,28920,28932,28924,28922,28926,28934,28930,28928,28918" style={{ display: 'none' }} lightbox="false" type="slider" columns="6" auto_slide="3000" image_width="71" text_align="center" decoding="async" data-lazy-src="wp-content/uploads/2021/11/adamos-logo-2311.png" />
+                          <LazyLoadImage width="100" height="30" className="slider_gallary_logo" alt="" ids="28916,28920,28932,28924,28922,28926,28934,28930,28928,28918" style={{ display: 'none' }} lightbox="false" type="slider" columns="6" auto_slide="3000" image_width="71" text_align="center" decoding="async" src={AdamosLogo} />
                           {' '}
 
                         </div>
