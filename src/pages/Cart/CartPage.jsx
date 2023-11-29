@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Cart() {
+function CartPage() {
   return (
     <main id="main" className="">
       <div className="checkout-page-title page-title">
@@ -14,7 +14,7 @@ function Cart() {
           <div className="text-center pt pb">
             <div className="woocommerce-notices-wrapper" />
             <p className="cart-empty woocommerce-info">Hiện tại giỏ hàng của bạn đang trống</p>
-            {' '}
+
             <p className="return-to-shop">
               <a className="button primary wc-backward" href="../cua-hang/index.html">
                 Quay lại cửa hàng
@@ -23,9 +23,8 @@ function Cart() {
           </div>
         </div>
       </div>
-
     </main>
   );
 }
 
-export default Cart;
+export default CartPage;

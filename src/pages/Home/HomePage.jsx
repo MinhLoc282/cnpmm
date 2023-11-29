@@ -3,9 +3,7 @@ import React from 'react';
 function Home() {
   return (
     <main id="main" className="">
-
       <div id="content" role="main" className="content-area">
-
         <div className="slider-wrapper relative hide-for-small" id="slider-609492901">
           <div
             className="slider slider-nav-dots-dashes-spaced slider-nav-simple slider-nav-large slider-nav-light slider-style-normal"
