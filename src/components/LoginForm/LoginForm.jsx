@@ -1,6 +1,51 @@
-import React from 'react';
+import React, { useCallback } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+
+import * as Yup from 'yup';
+import { useFormik } from 'formik';
+
+import { actionLogin } from 'store/actions';
+
+import RegisterForm from 'components/RegisterForm/RegisterForm';
+
+import {
+  TEXT_LENGTH_LIMIT, LOCATION,
+} from 'constants/index';
 
 function LoginForm() {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const loading = useSelector((state) => state.Login.loading);
+
+  const callbackLoginSuccess = useCallback(() => {
+    navigate(LOCATION.HOME);
+  }, [navigate]);
+
+  const validation = useFormik({
+    enableReinitialize: true,
+
+    initialValues: {
+      username: '',
+      password: '',
+    },
+
+    validationSchema: Yup.object({
+      username: Yup.string()
+        .trim()
+        .required('Username không được bỏ trống.'),
+      password: Yup.string()
+        .trim()
+        .required('Mật khẩu không được bỏ trống.')
+        .min(TEXT_LENGTH_LIMIT.PASSWORD, 'Mật khẩu không được ít hơn 6 kí tự')
+        .max(TEXT_LENGTH_LIMIT.SHORT, `Mật khẩu không được vượt quá ${TEXT_LENGTH_LIMIT.SHORT} kí tự`),
+    }),
+
+    onSubmit: (values) => {
+      dispatch(actionLogin({ values, callback: callbackLoginSuccess }));
+    },
+  });
+
   return (
     <div id="login-form-popup" className="lightbox-content mfp-hide">
       <div className="my-account-header page-title normal-title">
@@ -36,22 +81,45 @@ function LoginForm() {
             <div className="account-login-inner">
               <h3 className="uppercase">Đăng nhập</h3>
 
-              <form className="woocommerce-form woocommerce-form-login login" method="post">
+              <form className="woocommerce-form woocommerce-form-login login" onSubmit={validation.handleSubmit}>
                 <p className="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
                   <label htmlFor="username">
                     Tên đăng nhập hoặc địa chỉ email&nbsp;
                     <span className="required">*</span>
                   </label>
-                  <input type="text" className="woocommerce-Input woocommerce-Input--text input-text" name="username" id="username" autoComplete="username" value="" />
+                  <input
+                    type="text"
+                    className="woocommerce-Input woocommerce-Input--text input-text"
+                    name="username"
+                    id="username"
+                    autoComplete="username"
+                    onChange={validation.handleChange}
+                    onBlur={validation.handleBlur}
+                    value={validation.values.username || ''}
+                  />
+                  {validation.touched.username && validation.errors.username && (
+                  <div className="errors">{validation.errors.username}</div>
+                  )}
                 </p>
                 <p className="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
                   <label htmlFor="password">
                     Mật khẩu&nbsp;
                     <span className="required">*</span>
                   </label>
-                  <input className="woocommerce-Input woocommerce-Input--text input-text" type="password" name="password" id="password" autoComplete="current-password" />
+                  <input
+                    className="woocommerce-Input woocommerce-Input--text input-text"
+                    type="password"
+                    name="password"
+                    id="password"
+                    autoComplete="current-password"
+                    onChange={validation.handleChange}
+                    onBlur={validation.handleBlur}
+                    value={validation.values.password || ''}
+                  />
+                  {validation.touched.password && validation.errors.password && (
+                  <div className="errors">{validation.errors.password}</div>
+                  )}
                 </p>
-
                 <div className="g-recaptcha" id="g-recaptcha" data-sitekey="6LczGWscAAAAAMCKCCd_T-bWUZTOO5qALwgjPjuj" data-callback="submitEnable" data-expired-callback="submitDisable" />
                 <noscript>
                   <div style={{ width: '100%', height: '473px' }}>
@@ -108,10 +176,19 @@ function LoginForm() {
                   <input type="hidden" id="woocommerce-login-nonce" name="woocommerce-login-nonce" value="41715934dc" />
                   <input type="hidden" name="_wp_http_referer" value="/cam-hung-nha-xinh-y-tuong/" />
 
-                  <button type="submit" className="woocommerce-button button woocommerce-form-login__submit" name="login" value="Đăng nhập">Đăng nhập</button>
+                  {loading ? (
+                    <button type="submit" className="woocommerce-button button woocommerce-form-login__submit" name="login" value="Đăng nhập" disabled>
+                      <div className="loading" />
+                    </button>
+                  )
+                    : (
+                      <button type="submit" className="woocommerce-button button woocommerce-form-login__submit" name="login" value="Đăng nhập">
+                        Đăng nhập
+                      </button>
+                    )}
                 </p>
                 <p className="woocommerce-LostPassword lost_password">
-                  <a href="../../tai-khoan/reset-password/index.html">Quên mật khẩu?</a>
+                  <Link to="/tai-khoan/reset-password">Quên mật khẩu?</Link>
                 </p>
               </form>
             </div>
@@ -120,79 +197,7 @@ function LoginForm() {
           <div className="col-2 large-6 col pb-0">
             <div className="account-register-inner">
               <h3 className="uppercase">Đăng ký</h3>
-              <form method="post" className="woocommerce-form woocommerce-form-register register">
-                <p className="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-                  <label htmlFor="reg_email">
-                    Địa chỉ email&nbsp;
-                    <span className="required">*</span>
-                  </label>
-                  <input type="email" className="woocommerce-Input woocommerce-Input--text input-text" name="email" id="reg_email" autoComplete="email" value="" />
-                </p>
-                <p>Mật khẩu mới sẽ được gửi tới email của bạn.</p>
-                <div className="g-recaptcha" id="g-recaptcha" data-sitekey="6LczGWscAAAAAMCKCCd_T-bWUZTOO5qALwgjPjuj" data-callback="submitEnable" data-expired-callback="submitDisable" />
-                <noscript>
-                  <div style={{ width: '100%', height: '473px' }}>
-                    <div style={{ width: '100%', height: '422px', position: 'relative' }}>
-                      <div style={{ width: '302px', height: '422px', position: 'relative' }}>
-                        <iframe
-                          src="https://www.google.com/recaptcha/api/fallback?k=6LczGWscAAAAAMCKCCd_T-bWUZTOO5qALwgjPjuj"
-                          frameBorder="0"
-                          title="captcha"
-                          scrolling="no"
-                          style={{ width: '302px', height: '422px', borderStyle: 'none' }}
-                        />
-                      </div>
-                      <div
-                        style={{
-                          width: '100%',
-                          height: '60px',
-                          borderStyle: 'none',
-                          bottom: '12px',
-                          left: '25px',
-                          margin: '0px',
-                          padding: '0px',
-                          right: '25px',
-                          background: '#f9f9f9',
-                          border: '1px solid #c1c1c1',
-                          borderRadius: '3px',
-                        }}
-                      >
-                        <textarea
-                          id="g-recaptcha-response"
-                          name="g-recaptcha-response"
-                          title="response"
-                          className="g-recaptcha-response"
-                          style={{
-                            width: '250px',
-                            height: '40px',
-                            border: '1px solid #c1c1c1',
-                            margin: '10px 25px',
-                            padding: '0px',
-                            resize: 'none',
-                          }}
-                          value=""
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <br />
-                </noscript>
-                <div className="woocommerce-privacy-policy-text">
-                  <p>
-                    Dữ liệu cá nhân của bạn sẽ được sử dụng để hỗ trợ
-                    trải nghiệm của bạn trên toàn bộ trang web này,
-                    để quản lý quyền truy cập vào tài khoản của bạn
-                    và cho các mục đích khác được mô tả trong chính
-                    sách bảo mật của chúng tôi.
-                  </p>
-                </div>
-                <p className="woocommerce-form-row form-row">
-                  <input type="hidden" id="woocommerce-register-nonce" name="woocommerce-register-nonce" value="04fdbab7c8" />
-                  <input type="hidden" name="_wp_http_referer" value="/cam-hung-nha-xinh-y-tuong/" />
-
-                  <button type="submit" className="woocommerce-Button woocommerce-button button woocommerce-form-register__submit" name="register" value="Đăng ký">Đăng ký</button>
-                </p>
-              </form>
+              <RegisterForm />
             </div>
           </div>
         </div>
