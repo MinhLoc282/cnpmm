@@ -43,13 +43,13 @@
 @font-face {
     font-family: "fl-icons";
     font-display: block;
-    src: url(themes/flatsome/assets/css/icons/fl-iconsae55.eot);
+    src: url(../themes/flatsome/assets/css/icons/fl-iconsae55.eot);
     src:
-        url(themes/flatsome/assets/css/icons/fl-icons.eot#iefix) format("embedded-opentype"),
-        url(themes/flatsome/assets/css/icons/fl-iconsae55.woff2) format("woff2"),
-        url(themes/flatsome/assets/css/icons/fl-iconsae55.ttf) format("truetype"),
-        url(themes/flatsome/assets/css/icons/fl-iconsae55.woff) format("woff"),
-        url(themes/flatsome/assets/css/icons/fl-iconsae55.svg) format("svg");
+        url(../themes/flatsome/assets/css/icons/fl-icons.eot#iefix) format("embedded-opentype"),
+        url(../themes/flatsome/assets/css/icons/fl-iconsae55.woff2) format("woff2"),
+        url(../themes/flatsome/assets/css/icons/fl-iconsae55.ttf) format("truetype"),
+        url(../themes/flatsome/assets/css/icons/fl-iconsae55.woff) format("woff"),
+        url(../themes/flatsome/assets/css/icons/fl-iconsae55.svg) format("svg");
 }
 
 .bg {
