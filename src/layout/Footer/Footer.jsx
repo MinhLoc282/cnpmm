@@ -1,6 +1,5 @@
+/* eslint-disable react/no-unknown-property */
 import React from 'react';
-
-import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 import Logo from 'assets/images/logo.png';
 import CorrLogo from 'assets/images/aa-corporation-logo-2311.png';
@@ -9,7 +8,7 @@ import NhaXinhLogo from 'assets/images/nha-xinh-logo-2311.png';
 import Image15 from 'assets/images/image-15.png';
 import BoconceptLogo from 'assets/images/Boconcept-logo-2311.png';
 import BellavitaLogo from 'assets/images/bellavita-luxury-logo-2311.png';
-import ValligarisLogo from 'assets/images/calligaris-logo-2311.png';
+import CalligarisLogo from 'assets/images/calligaris-logo-2311.png';
 import BaxterLogo from 'assets/images/baxter-logo-2311.png';
 import LignerosetLogo from 'assets/images/ligneroset-logo-2311.png';
 import LagoLogo from 'assets/images/lago-logo-2311.png';
@@ -26,7 +25,8 @@ function Footer() {
             {' '}
             <div className="textwidget">
               <p>
-                <LazyLoadImage width="140" height="40" className="logo_ft" src={Logo} alt="logo" />
+                <img width="140" height="40" decoding="async" className="logo_ft" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20140%2040'%3E%3C/svg%3E" data-lazy-src={Logo} alt="logo" />
+                <noscript><img width="140" height="40" decoding="async" className="logo_ft" src={Logo} alt="logo" /></noscript>
               </p>
               <div className="follow">
                 <h4>Follow us</h4>
@@ -71,8 +71,8 @@ function Footer() {
             <div id="text-4141469133" className="text">
 
               <p>
-                Hãy để lại email của bạn để nhận được những ý tưởng trang trí mới
-                và những thông tin, ưu đãi từ Nhà Xinh
+                Hãy để lại email của bạn để nhận được những ý tưởng trang
+                trí mới và những thông tin, ưu đãi từ Nhà Xinh
               </p>
               <p>Email: nhaxinhcare@akacompany.com.vn</p>
               <p>
@@ -129,7 +129,8 @@ function Footer() {
                       {' '}
                       <div className="box has-hover gallery-box box-none">
                         <div className="box-image" style={{ width: '71%' }}>
-                          <LazyLoadImage width="100" height="30" className="slider_gallary_logo" alt="" ids="28916,28920,28932,28924,28922,28926,28934,28930,28928,28918" style={{ display: 'none' }} lightbox="false" type="slider" columns="6" auto_slide="3000" image_width="71" text_align="center" decoding="async" src={CorrLogo} />
+                          <img width="100" height="30" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%2030'%3E%3C/svg%3E" className="slider_gallary_logo" alt="" ids="28916,28920,28932,28924,28922,28926,28934,28930,28928,28918" style={{ display: 'none' }} lightbox="false" type="slider" columns="6" auto_slide="3000" image_width="71" text_align="center" decoding="async" data-lazy-src={CorrLogo} />
+                          <noscript><img width="100" height="30" src={CorrLogo} className="slider_gallary_logo" alt="" ids="28916,28920,28932,28924,28922,28926,28934,28930,28928,28918" style={{ display: 'none' }} lightbox="false" type="slider" columns="6" auto_slide="3000" image_width="71" text_align="center" decoding="async" /></noscript>
                           {' '}
 
                         </div>
@@ -148,7 +149,8 @@ function Footer() {
                       {' '}
                       <div className="box has-hover gallery-box box-none">
                         <div className="box-image" style={{ width: '71%' }}>
-                          <LazyLoadImage width="100" height="30" className="slider_gallary_logo" alt="" ids="28916,28920,28932,28924,28922,28926,28934,28930,28928,28918" style={{ display: 'none' }} lightbox="false" type="slider" columns="6" auto_slide="3000" image_width="71" text_align="center" decoding="async" src={AkaLogo} />
+                          <img width="100" height="30" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%2030'%3E%3C/svg%3E" className="slider_gallary_logo" alt="" ids="28916,28920,28932,28924,28922,28926,28934,28930,28928,28918" style={{ display: 'none' }} lightbox="false" type="slider" columns="6" auto_slide="3000" image_width="71" text_align="center" decoding="async" data-lazy-src={AkaLogo} />
+                          <noscript><img width="100" height="30" src={AkaLogo} className="slider_gallary_logo" alt="" ids="28916,28920,28932,28924,28922,28926,28934,28930,28928,28918" style={{ display: 'none' }} lightbox="false" type="slider" columns="6" auto_slide="3000" image_width="71" text_align="center" decoding="async" /></noscript>
                           {' '}
 
                         </div>
@@ -167,7 +169,8 @@ function Footer() {
                       {' '}
                       <div className="box has-hover gallery-box box-none">
                         <div className="box-image" style={{ width: '71%' }}>
-                          <LazyLoadImage width="100" height="30" className="slider_gallary_logo" alt="" ids="28916,28920,28932,28924,28922,28926,28934,28930,28928,28918" style={{ display: 'none' }} lightbox="false" type="slider" columns="6" auto_slide="3000" image_width="71" text_align="center" decoding="async" src={NhaXinhLogo} />
+                          <img width="100" height="30" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%2030'%3E%3C/svg%3E" className="slider_gallary_logo" alt="" ids="28916,28920,28932,28924,28922,28926,28934,28930,28928,28918" style={{ display: 'none' }} lightbox="false" type="slider" columns="6" auto_slide="3000" image_width="71" text_align="center" decoding="async" data-lazy-src={NhaXinhLogo} />
+                          <noscript><img width="100" height="30" src={NhaXinhLogo} className="slider_gallary_logo" alt="" ids="28916,28920,28932,28924,28922,28926,28934,28930,28928,28918" style={{ display: 'none' }} lightbox="false" type="slider" columns="6" auto_slide="3000" image_width="71" text_align="center" decoding="async" /></noscript>
                           {' '}
 
                         </div>
@@ -186,7 +189,8 @@ function Footer() {
                       {' '}
                       <div className="box has-hover gallery-box box-none">
                         <div className="box-image" style={{ width: '71%' }}>
-                          <LazyLoadImage width="100" height="30" className="slider_gallary_logo" alt="" ids="28916,28920,28932,28924,28922,28926,28934,28930,28928,28918" style={{ display: 'none' }} lightbox="false" type="slider" columns="6" auto_slide="3000" image_width="71" text_align="center" decoding="async" src={BoconceptLogo} />
+                          <img width="100" height="30" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%2030'%3E%3C/svg%3E" className="slider_gallary_logo" alt="" ids="28916,28920,28932,28924,28922,28926,28934,28930,28928,28918" style={{ display: 'none' }} lightbox="false" type="slider" columns="6" auto_slide="3000" image_width="71" text_align="center" decoding="async" data-lazy-src={BoconceptLogo} />
+                          <noscript><img width="100" height="30" src={BoconceptLogo} className="slider_gallary_logo" alt="" ids="28916,28920,28932,28924,28922,28926,28934,28930,28928,28918" style={{ display: 'none' }} lightbox="false" type="slider" columns="6" auto_slide="3000" image_width="71" text_align="center" decoding="async" /></noscript>
                           {' '}
 
                         </div>
@@ -205,7 +209,8 @@ function Footer() {
                       {' '}
                       <div className="box has-hover gallery-box box-none">
                         <div className="box-image" style={{ width: '71%' }}>
-                          <LazyLoadImage width="100" height="30" className="slider_gallary_logo" alt="" ids="28916,28920,28932,28924,28922,28926,28934,28930,28928,28918" style={{ display: 'none' }} lightbox="false" type="slider" columns="6" auto_slide="3000" image_width="71" text_align="center" decoding="async" src={BellavitaLogo} />
+                          <img width="100" height="30" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%2030'%3E%3C/svg%3E" className="slider_gallary_logo" alt="" ids="28916,28920,28932,28924,28922,28926,28934,28930,28928,28918" style={{ display: 'none' }} lightbox="false" type="slider" columns="6" auto_slide="3000" image_width="71" text_align="center" decoding="async" data-lazy-src={BellavitaLogo} />
+                          <noscript><img width="100" height="30" src={BellavitaLogo} className="slider_gallary_logo" alt="" ids="28916,28920,28932,28924,28922,28926,28934,28930,28928,28918" style={{ display: 'none' }} lightbox="false" type="slider" columns="6" auto_slide="3000" image_width="71" text_align="center" decoding="async" /></noscript>
                           {' '}
 
                         </div>
@@ -224,7 +229,8 @@ function Footer() {
                       {' '}
                       <div className="box has-hover gallery-box box-none">
                         <div className="box-image" style={{ width: '71%' }}>
-                          <LazyLoadImage width="100" height="30" className="slider_gallary_logo" alt="" ids="28916,28920,28932,28924,28922,28926,28934,28930,28928,28918" style={{ display: 'none' }} lightbox="false" type="slider" columns="6" auto_slide="3000" image_width="71" text_align="center" decoding="async" src={ValligarisLogo} />
+                          <img width="100" height="30" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%2030'%3E%3C/svg%3E" className="slider_gallary_logo" alt="" ids="28916,28920,28932,28924,28922,28926,28934,28930,28928,28918" style={{ display: 'none' }} lightbox="false" type="slider" columns="6" auto_slide="3000" image_width="71" text_align="center" decoding="async" data-lazy-src={CalligarisLogo} />
+                          <noscript><img width="100" height="30" src={CalligarisLogo} className="slider_gallary_logo" alt="" ids="28916,28920,28932,28924,28922,28926,28934,28930,28928,28918" style={{ display: 'none' }} lightbox="false" type="slider" columns="6" auto_slide="3000" image_width="71" text_align="center" decoding="async" /></noscript>
                           {' '}
 
                         </div>
@@ -243,7 +249,8 @@ function Footer() {
                       {' '}
                       <div className="box has-hover gallery-box box-none">
                         <div className="box-image" style={{ width: '71%' }}>
-                          <LazyLoadImage width="100" height="30" className="slider_gallary_logo" alt="" ids="28916,28920,28932,28924,28922,28926,28934,28930,28928,28918" style={{ display: 'none' }} lightbox="false" type="slider" columns="6" auto_slide="3000" image_width="71" text_align="center" decoding="async" data-lazy-src={BaxterLogo} />
+                          <img width="100" height="30" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%2030'%3E%3C/svg%3E" className="slider_gallary_logo" alt="" ids="28916,28920,28932,28924,28922,28926,28934,28930,28928,28918" style={{ display: 'none' }} lightbox="false" type="slider" columns="6" auto_slide="3000" image_width="71" text_align="center" decoding="async" data-lazy-src={BaxterLogo} />
+                          <noscript><img width="100" height="30" src={BaxterLogo} className="slider_gallary_logo" alt="" ids="28916,28920,28932,28924,28922,28926,28934,28930,28928,28918" style={{ display: 'none' }} lightbox="false" type="slider" columns="6" auto_slide="3000" image_width="71" text_align="center" decoding="async" /></noscript>
                           {' '}
 
                         </div>
@@ -262,7 +269,8 @@ function Footer() {
                       {' '}
                       <div className="box has-hover gallery-box box-none">
                         <div className="box-image" style={{ width: '71%' }}>
-                          <LazyLoadImage width="100" height="30" className="slider_gallary_logo" alt="" ids="28916,28920,28932,28924,28922,28926,28934,28930,28928,28918" style={{ display: 'none' }} lightbox="false" type="slider" columns="6" auto_slide="3000" image_width="71" text_align="center" decoding="async" src={LignerosetLogo} />
+                          <img width="100" height="30" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%2030'%3E%3C/svg%3E" className="slider_gallary_logo" alt="" ids="28916,28920,28932,28924,28922,28926,28934,28930,28928,28918" style={{ display: 'none' }} lightbox="false" type="slider" columns="6" auto_slide="3000" image_width="71" text_align="center" decoding="async" data-lazy-src={LignerosetLogo} />
+                          <noscript><img width="100" height="30" src={LignerosetLogo} className="slider_gallary_logo" alt="" ids="28916,28920,28932,28924,28922,28926,28934,28930,28928,28918" style={{ display: 'none' }} lightbox="false" type="slider" columns="6" auto_slide="3000" image_width="71" text_align="center" decoding="async" /></noscript>
                           {' '}
 
                         </div>
@@ -281,7 +289,8 @@ function Footer() {
                       {' '}
                       <div className="box has-hover gallery-box box-none">
                         <div className="box-image" style={{ width: '71%' }}>
-                          <LazyLoadImage width="100" height="30" className="slider_gallary_logo" alt="" ids="28916,28920,28932,28924,28922,28926,28934,28930,28928,28918" style={{ display: 'none' }} lightbox="false" type="slider" columns="6" auto_slide="3000" image_width="71" text_align="center" decoding="async" src={LagoLogo} />
+                          <img width="100" height="30" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%2030'%3E%3C/svg%3E" className="slider_gallary_logo" alt="" ids="28916,28920,28932,28924,28922,28926,28934,28930,28928,28918" style={{ display: 'none' }} lightbox="false" type="slider" columns="6" auto_slide="3000" image_width="71" text_align="center" decoding="async" data-lazy-src={LagoLogo} />
+                          <noscript><img width="100" height="30" src={LagoLogo} className="slider_gallary_logo" alt="" ids="28916,28920,28932,28924,28922,28926,28934,28930,28928,28918" style={{ display: 'none' }} lightbox="false" type="slider" columns="6" auto_slide="3000" image_width="71" text_align="center" decoding="async" /></noscript>
                           {' '}
 
                         </div>
@@ -300,7 +309,8 @@ function Footer() {
                       {' '}
                       <div className="box has-hover gallery-box box-none">
                         <div className="box-image" style={{ width: '71%' }}>
-                          <LazyLoadImage width="100" height="30" className="slider_gallary_logo" alt="" ids="28916,28920,28932,28924,28922,28926,28934,28930,28928,28918" style={{ display: 'none' }} lightbox="false" type="slider" columns="6" auto_slide="3000" image_width="71" text_align="center" decoding="async" src={AdamosLogo} />
+                          <img width="100" height="30" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%2030'%3E%3C/svg%3E" className="slider_gallary_logo" alt="" ids="28916,28920,28932,28924,28922,28926,28934,28930,28928,28918" style={{ display: 'none' }} lightbox="false" type="slider" columns="6" auto_slide="3000" image_width="71" text_align="center" decoding="async" data-lazy-src={AdamosLogo} />
+                          <noscript><img width="100" height="30" src={AdamosLogo} className="slider_gallary_logo" alt="" ids="28916,28920,28932,28924,28922,28926,28934,28930,28928,28918" style={{ display: 'none' }} lightbox="false" type="slider" columns="6" auto_slide="3000" image_width="71" text_align="center" decoding="async" /></noscript>
                           {' '}
 
                         </div>
@@ -324,7 +334,8 @@ function Footer() {
               © 2021 - Bản quyền của Nhà Xinh - thương hiệu thuộc AKA Furniture
               <br />
               Từ năm 1999 - thương hiệu đăng ký số 284074 Cục sở hữu trí tuệ
-              <LazyLoadImage width="105" height="40" style={{ float: 'right' }} src={Image15} />
+              <img width="105" height="40" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20105%2040'%3E%3C/svg%3E" style={{ float: 'right' }} data-lazy-src={Image15} alt="image15" />
+              <noscript><img width="105" height="40" src={Image15} alt="image15" style={{ float: 'right' }} /></noscript>
               {' '}
 
             </div>

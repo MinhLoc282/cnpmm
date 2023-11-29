@@ -1,17 +1,3 @@
-:root {--primary-color: #0a0a0b;}.full-width .ubermenu-nav, .container, .row{max-width: 1320px}.row.row-collapse{max-width: 1290px}.row.row-small{max-width: 1312.5px}.row.row-large{max-width: 1350px}.header-main{height: 90px}#logo img{max-height: 90px}#logo{width:169px;}.header-bottom{min-height: 10px}.header-top{min-height: 40px}.transparent .header-main{height: 30px}.transparent #logo img{max-height: 30px}.has-transparent + .page-title:first-of-type,.has-transparent + #main > .page-title,.has-transparent + #main > div > .page-title,.has-transparent + #main .page-header-wrapper:first-of-type .page-title{padding-top: 60px;}.header.show-on-scroll,.stuck .header-main{height:70px!important}.stuck #logo img{max-height: 70px!important}.search-form{ width: 100%;}.header-bg-color, .header-wrapper {background-color: rgba(255,255,255,0.9)}.header-bottom {background-color: #f1f1f1}.top-bar-nav > li > a{line-height: 16px }.header-main .nav > li > a{line-height: 16px }.header-bottom-nav > li > a{line-height: 16px }@media (max-width: 549px) {.header-main{height: 70px}#logo img{max-height: 70px}}.header-top{background-color:rgba(0,0,0,0)!important;}/* Color */.accordion-title.active, .has-icon-bg .icon .icon-inner,.logo a, .primary.is-underline, .primary.is-link, .badge-outline .badge-inner, .nav-outline > li.active> a,.nav-outline >li.active > a, .cart-icon strong,[data-color='primary'], .is-outline.primary{color: #0a0a0b;}/* Color !important */[data-text-color="primary"]{color: #0a0a0b!important;}/* Background Color */[data-text-bg="primary"]{background-color: #0a0a0b;}/* Background */.scroll-to-bullets a,.featured-title, .label-new.menu-item > a:after, .nav-pagination > li > .current,.nav-pagination > li > span:hover,.nav-pagination > li > a:hover,.has-hover:hover .badge-outline .badge-inner,button[type="submit"], .button.wc-forward:not(.checkout):not(.checkout-button), .button.submit-button, .button.primary:not(.is-outline),.featured-table .title,.is-outline:hover, .has-icon:hover .icon-label,.nav-dropdown-bold .nav-column li > a:hover, .nav-dropdown.nav-dropdown-bold > li > a:hover, .nav-dropdown-bold.dark .nav-column li > a:hover, .nav-dropdown.nav-dropdown-bold.dark > li > a:hover, .is-outline:hover, .tagcloud a:hover,.grid-tools a, input[type='submit']:not(.is-form), .box-badge:hover .box-text, input.button.alt,.nav-box > li > a:hover,.nav-box > li.active > a,.nav-pills > li.active > a ,.current-dropdown .cart-icon strong, .cart-icon:hover strong, .nav-line-bottom > li > a:before, .nav-line-grow > li > a:before, .nav-line > li > a:before,.banner, .header-top, .slider-nav-circle .flickity-prev-next-button:hover svg, .slider-nav-circle .flickity-prev-next-button:hover .arrow, .primary.is-outline:hover, .button.primary:not(.is-outline), input[type='submit'].primary, input[type='submit'].primary, input[type='reset'].button, input[type='button'].primary, .badge-inner{background-color: #0a0a0b;}/* Border */.nav-vertical.nav-tabs > li.active > a,.scroll-to-bullets a.active,.nav-pagination > li > .current,.nav-pagination > li > span:hover,.nav-pagination > li > a:hover,.has-hover:hover .badge-outline .badge-inner,.accordion-title.active,.featured-table,.is-outline:hover, .tagcloud a:hover,blockquote, .has-border, .cart-icon strong:after,.cart-icon strong,.blockUI:before, .processing:before,.loading-spin, .slider-nav-circle .flickity-prev-next-button:hover svg, .slider-nav-circle .flickity-prev-next-button:hover .arrow, .primary.is-outline:hover{border-color: #0a0a0b}.nav-tabs > li.active > a{border-top-color: #0a0a0b}.widget_shopping_cart_content .blockUI.blockOverlay:before { border-left-color: #0a0a0b }.woocommerce-checkout-review-order .blockUI.blockOverlay:before { border-left-color: #0a0a0b }/* Fill */.slider .flickity-prev-next-button:hover svg,.slider .flickity-prev-next-button:hover .arrow{fill: #0a0a0b;}body{font-size: 111%;}@media screen and (max-width: 549px){body{font-size: 100%;}}body{font-family:"Roboto", sans-serif}body{font-weight: 0}body{color: #303036}.nav > li > a {font-family:"Roboto", sans-serif;}.mobile-sidebar-levels-2 .nav > li > ul > li > a {font-family:"Roboto", sans-serif;}.nav > li > a {font-weight: 0;}.mobile-sidebar-levels-2 .nav > li > ul > li > a {font-weight: 0;}h1,h2,h3,h4,h5,h6,.heading-font, .off-canvas-center .nav-sidebar.nav-vertical > li > a{font-family: "Montserrat", sans-serif;}h1,h2,h3,h4,h5,h6,.heading-font,.banner h1,.banner h2{font-weight: 600;}h1,h2,h3,h4,h5,h6,.heading-font{color: #0a0a0b;}.alt-font{font-family: "Dancing Script", sans-serif;}.alt-font{font-weight: 400!important;}.header:not(.transparent) .header-nav-main.nav > li > a {color: #303036;}.header:not(.transparent) .header-nav-main.nav > li > a:hover,.header:not(.transparent) .header-nav-main.nav > li.active > a,.header:not(.transparent) .header-nav-main.nav > li.current > a,.header:not(.transparent) .header-nav-main.nav > li > a.active,.header:not(.transparent) .header-nav-main.nav > li > a.current{color: #dd9933;}.header-nav-main.nav-line-bottom > li > a:before,.header-nav-main.nav-line-grow > li > a:before,.header-nav-main.nav-line > li > a:before,.header-nav-main.nav-box > li > a:hover,.header-nav-main.nav-box > li.active > a,.header-nav-main.nav-pills > li > a:hover,.header-nav-main.nav-pills > li.active > a{color:#FFF!important;background-color: #dd9933;}.shop-page-title.featured-title .title-bg{background-image: url(wp-content/uploads/2022/04/banner-trang-chu-san-pham-dep-oki.jpg);}@media screen and (min-width: 550px){.products .box-vertical .box-image{min-width: 300px!important;width: 300px!important;}}.footer-2{background-color: #303036}.absolute-footer{background-color: #303036}.page-title-small + main .product-container > .row{padding-top:0;}/* Custom CSS */p.in-stock{display:none;}li#menu-item-30269 a{color: red;}.label-new.menu-item > a:after{content:"New";}.label-hot.menu-item > a:after{content:"Hot";}.label-sale.menu-item > a:after{content:"Sale";}.label-popular.menu-item > a:after{content:"Popular";}
-
-@font-face {
-  font-family: "fl-icons";
-  font-display: block;
-  src: url(../fonts/fl-icons.eot);
-  src:
-    url(../fonts/fl-icons.eot) format("embedded-opentype"),
-    url(../fonts/fl-icons.woff2) format("woff2"),
-    url(../fonts/fl-icons.ttf) format("truetype"),
-    url(../fonts/fl-icons.woff) format("woff"),
-    url(../fonts/fl-icons.svg#fl-icons) format("svg");
-}
-
 .search-container {
   position: relative;
 }
@@ -23,48 +9,697 @@
   transform: translateY(-50%);
 }
 
-.bg {
-  opacity: 0;
-  transition: opacity 1s;
-  -webkit-transition: opacity 1s;
+#gap-698061554 {
+  padding-top: 80px;
 }
 
-.bg-loaded {
-  opacity: 1;
+#section_635179170 {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  background-color: rgb(235, 235, 235);
 }
 
-.cart-button {
-  vertical-align: top;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-left: 0;
-  padding-right: 0;
-  margin: 0;
+#section_635179170 .section-bg-overlay {
+  background-color: rgba(0, 0, 0, 0);
 }
 
-.cart-button i {
-  font-size: 1.45em;
-  vertical-align: middle;
-  line-height: 1.2;
+#image_2096296992 {
+  width: 100%;
 }
 
-.wishlist-button {
-  vertical-align: top;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-left: 0;
-  padding-right: 0;
-  margin: 0;
-  top: 0;
-  color: rgba(102,102,102,.85);
-  transition: all .2s;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+#col-1988428650 > .col-inner {
+  padding: 5% 5% 5% 0px;
 }
 
-.wishlist-button i {
-  font-size: 1.45em;
-  vertical-align: middle;
-  line-height: 1.2;
+#text-2368726676 {
+  color: rgb(83, 80, 80);
+}
+
+#text-2368726676 > * {
+  color: rgb(83, 80, 80);
+}
+
+#gap-123179871 {
+  padding-top: 40px;
+}
+
+#gap-1509444521 {
+  padding-top: 21px;
+}
+
+#gap-1895576768 {
+  padding-top: 20px;
+}
+
+#banner-1950404152 .bg.bg-loaded {
+  background-image: url(wp-content/uploads/2022/04/giuong-iris-dep-gia-tot-hoc-keo.jpg);
+}
+#banner-1950404152 .bg {
+  background-position: 49% 56%;
+}
+
+#text-box-1028103647 {
+  width: 63%;
+}
+#text-box-1028103647 .text-box-content {
+  font-size: 100%;
+}
+
+#text-221784697 {
+  text-align: center;
+  color: rgb(36, 32, 32);
+}
+#text-221784697 > * {
+  color: rgb(36, 32, 32);
+}
+
+#gap-2113667135 {
+  padding-top: 30px;
+}
+
+#banner-1674203706 {
+  padding-top: 100%;
+}
+#banner-1674203706 .bg.bg-loaded {
+  background-image: url(wp-content/uploads/2023/02/cua-hang-360-do-nha-xinh.jpg);
+}
+#banner-1674203706 .bg {
+  background-position: 43% 68%;
+}
+#text-box-697698869 {
+  width: 60%;
+}
+#text-box-697698869 .text-box-content {
+  font-size: 100%;
+}
+#text-2314744426 {
+  font-size: 1.05rem;
+  color: rgb(69, 69, 73);
+}
+#text-2314744426 > * {
+  color: rgb(69, 69, 73);
+}
+#gap-1752626467 {
+  padding-top: 36px;
+}
+#image_506014236 {
+  width: 100%;
+}
+#col-398052187 > .col-inner {
+  padding: 10% 10% 10% 10%;
+}
+#section_1752696899 {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+#image_28374993 {
+  width: 100%;
+}
+#image_1640297508 {
+  width: 100%;
+}
+#image_1999236504 {
+  width: 100%;
+}
+#image_1090924730 {
+  width: 100%;
+}
+#section_759632796 {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  background-color: rgb(247, 247, 247);
+}
+#section_759632796 .section-bg-overlay {
+  background-color: rgba(255, 255, 255, 0.85);
+}
+#banner-grid-994941275 .grid-col-1{height: 600px}
+#banner-grid-994941275 .grid-col-1-2{height: 300px}
+#banner-grid-994941275 .grid-col-1-3{height:200px}
+#banner-grid-994941275 .grid-col-2-3{height: 400px}
+#banner-grid-994941275 .grid-col-1-4{height: 150px}
+#banner-grid-994941275 .grid-col-3-4{height: 450px}
+#banner-1088107610 {
+  padding-top: 500px;
+}
+#banner-1088107610 .bg.bg-loaded {
+  background-image: url(wp-content/uploads/2021/11/nha-xinh-ghe-an-phong-an-749x800.jpg);
+}
+#banner-1088107610 .bg {
+  background-position: 10% 27%;
+}
+#text-box-1318303730 {
+  width: 60%;
+}
+#text-box-1318303730 .text-box-content {
+  font-size: 100%;
+}
+
+#banner-778942181 {
+  padding-top: 500px;
+}
+#banner-778942181 .bg.bg-loaded {
+  background-image: url(wp-content/uploads/2022/03/Armchair-TUDOR-VELVET-PETROL-398217-3.jpg);
+}
+#banner-778942181 .bg {
+  background-position: 60% 61%;
+}
+#text-box-1696166676 {
+  width: 60%;
+}
+#text-box-1696166676 .text-box-content {
+  font-size: 100%;
+}
+
+#banner-361829436 {
+  padding-top: 500px;
+}
+#banner-361829436 .bg.bg-loaded {
+  background-image: url(wp-content/uploads/2022/01/giuong-ngu-pio-1.jpg);
+}
+#banner-361829436 .bg {
+  background-position: 97% 83%;
+}
+
+#text-box-1660448018 {
+  width: 60%;
+}
+#text-box-1660448018 .text-box-content {
+  font-size: 100%;
+}
+
+#banner-1475762535 {
+  padding-top: 500px;
+}
+#banner-1475762535 .bg.bg-loaded {
+  background-image: url(wp-content/uploads/2023/04/nha-xinh-banner-ban-an-vuong-24423.jpg);
+}
+#banner-1475762535 .overlay {
+  background-color: rgba(7, 7, 7, 0.07);
+}
+#banner-1475762535 .bg {
+  background-position: 0% 43%;
+}
+#text-box-1929009184 {
+  width: 60%;
+}
+#text-box-1929009184 .text-box-content {
+  font-size: 100%;
+}
+#banner-1603689008 {
+  padding-top: 500px;
+}
+#banner-1603689008 .bg.bg-loaded {
+  background-image: url(wp-content/uploads/2023/07/BST-COASTAL-SOFA-VANG-2.jpg);
+}
+#banner-1603689008 .bg {
+  background-position: 44% 79%;
+}
+#text-box-1171943206 {
+  width: 60%;
+}
+#text-box-1171943206 .text-box-content {
+  font-size: 100%;
+}
+#gap-883906113 {
+  padding-top: 30px;
+}
+#section_689558828 {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+#banner-1980159345 {
+  padding-top: 100%;
+}
+#banner-1980159345 .bg.bg-loaded {
+  background-image: url(wp-content/uploads/2023/07/bo-suu-tap-coastal-13723-vuong.jpg);
+}
+#banner-1980159345 .bg {
+  background-position: 56% 48%;
+}
+@media (min-width:550px) {
+  #banner-1980159345 {
+    padding-top: 100%;
+  }
+}
+
+#text-box-13400618 {
+  width: 85%;
+}
+#text-box-13400618 .text-box-content {
+  font-size: 100%;
+}
+@media (min-width:550px) {
+  #text-box-13400618 {
+    width: 60%;
+  }
+}
+
+#banner-762721332 {
+  padding-top: 50%;
+}
+#banner-762721332 .bg.bg-loaded {
+  background-image: url(wp-content/uploads/2023/07/bo-suu-tap-coastal-13723-1.jpg);
+}
+#banner-762721332 .overlay {
+  background-color: rgba(255, 255, 255, 0);
+}
+#banner-762721332 .bg {
+  background-position: 48% 62%;
+}
+#text-box-671666854 {
+  width: 78%;
+}
+#text-box-671666854 .text-box-content {
+  font-size: 100%;
+}
+#text-3705634621 {
+  color: rgb(255,255,255);
+}
+#text-3705634621 > * {
+  color: rgb(255,255,255);
+}
+#section_917526953 {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: rgb(246, 247, 248);
+}
+#row-1427509508 > .col > .col-inner {
+  background-color: rgb(246, 247, 248);
+}
+#image_1349304432 {
+  width: 100%;
+}
+#text-4141469133 {
+  font-size: 0.75rem;
+}
+#gap-1058742967 {
+  padding-top: 30px;
+}
+#gap-1983472287 {
+  padding-top: 36px;
+}
+
+#banner-grid-1630569317 .grid-col-1{height: 575px}
+#banner-grid-1630569317 .grid-col-1-2{height: 287.5px}
+#banner-grid-1630569317 .grid-col-1-3{height:191.66666666667px}
+#banner-grid-1630569317 .grid-col-2-3{height: 383.33333333333px}
+#banner-grid-1630569317 .grid-col-1-4{height: 143.75px}
+#banner-grid-1630569317 .grid-col-3-4{height: 431.25px}
+
+#banner-1404720218 {
+  padding-top: 500px;
+}
+#banner-1404720218 .bg.bg-loaded {
+  background-image: url(../../assets/images/GIUONG-DEP-GIA-TOT-IRIS-1-400x400.jpg);
+}
+
+#banner-1938589329 {
+  padding-top: 500px;
+}
+#banner-1938589329 .bg.bg-loaded {
+  background-image: url(../../assets/images/armchair-dep-mau-hong-hien-dai-13522-305x400.jpg);
+}
+#banner-1938589329 .bg {
+  background-position: 49% 99%;
+}
+
+#text-box-2057150342 {
+  width: 60%;
+}
+#text-box-2057150342 .text-box-content {
+  font-size: 100%;
+}
+@media (min-width:550px) {
+  #text-box-2057150342 {
+    width: 67%;
+  }
+}
+
+#banner-111509773 {
+  padding-top: 100%;
+  background-color: rgb(255, 255, 255);
+}
+#banner-111509773 .bg.bg-loaded {
+  background-image: url(../../assets/images/bo-suu-tap-osaka-moi-nha-xinh-6522-1346x800.jpg);
+}
+#banner-111509773 .overlay {
+  background-color: rgba(39, 38, 38, 0.116);
+}
+#banner-111509773 .bg {
+  background-position: 58% 54%;
+}
+
+#text-box-875675452 {
+  width: 50%;
+}
+#text-box-875675452 .text-box-content {
+  font-size: 99%;
+}
+
+#text-2215819048 {
+  color: rgb(255,255,255);
+}
+#text-2215819048 > * {
+  color: rgb(255,255,255);
+}
+
+#gap-1286971254 {
+  padding-top: 30px;
+}
+
+#text-3954735178 {
+  text-align: center;
+}
+
+#gap-839622587 {
+  padding-top: 20px;
+}
+
+#text-297264249 {
+  font-size: 1.35rem;
+}
+
+#gap-1235709045 {
+  padding-top: 30px;
+}
+
+#text-3039035824 {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+#image_557153708 {
+  width: 100%;
+}
+
+#image_2036034150 {
+  width: 100%;
+}
+
+#image_1388662978 {
+  width: 100%;
+}
+
+#text-1793638704 {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+#image_551227727 {
+  width: 100%;
+}
+
+#text-2430147520 {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+#image_732733115 {
+  width: 100%;
+}
+
+#text-1576206175 {
+  font-size: 1rem;
+}
+
+#gap-526218808 {
+  padding-top: 192px;
+}
+
+#text-2509683323 {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+#image_1500853033 {
+  width: 100%;
+}
+
+#gap-1080054009 {
+  padding-top: 41px;
+}
+
+#image_862170874 {
+  width: 100%;
+}
+
+#section_1849617930 {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+#page-header-798356729 .title-bg {
+  background-image: url(../../assets/images/nha-xinh-lich-su-hinh-thanh-21.jpg);
+}
+
+#section_289448662 {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+#text-387192178 {
+  text-align: center;
+}
+
+#col-37920929 > .col-inner {
+  padding: 25px 0px 25px 0px;
+}
+
+#page-header-92282073 .title-bg {
+  background-image: url(../../assets/images/elegance-bo-suu-tap-dep.jpg);
+}
+
+#banner-grid-1716618239 .grid-col-1{height: 600px}
+#banner-grid-1716618239 .grid-col-1-2{height: 300px}
+#banner-grid-1716618239 .grid-col-1-3{height:200px}
+#banner-grid-1716618239 .grid-col-2-3{height: 400px}
+#banner-grid-1716618239 .grid-col-1-4{height: 150px}
+#banner-grid-1716618239 .grid-col-3-4{height: 450px}
+
+#image_361833446 {
+  width: 100%;
+}
+
+#image_755893469 {
+  width: 100%;
+}
+
+#image_637956119 {
+  width: 100%;
+}
+
+#image_1581466307 {
+  width: 100%;
+}
+
+#image_1825092324 {
+  width: 100%;
+}
+
+#image_506845478 {
+  width: 100%;
+}
+
+#image_1140716393 {
+  width: 100%;
+}
+
+#gap-1346437486 {
+  padding-top: 16px;
+}
+
+#text-2829812783 {
+  font-size: 1rem;
+  line-height: 1;
+  text-align: center;
+}
+
+#section_1842558814 {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  background-color: rgb(247, 247, 247);
+}
+#section_1842558814 .section-bg-overlay {
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
+#col-1371473548 > .col-inner {
+  padding: 10% 10% 10% 10%;
+}
+
+#image_915137129 {
+  width: 100%;
+}
+
+#image_790438928 {
+  width: 100%;
+}
+
+#image_1898385468 {
+  width: 100%;
+}
+
+#banner-1830224003 {
+  padding-top: 100%;
+  background-color: rgb(135, 150, 84);
+}
+
+#text-box-1164446928 {
+  width: 60%;
+}
+#text-box-1164446928 .text-box-content {
+  font-size: 100%;
+}
+
+#text-3952504706 {
+  font-size: 0.9rem;
+}
+
+#banner-886818426 {
+  padding-top: 100%;
+  background-color: rgb(47, 128, 157);
+}
+
+#text-box-1241495738 {
+  width: 60%;
+}
+#text-box-1241495738 .text-box-content {
+  font-size: 100%;
+}
+
+#text-3408138736 {
+  font-size: 0.9rem;
+}
+
+#banner-1824908502 {
+  padding-top: 100%;
+  background-color: #7a9c59;
+}
+
+#text-box-1475214361 {
+  width: 60%;
+}
+#text-box-1475214361 .text-box-content {
+  font-size: 100%;
+}
+
+#text-3236768758 {
+  font-size: 0.9rem;
+}
+
+#text-958928204 {
+  font-size: 1rem;
+  text-align: center;
+}
+
+#gap-501195152 {
+  padding-top: 30px;
+}
+
+#banner-2016249792 {
+  padding-top: 100%;
+}
+#banner-2016249792 .bg.bg-loaded {
+  background-image: url(./../../assets/images/nha-xinh-thiet-ke-noi-that-ecopark-16523.jpg);
+}
+#banner-2016249792 .overlay {
+  background-color: rgba(14, 11, 11, 0.256);
+}
+#banner-2016249792 .bg {
+  background-position: 38% 100%;
+}
+
+#text-box-1528124167 {
+  width: 64%;
+}
+#text-box-1528124167 .text-box-content {
+  font-size: 100%;
+}
+
+#text-1251763580 {
+  font-size: 0.9rem;
+}
+
+
+#banner-grid-1967568746 .grid-col-1{height: 600px}
+#banner-grid-1967568746 .grid-col-1-2{height: 300px}
+#banner-grid-1967568746 .grid-col-1-3{height:200px}
+#banner-grid-1967568746 .grid-col-2-3{height: 400px}
+#banner-grid-1967568746 .grid-col-1-4{height: 150px}
+#banner-grid-1967568746 .grid-col-3-4{height: 450px}
+
+#banner-1505231962 {
+  padding-top: 500px;
+}
+#banner-1505231962 .bg.bg-loaded {
+  background-image: url(../../assets/images/giuong-iris-dep-gia-tot-hoc-keo-1200x800.jpg);
+}
+#banner-1505231962 .bg {
+  background-position: 54% 79%;
+}
+
+#text-box-1432303155 {
+  width: 60%;
+}
+#text-box-1432303155 .text-box-content {
+  font-size: 100%;
+}
+
+#text-2089824159 {
+  color: rgb(66, 66, 69);
+}
+#text-2089824159 > * {
+  color: rgb(66, 66, 69);
+}
+
+#banner-1079514283 {
+  padding-top: 500px;
+}
+#banner-1079514283 .bg.bg-loaded {
+  background-image: url(../../assets/images/Sofa-Poppy-2.5-cho-vai-vang-5.jpg);
+}
+#banner-1079514283 .overlay {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+#text-box-840052609 {
+  width: 60%;
+}
+#text-box-840052609 .text-box-content {
+  font-size: 100%;
+}
+
+#banner-1120750387 {
+  padding-top: 500px;
+}
+#banner-1120750387 .bg.bg-loaded {
+  background-image: url(../../assets/images/Ghe-an-cabo-vai-MB204117-2.jpg);
+}
+
+#text-box-1104773910 {
+  width: 60%;
+}
+#text-box-1104773910 .text-box-content {
+  font-size: 100%;
+}
+
+#text-3333905160 {
+  color: rgb(0,0,0);
+}
+#text-3333905160 > * {
+  color: rgb(0,0,0);
+}
+
+#text-3528239104 {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+#gap-2028902923 {
+  padding-top: 30px;
+}
+
+#text-2598590051 {
+  font-size: 1rem;
+  line-height: 1.5;
 }
