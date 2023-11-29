@@ -5,8 +5,6 @@ import { useDispatch } from 'react-redux';
 
 import { actionLogout } from 'store/actions';
 
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-
 import { LOCATION } from 'constants/index';
 
 import VIFlag from 'assets/images/flags/vi.png';
@@ -17,11 +15,6 @@ import NhaXinhPhongKhachHienDai from 'assets/images/nha-xinh-phong-khach-1.jpg';
 import NhaXinhPhongKhachHienDai1200x800 from 'assets/images/nha-xinh-phong-khach-hien-dai-poppy-1-1200x800.jpg';
 import NhaXinhPhongKhachHienDai600x400 from 'assets/images/nha-xinh-phong-khach-hien-dai-poppy-1-600x400.jpg';
 import NhaXinhPhongKhachHienDai311021 from 'assets/images/nha-xinh-phong-khach-hien-dai-poppy-311021.jpg';
-
-import MenuItem from 'components/MenuItem/MenuItem';
-import NavbarModal from 'components/Modals/NavbarModal/NavbarModal';
-import CartModal from 'components/Modals/CartModal/CartModal';
-import WishlistModal from 'components/Modals/WishlistModal/WishlistModal';
 
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import './index.css';
@@ -84,7 +77,6 @@ function Header() {
   return (
     <header id="header" className="header has-sticky sticky-jump">
       <div className="header-wrapper">
-
         <div id="top-bar" className="header-top hide-for-sticky">
           <div className="flex-row container">
             <div className="flex-col hide-for-medium flex-left">
@@ -137,9 +129,7 @@ function Header() {
                   </a>
                 </li>
                 <li className="cart-item has-icon">
-
                   <a href="gio-hang/index.html" className="header-cart-link off-canvas-toggle nav-top-link is-small" data-open="#cart-popup" data-class="off-canvas-cart" title="Cart" data-pos="right">
-
                     <span className="image-icon header-cart-icon" data-icon-label="0">
                       <img width="20" height="20" className="cart-img-icon" alt="Cart" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2020%2020'%3E%3C/svg%3E" data-lazy-src={ICShopping} />
                       <noscript><img width="20" height="20" className="cart-img-icon" alt="Cart" src="wp-content/uploads/2021/09/ic-shopping.png" /></noscript>
@@ -153,19 +143,14 @@ function Header() {
                         <div className="is-divider" />
                       </div>
                       <div className="widget_shopping_cart_content">
-
                         <p className="woocommerce-mini-cart__empty-message">Không có sản phẩm nào trong giỏ hàng</p>
-
                       </div>
                       <div className="cart-sidebar-content relative" />
                     </div>
                   </div>
-
                 </li>
-                <li className="account-item has-icon
-    "
-                >
 
+                <li className="account-item has-icon">
                   <a
                     href="tai-khoan/index.html"
                     className="nav-top-link nav-top-not-logged-in is-small"
@@ -176,9 +161,7 @@ function Header() {
                       {' '}
                       <i className="icon-user" />
                     </span>
-
                   </a>
-
                 </li>
               </ul>
             </div>
@@ -204,19 +187,15 @@ function Header() {
             <div id="menu-icon" className="flex-col menu-icon">
               <div className="nav-icon has-icon menu_bar desktop">
                 <a href="/" data-open="#product-categories-menu" data-pos="left" data-bg="main-menu-overlay" data-color="" className="is-small" aria-label="Menu" aria-controls="product-categories-menu" aria-expanded="false">
-
                   <img width="30" height="22" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2030%2022'%3E%3C/svg%3E" alt="Menu bar" data-lazy-src={MenuBar} />
                   <noscript><img width="30" height="22" src="wp-content/themes/flatsome-child/assets/images/menu-bar.png" alt="Menu bar" /></noscript>
-
                 </a>
               </div>
 
               <div className="nav-icon has-icon menu_bar mobile">
                 <a href="/" data-open="#main-menu" data-pos="left" data-bg="main-menu-overlay" data-color="" className="is-small" aria-label="Menu" aria-controls="main-menu" aria-expanded="false">
-
                   <img width="30" height="22" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2030%2022'%3E%3C/svg%3E" alt="Menu bar" data-lazy-src={MenuBar} />
                   <noscript><img width="30" height="22" src="wp-content/themes/flatsome-child/assets/images/menu-bar.png" alt="Menu bar" /></noscript>
-
                 </a>
               </div>
             </div>
@@ -233,19 +212,15 @@ function Header() {
               <ul className="mobile-nav nav nav-left ">
                 <div className="nav-icon has-icon menu_bar desktop">
                   <a href="/" data-open="#product-categories-menu" data-pos="left" data-bg="main-menu-overlay" data-color="" className="is-small" aria-label="Menu" aria-controls="product-categories-menu" aria-expanded="false">
-
                     <img width="30" height="22" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2030%2022'%3E%3C/svg%3E" alt="Menu bar" data-lazy-src={MenuBar} />
                     <noscript><img width="30" height="22" src="wp-content/themes/flatsome-child/assets/images/menu-bar.png" alt="Menu bar" /></noscript>
-
                   </a>
                 </div>
 
                 <div className="nav-icon has-icon menu_bar mobile">
                   <a href="/" data-open="#main-menu" data-pos="left" data-bg="main-menu-overlay" data-color="" className="is-small" aria-label="Menu" aria-controls="main-menu" aria-expanded="false">
-
                     <img width="30" height="22" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2030%2022'%3E%3C/svg%3E" alt="Menu bar" data-lazy-src={MenuBar} />
                     <noscript><img width="30" height="22" src="wp-content/themes/flatsome-child/assets/images/menu-bar.png" alt="Menu bar" /></noscript>
-
                   </a>
                 </div>
               </ul>
@@ -261,24 +236,17 @@ function Header() {
                     <i className="icon-angle-down" />
                   </a>
                   <div className="sub-menu nav-dropdown">
-                    {' '}
                     <section className="section" id="section_917526953">
                       <div className="bg section-bg fill bg-fill  bg-loaded" />
 
                       <div className="section-content relative">
-
                         <div className="row" id="row-1427509508">
-
                           <div id="col-613881319" className="col medium-9 small-12 large-9">
                             <div className="col-inner">
-
                               <div className="row" id="row-1171157161">
-
                                 <div id="col-267792164" className="col medium-2 small-6 large-2">
                                   <div className="col-inner">
-
                                     <div className="ux-menu stack stack-col justify-start">
-
                                       <div className="ux-menu-link flex menu-item">
                                         <a className="ux-menu-link__link flex" href="danh-muc/phong-khach/sofa/index.html">
                                           <span className="ux-menu-link__text">
@@ -374,9 +342,7 @@ function Header() {
 
                                 <div id="col-617467414" className="col medium-2 small-6 large-2">
                                   <div className="col-inner">
-
                                     <div className="ux-menu stack stack-col justify-start">
-
                                       <div className="ux-menu-link flex menu-item">
                                         <a className="ux-menu-link__link flex" href="danh-muc/phong-an/ban-an/index.html">
                                           <span className="ux-menu-link__text">
@@ -432,17 +398,13 @@ function Header() {
                                           </span>
                                         </a>
                                       </div>
-
                                     </div>
-
                                   </div>
                                 </div>
 
                                 <div id="col-734556994" className="col medium-2 small-6 large-2">
                                   <div className="col-inner">
-
                                     <div className="ux-menu stack stack-col justify-start">
-
                                       <div className="ux-menu-link flex menu-item">
                                         <a className="ux-menu-link__link flex" href="danh-muc/phong-ngu/giuong/index.html">
                                           <span className="ux-menu-link__text">
@@ -498,17 +460,13 @@ function Header() {
                                           </span>
                                         </a>
                                       </div>
-
                                     </div>
-
                                   </div>
                                 </div>
 
                                 <div id="col-1385386632" className="col medium-2 small-6 large-2">
                                   <div className="col-inner">
-
                                     <div className="ux-menu stack stack-col justify-start">
-
                                       <div className="ux-menu-link flex menu-item">
                                         <a className="ux-menu-link__link flex" href="danh-muc/phong-lam-viec/ban-lam-viec/index.html">
                                           <span className="ux-menu-link__text">
@@ -548,17 +506,13 @@ function Header() {
                                           </span>
                                         </a>
                                       </div>
-
                                     </div>
-
                                   </div>
                                 </div>
 
                                 <div id="col-1570284053" className="col medium-2 small-6 large-2">
                                   <div className="col-inner">
-
                                     <div className="ux-menu stack stack-col justify-start">
-
                                       <div className="ux-menu-link flex menu-item">
                                         <a className="ux-menu-link__link flex" href="danh-muc/hang-trang-tri/den/index.html">
                                           <span className="ux-menu-link__text">
@@ -662,17 +616,13 @@ function Header() {
                                           </span>
                                         </a>
                                       </div>
-
                                     </div>
-
                                   </div>
                                 </div>
 
                                 <div id="col-2031353246" className="col medium-2 small-12 large-2">
                                   <div className="col-inner">
-
                                     <div className="ux-menu stack stack-col justify-start ux-menu--divider-solid">
-
                                       <div className="ux-menu-link flex menu-item">
                                         <a className="ux-menu-link__link flex" href="danh-muc/hang-trang-tri/dung-cu-bep/index.html">
                                           <span className="ux-menu-link__text">
@@ -688,43 +638,35 @@ function Header() {
                                           </span>
                                         </a>
                                       </div>
-
                                     </div>
-
                                   </div>
                                 </div>
-
                               </div>
-
                             </div>
                           </div>
 
                           <div id="col-40186864" className="col medium-3 small-12 large-3">
                             <div className="col-inner">
-
                               <div className="img has-hover img_menu_mega x md-x lg-x y md-y lg-y" id="image_1349304432">
                                 <div className="img-inner dark">
                                   <img width="1020" height="680" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201020%20680'%3E%3C/svg%3E" className="attachment-large size-large" alt="phòng khách hiện đại poppy" decoding="async" data-lazy-srcset={`${NhaXinhPhongKhachHienDai1200x800} 1200w, ${NhaXinhPhongKhachHienDai311021} 300w, ${NhaXinhPhongKhachHienDai600x400} 600w, ${NhaXinhPhongKhachHienDai} 1500w`} data-lazy-sizes="(max-width: 1020px) 100vw, 1020px" data-lazy-src={NhaXinhPhongKhachHienDai1200x800} />
                                   <noscript><img width="1020" height="680" src="wp-content/uploads/2021/10/nha-xinh-phong-khach-hien-dai-poppy-1-1200x800.jpg" className="attachment-large size-large" alt="phòng khách hiện đại poppy" decoding="async" srcSet={`${NhaXinhPhongKhachHienDai1200x800} 1200w, ${NhaXinhPhongKhachHienDai311021} 300w, ${NhaXinhPhongKhachHienDai600x400} 600w, ${NhaXinhPhongKhachHienDai} 1500w" sizes="(max-width: 1020px) 100vw, 1020px`} /></noscript>
                                 </div>
-
                               </div>
-
                             </div>
                           </div>
-
                         </div>
-
                       </div>
-
                     </section>
                   </div>
                 </li>
+
                 <li id="menu-item-8010" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-8010 menu-item-design-default has-dropdown">
                   <a href="phong-khach/index.html" className="nav-top-link">
                     Phòng
                     <i className="icon-angle-down" />
                   </a>
+
                   <ul className="sub-menu nav-dropdown nav-dropdown-default">
                     <li id="menu-item-8199" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-8199"><a href="phong-khach/index.html">Phòng khách</a></li>
                     <li id="menu-item-24423" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-24423"><a href="phong-an/index.html">Phòng ăn</a></li>
@@ -735,6 +677,7 @@ function Header() {
                     <li id="menu-item-27855" className="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-27855"><a href="danh-muc/ngoai-that/index.html">Ngoại thất</a></li>
                   </ul>
                 </li>
+
                 <li id="menu-item-24226" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-24226 menu-item-design-default"><a href="bo-suu-tap/index.html" className="nav-top-link">Bộ sưu tập</a></li>
                 <li id="menu-item-290" className="menu-item menu-item-type-custom menu-item-object-custom menu-item-290 menu-item-design-default"><a href="thiet-ke-noi-that/index.html" className="nav-top-link">Thiết kế nội thất</a></li>
                 <li id="menu-item-288" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-288 menu-item-design-default"><a href="showroom-ao/index.html" className="nav-top-link">Cửa hàng 360 độ</a></li>
@@ -775,10 +718,9 @@ function Header() {
               <ul className="mobile-nav nav nav-right huan ">
                 <li className="header-search header-search-dropdown has-icon has-dropdown menu-item-has-children">
                   <div className="header-button">
-                    {' '}
                     <a href="/" aria-label="Search" className="icon button round is-outline is-small"><i className="icon-search" /></a>
                   </div>
-                  {' '}
+
                   <ul className="nav-dropdown nav-dropdown-default">
                     <li className="header-search-form search-form html relative has-icon">
                       <div className="header-search-form-wrapper">
@@ -807,23 +749,20 @@ function Header() {
                 </li>
                 <li className="html custom html_topbar_right"><a href="he-thong-cua-hang/index.html" aria-label="home"><i className="fal fa-map-marker-alt" /></a></li>
                 <li className="cart-item has-icon">
-
                   <a href="gio-hang/index.html" className="header-cart-link off-canvas-toggle nav-top-link is-small" data-open="#cart-popup" data-class="off-canvas-cart" title="Cart" data-pos="right">
-
                     <span className="image-icon header-cart-icon" data-icon-label="0">
                       <img width="20" height="20" className="cart-img-icon" alt="Cart" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2020%2020'%3E%3C/svg%3E" data-lazy-src={ICShopping} />
                       <noscript><img width="20" height="20" className="cart-img-icon" alt="Cart" src="wp-content/uploads/2021/09/ic-shopping.png" /></noscript>
                     </span>
                   </a>
-
                 </li>
               </ul>
             </div>
-
           </div>
 
           <div className="container"><div className="top-divider full-width" /></div>
         </div>
+
         <div className="header-bg-container fill">
           <div className="header-bg-image fill" />
           <div className="header-bg-color fill" />
