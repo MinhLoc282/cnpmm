@@ -26,9 +26,6 @@ import AccountPage from 'pages/Account/AccountPage';
 import WishlistPage from 'pages/Wishlist/WishlistPage';
 import CartPage from 'pages/Cart/CartPage';
 
-import LoginPage from 'components/Login/LoginPage';
-import RegisterPage from 'components/Register/RegisterPage';
-
 import './App.css';
 
 function App() {
@@ -55,10 +52,6 @@ function App() {
           <Route path={LOCATION.WISHLIST} element={<WishlistPage />} />
           <Route path={LOCATION.CART} element={<CartPage />} />
         </Route>
-
-        <Route path={LOCATION.LOGIN} element={<LoginPage />} />
-
-        <Route path={LOCATION.REGISTER} element={<RegisterPage />} />
       </Routes>
     </BrowserRouter>
   );
