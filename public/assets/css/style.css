@@ -172,12 +172,14 @@ a,
 
 a.btn,
 button.btn {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
     min-width: 170px;
-    height: 50px;
+    /* height: 50px; */
     border-radius: 100px;
     padding: 0;
     text-align: center;
-    line-height: 52px;
     font-size: 14px;
     font-weight: 400;
     text-transform: uppercase;
@@ -4763,7 +4765,8 @@ section .gray_font {
     line-height: 50px;
     color: #fff;
     font-weight: 500;
-    padding: 0 15px font-size: 14px;
+    padding: 0 15px;
+    font-size: 14px;
     border-radius: 5px;
     position: relative;
 }
@@ -8677,25 +8680,6 @@ img[data-toggle="modal"] {
 .back_blog img {
     width: auto;
     float: right;
-}
-
-form button {
-    width: 230px;
-    height: 80px;
-    border: none;
-    border-radius: 100px;
-    background: #2d2d2d;
-    font-weight: 600;
-    font-size: 20px;
-    text-transform: uppercase;
-    color: #e1e7d8;
-    margin-top: 35px;
-}
-
-form button:hover,
-form button:focus {
-    background: #fcbf49;
-    color: #2d2d2d;
 }
 
 .read_more_bt {

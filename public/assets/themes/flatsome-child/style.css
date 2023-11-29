@@ -11,7 +11,7 @@ Version: 3.0
 body{
   font-family: 'Poppins', sans-serif;
   font-size: 18px;
-  background: #fff;  
+  background: #fff;
 }
 .navbar{
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
@@ -124,7 +124,7 @@ li.price_km a{
 }
 b, strong {
   font-weight: 600 !important;
-} 
+}
 .header-nav-main > li > a {
   font-weight: 400 !important;
 }
@@ -449,7 +449,7 @@ input#woocommerce-product-search-field-0 {
   float: left;
   margin-top: 3px;
 }
-/*** Huan commnet lange 
+/*** Huan commnet lange
 a.curent_lang:before {
   content: "/";
   margin-left: 6px;
@@ -532,7 +532,7 @@ button.wishlist-button.button.is-outline.circle.icon:hover{
   float: left;
   width: 100%;
   margin-top: 15px;
-  display: none;  
+  display: none;
 }
 .product-box-after:hover{
   display: block;
@@ -1055,7 +1055,7 @@ p.price.product-page-price.price-on-sale del bdi{
   font-size: 14px;
   color: #A9A9B2;
 
-} 
+}
 .product-info p.price.product-page-price.price-on-sale {
   margin: 3px;
 }
@@ -1140,7 +1140,7 @@ p.price.product-page-price.price-on-sale del bdi{
   border: none;
   padding: 30px 0;
   font-size: 14px;
-  
+
 }
 .page-archive-header.life-style {
   position: relative;height: 560px;
@@ -1170,7 +1170,7 @@ p.price.product-page-price.price-on-sale del bdi{
 }
 .sidebar-left ul{
   list-style: none;
-  
+
 }
 .sidebar-left ul li {
   width: 100%;
@@ -1184,7 +1184,7 @@ p.price.product-page-price.price-on-sale del bdi{
   font-weight: bold;
   font-size: 16px !important;
     border-left: 3px solid #FBAF1A;
-    
+
 }
 .lienhe input.wpcf7-form-control.wpcf7-submit.btn {
   margin-right: 0;
@@ -1209,7 +1209,7 @@ div#cart-popup .woocommerce-mini-cart__buttons .wc-forward{
   color: #fff;
   font-size: 16px;
   font-weight: 600;
-  
+
 }
 div#cart-popup a.button.checkout.wc-forward{
   background: transparent;
@@ -1356,7 +1356,7 @@ tr.order-total th, tr.order-total td{
 .page-checkout  .wc-go-to-shopping {
   width: 49%;
     float: left;
-   
+
 }
 .shipping_info {
   font-size: 14px;
@@ -1427,7 +1427,7 @@ tr.order-total th, tr.order-total td{
   font-size: 12px;
   font-weight: 400;
   color: #000;
-  
+
 }
 #customer_details .woocommerce-billing-fields input[type="radio"]{
   display: none;
@@ -1592,7 +1592,7 @@ table.woocommerce-table.woocommerce-table--order-details.shop_table.order_detail
   box-shadow: none;
 }
 .woocommerce-order-details th {
-  
+
 }
 .copyright-footer {
   font-size: 14px;
@@ -1699,7 +1699,7 @@ span.user-name.inline-block {
 .my-account button.btn.btn-status.active {
   color: #000;
   border-bottom: 2px solid #FBAF1A;
-  
+
 }
 .my-account .order-items-wrapper .order-item {
   border-top: 1px solid #F6F7F8;
@@ -1793,7 +1793,7 @@ span.user-name.inline-block {
   font-size: 12px;
   font-weight: 400;
   color: #000;
-  
+
 }
 .ocwma_table_bill input[type="radio"]{
   display: none;
@@ -1952,14 +1952,14 @@ p.same-h3 {
   font-size: 40px;
   font-weight: 600;
   color: #0A0A0B;
-  
+
 }
 p.same-h3.second-section {
   padding-top: 1.3em;
   margin-top: 1.3em;
   border-top: 1px solid #ddd;
 }
-/*** 
+/***
 .sp_addmore  .iterm_pr:after{
   content: "";
   width: 17px;
@@ -1984,7 +1984,7 @@ p.same-h3.second-section {
 }
 .info_product {
   min-height: 100px;
-} 
+}
 ul.page-numbers.nav-pagination li a, span.page-number.current {
   border:1px solid #0A0A0B !important;
   border-radius: 0 !important;
@@ -2013,7 +2013,7 @@ mark {
 .shop_table.order_details tfoot {
   margin-top: 15px;
   width: 100%;
- 
+
 }
 .shop_table.order_details tfoot tr td{
   border:none;
@@ -2204,7 +2204,7 @@ p.stock.out-of-stock {
 .wc_payment_methods.payment_methods.methods .payment-method-wrapper .wc_payment_method input[type="radio"]:checked+label {
   border: 1px solid #4B4E51;
   color: #4B4E51;
-  
+
 }
 .wc_payment_methods.payment_methods.methods .payment-method-wrapper .wc_payment_method input[type="radio"]{
   display: none;
@@ -2269,8 +2269,7 @@ p.stock.out-of-stock {
   margin-top: 50px;
 }
 .mfp-close{
-  left: 405px;
-  right: auto;
+  display: none;
 }
 .lang a[hreflang="en"]{
 	/* display: none; */
@@ -2637,7 +2636,7 @@ form#find_stock button {
 }
 .yith-wcan-filters .apply-filters {
     margin-top: 0;
-    
+
     margin-right: 0;
 }
 .sp_addmore p.same-h3 {
@@ -2851,7 +2850,7 @@ a.bt_timcuahang {
   font-size: 30px;
 }
 .product {
-  
+
 }
 .single-product .design_air{
   margin-left: 0;
@@ -3045,7 +3044,7 @@ ul.page-numbers.nav-pagination li a {
   p.is-smaller.no-text-overflow.product-tag{
     font-size: 12px;
   }
-  
+
 
 }
 

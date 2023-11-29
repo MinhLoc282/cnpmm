@@ -13,6 +13,9 @@ export const LOCATION = {
   PRODUCT_CATEGORY: '/danh-muc',
   PROMOTION: '/khuyen-mai',
   SHOWROOM: '/showroom-ao',
+  ACCOUNT: '/tai-khoan',
+  WISHLIST: '/tai-khoan/wishlist',
+  CART: '/gio-hang',
 
   LOGIN: '/login',
   REGISTER: '/register',

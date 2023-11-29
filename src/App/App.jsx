@@ -22,6 +22,9 @@ import BedroomPage from 'pages/Rooms/BedRoom/BedRoomPage';
 import ProductCategoryPage from 'pages/ProductCategory/ProductCategoryPage';
 import PromotionPage from 'pages/Promotion/PromotionPage';
 import ShowroomPage from 'pages/Showroom/ShowroomPage';
+import AccountPage from 'pages/Account/AccountPage';
+import WishlistPage from 'pages/Wishlist/WishlistPage';
+import CartPage from 'pages/Cart/CartPage';
 
 import LoginPage from 'components/Login/LoginPage';
 import RegisterPage from 'components/Register/RegisterPage';
@@ -48,6 +51,9 @@ function App() {
           <Route path={`${LOCATION.PRODUCT_CATEGORY}/:id`} element={<ProductPage />} />
           <Route path={LOCATION.PROMOTION} element={<PromotionPage />} />
           <Route path={LOCATION.SHOWROOM} element={<ShowroomPage />} />
+          <Route path={LOCATION.ACCOUNT} element={<AccountPage />} />
+          <Route path={LOCATION.WISHLIST} element={<WishlistPage />} />
+          <Route path={LOCATION.CART} element={<CartPage />} />
         </Route>
 
         <Route path={LOCATION.LOGIN} element={<LoginPage />} />
