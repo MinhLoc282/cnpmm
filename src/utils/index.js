@@ -27,19 +27,6 @@ export const removeSpacesWithTrim = (data) => {
   return newData;
 };
 
-export const getRefreshTokenFromCookie = () => {
-  const cookies = document.cookie.split(';');
-
-  for (let i = 0; i < cookies.length; i += 1) {
-    const cookie = cookies[i].trim();
-    if (cookie.startsWith('refreshToken=')) {
-      return cookie.substring('refreshToken='.length);
-    }
-  }
-
-  return null;
-};
-
 export async function calculateDistance(lat1, lon1, lat2, lon2) {
   const response = await fetch(`https://api.tomtom.com/routing/1/calculateRoute/${lat1},${lon1}:${lat2},${lon2}/json?key=${process.env.REACT_APP_TOMTOM_KEY}`);
   const data = await response.json();
@@ -78,7 +65,6 @@ export const decodeJWT = (token) => {
     const decoded = jwt.decode(token);
     return decoded;
   } catch (error) {
-    console.error('Error decoding token:', error);
     return null;
   }
 };

@@ -18,8 +18,6 @@ function* login({ payload }) {
         username,
         password,
       },
-
-      callback,
     } = payload;
 
     const newData = removeSpacesWithTrim({
@@ -29,8 +27,8 @@ function* login({ payload }) {
 
     const response = yield call(authAPI.login, newData);
 
-    localStorage.setItem('accessToken', response.data.accessToken);
-    document.cookie = `refreshToken=${response.data.refreshToken}; path=/; secure; HttpOnly`;
+    localStorage.setItem('accessToken', response.data.token);
+
     localStorage.setItem('accessTokenExpirationTime', 24 * 60 * 60 * 1000);
 
     yield put(actionLoginSuccess(response.data));
@@ -38,8 +36,6 @@ function* login({ payload }) {
     toast.success(response.message);
 
     axiosClient.defaults.headers.Authorization = `Bearer ${response.data.accessToken}`;
-
-    callback();
   } catch (error) {
     toast.error(error.message);
 

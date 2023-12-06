@@ -58,7 +58,7 @@ function InspirationPage() {
 
                                 <div className="is-divider divider clearfix" />
 
-                                <a href="../../category/goc-cam-hung/index.html" target="_self" className="button white is-outline is-larger">
+                                <a href="/category/goc-cam-hung" target="_self" className="button white is-outline is-larger">
                                   <span>Xem thêm</span>
                                 </a>
 
@@ -89,7 +89,7 @@ function InspirationPage() {
 
                     </div>
                     <div className="banner-layers container">
-                      <a className="fill" href="../../gallery/index.html" aria-label="banner-link"><div className="fill banner-link" /></a>
+                      <a className="fill" href="/gallery" aria-label="banner-link"><div className="fill banner-link" /></a>
 
                       <div id="text-box-2057150342" className="text-box banner-layer x50 md-x50 lg-x50 y50 md-y50 lg-y50 res-text">
                         <div className="text-box-content text dark">
@@ -136,7 +136,7 @@ function InspirationPage() {
 
           <div className="col post-item">
             <div className="col-inner">
-              <a href="../../den-nha-xinh-chon-qua-tinh-te/index.html" className="plain">
+              <a href="/den-nha-xinh-chon-qua-tinh-te" className="plain">
                 <div className="box box-normal box-text-bottom box-blog-post has-hover">
                   <div className="box-image">
                     <div className="image-cover" style={{ paddingTop: '56.25%' }}>
@@ -160,7 +160,7 @@ function InspirationPage() {
           </div>
           <div className="col post-item">
             <div className="col-inner">
-              <a href="../../phan-loai-va-goi-y-cach-chon-den-trang-tri/index.html" className="plain">
+              <a href="/phan-loai-va-goi-y-cach-chon-den-trang-tri" className="plain">
                 <div className="box box-normal box-text-bottom box-blog-post has-hover">
                   <div className="box-image">
                     <div className="image-cover" style={{ paddingTop: '56.25%' }}>
@@ -184,7 +184,7 @@ function InspirationPage() {
           </div>
           <div className="col post-item">
             <div className="col-inner">
-              <a href="../../nghe-thuat-chon-den-trang-tri-cho-khong-gian-hien-dai/index.html" className="plain">
+              <a href="/nghe-thuat-chon-den-trang-tri-cho-khong-gian-hien-dai" className="plain">
                 <div className="box box-normal box-text-bottom box-blog-post has-hover">
                   <div className="box-image">
                     <div className="image-cover" style={{ paddingTop: '56.25%' }}>
@@ -208,7 +208,7 @@ function InspirationPage() {
           </div>
           <div className="col post-item">
             <div className="col-inner">
-              <a href="../../tao-lap-phong-an-chat-luong-voi-5-cach-don-gian/index.html" className="plain">
+              <a href="/tao-lap-phong-an-chat-luong-voi-5-cach-don-gian" className="plain">
                 <div className="box box-normal box-text-bottom box-blog-post has-hover">
                   <div className="box-image">
                     <div className="image-cover" style={{ paddingTop: '56.25%' }}>
@@ -232,7 +232,7 @@ function InspirationPage() {
           </div>
           <div className="col post-item">
             <div className="col-inner">
-              <a href="../../noi-that-go-soi-su-giao-thoa-cua-ve-dep-va-chat-luong-2/index.html" className="plain">
+              <a href="/noi-that-go-soi-su-giao-thoa-cua-ve-dep-va-chat-luong-2" className="plain">
                 <div className="box box-normal box-text-bottom box-blog-post has-hover">
                   <div className="box-image">
                     <div className="image-cover" style={{ paddingTop: '56.25%' }}>
@@ -256,7 +256,7 @@ function InspirationPage() {
           </div>
           <div className="col post-item">
             <div className="col-inner">
-              <a href="../../noi-that-go-soi-su-giao-thoa-cua-ve-dep-va-chat-luong/index.html" className="plain">
+              <a href="/noi-that-go-soi-su-giao-thoa-cua-ve-dep-va-chat-luong" className="plain">
                 <div className="box box-normal box-text-bottom box-blog-post has-hover">
                   <div className="box-image">
                     <div className="image-cover" style={{ paddingTop: '56.25%' }}>
@@ -280,7 +280,7 @@ function InspirationPage() {
           </div>
           <div className="col post-item">
             <div className="col-inner">
-              <a href="../../nhung-y-tuong-trang-tri-phong-khach-noi-bat/index.html" className="plain">
+              <a href="/nhung-y-tuong-trang-tri-phong-khach-noi-bat" className="plain">
                 <div className="box box-normal box-text-bottom box-blog-post has-hover">
                   <div className="box-image">
                     <div className="image-cover" style={{ paddingTop: '56.25%' }}>
@@ -304,7 +304,7 @@ function InspirationPage() {
           </div>
           <div className="col post-item">
             <div className="col-inner">
-              <a href="../../co-nen-mua-sofa-da-cong-nghiep-khong/index.html" className="plain">
+              <a href="/co-nen-mua-sofa-da-cong-nghiep-khong" className="plain">
                 <div className="box box-normal box-text-bottom box-blog-post has-hover">
                   <div className="box-image">
                     <div className="image-cover" style={{ paddingTop: '56.25%' }}>
@@ -334,7 +334,7 @@ function InspirationPage() {
 
           <div className="col post-item">
             <div className="col-inner">
-              <a href="../../ve-dep-ben-vung-voi-giuong-ngu-may/index.html" className="plain">
+              <a href="/ve-dep-ben-vung-voi-giuong-ngu-may" className="plain">
                 <div className="box box-text-bottom box-blog-post has-hover">
                   <div className="box-image">
                     <div className="image-cover" style={{ paddingTop: '75%' }}>
@@ -358,7 +358,7 @@ function InspirationPage() {
           </div>
           <div className="col post-item">
             <div className="col-inner">
-              <a href="../../tha-minh-em-ai-tren-giuong-ngu-maxine/index.html" className="plain">
+              <a href="/tha-minh-em-ai-tren-giuong-ngu-maxine" className="plain">
                 <div className="box box-text-bottom box-blog-post has-hover">
                   <div className="box-image">
                     <div className="image-cover" style={{ paddingTop: '75%' }}>
@@ -382,7 +382,7 @@ function InspirationPage() {
           </div>
           <div className="col post-item">
             <div className="col-inner">
-              <a href="../../giuong-ngu-pio-1m8/index.html" className="plain">
+              <a href="/giuong-ngu-pio-1m8" className="plain">
                 <div className="box box-text-bottom box-blog-post has-hover">
                   <div className="box-image">
                     <div className="image-cover" style={{ paddingTop: '75%' }}>
@@ -406,7 +406,7 @@ function InspirationPage() {
           </div>
           <div className="col post-item">
             <div className="col-inner">
-              <a href="../../phong-an-may/index.html" className="plain">
+              <a href="/phong-an-may" className="plain">
                 <div className="box box-text-bottom box-blog-post has-hover">
                   <div className="box-image">
                     <div className="image-cover" style={{ paddingTop: '75%' }}>
@@ -430,7 +430,7 @@ function InspirationPage() {
           </div>
           <div className="col post-item">
             <div className="col-inner">
-              <a href="../../phong-an-bridge-nau-tram/index.html" className="plain">
+              <a href="/phong-an-bridge-nau-tram" className="plain">
                 <div className="box box-text-bottom box-blog-post has-hover">
                   <div className="box-image">
                     <div className="image-cover" style={{ paddingTop: '75%' }}>
@@ -454,7 +454,7 @@ function InspirationPage() {
           </div>
           <div className="col post-item">
             <div className="col-inner">
-              <a href="../../phong-ngu-victoria/index.html" className="plain">
+              <a href="/phong-ngu-victoria" className="plain">
                 <div className="box box-text-bottom box-blog-post has-hover">
                   <div className="box-image">
                     <div className="image-cover" style={{ paddingTop: '75%' }}>
@@ -478,7 +478,7 @@ function InspirationPage() {
           </div>
           <div className="col post-item">
             <div className="col-inner">
-              <a href="../../phong-ngu-go-pop/index.html" className="plain">
+              <a href="/phong-ngu-go-pop" className="plain">
                 <div className="box box-text-bottom box-blog-post has-hover">
                   <div className="box-image">
                     <div className="image-cover" style={{ paddingTop: '75%' }}>
@@ -502,7 +502,7 @@ function InspirationPage() {
           </div>
           <div className="col post-item">
             <div className="col-inner">
-              <a href="../../phong-ngu-thong-minh-iris/index.html" className="plain">
+              <a href="/phong-ngu-thong-minh-iris" className="plain">
                 <div className="box box-text-bottom box-blog-post has-hover">
                   <div className="box-image">
                     <div className="image-cover" style={{ paddingTop: '75%' }}>
@@ -526,7 +526,7 @@ function InspirationPage() {
           </div>
         </div>
 
-        <a href="../../category/goc-cam-hung/index.html" target="_self" className="button success">
+        <a href="/category/goc-cam-hung" target="_self" className="button success">
           <span>xem tất cả</span>
         </a>
 

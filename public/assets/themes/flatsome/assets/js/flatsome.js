@@ -6189,7 +6189,7 @@
       return window.requestAnimationFrame(o)
   }
   )),
-  window.addEventListener("DOMNodeInserted", (function() {
+  window.addEventListener("MutationObserverf", (function() {
       return window.requestAnimationFrame(o)
   }
   )),

@@ -764,14 +764,7 @@ function InteriorDesignPage() {
                             </div>
 
                             <div id="col-1427039574" className="col medium-2 small-12 large-2">
-                              <div className="col-inner text-center">
-
-                                <a href="../../he-thong-cua-hang/index.html" target="_self" className="button white is-outline lowercase">
-                                  <span>Tìm cửa hàng</span>
-                                  <i className="icon-angle-right" />
-                                </a>
-
-                              </div>
+                              <div className="col-inner text-center" />
                             </div>
 
                           </div>
