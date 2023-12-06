@@ -1,7 +1,8 @@
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
+
+import { useFormik } from 'formik';
 
 import { actionLogout } from 'store/actions';
 
@@ -16,6 +17,10 @@ import NhaXinhPhongKhachHienDai1200x800 from 'assets/images/nha-xinh-phong-khach
 import NhaXinhPhongKhachHienDai600x400 from 'assets/images/nha-xinh-phong-khach-hien-dai-poppy-1-600x400.jpg';
 import NhaXinhPhongKhachHienDai311021 from 'assets/images/nha-xinh-phong-khach-hien-dai-poppy-311021.jpg';
 
+import Wishlist from 'components/Wishlist/Wishlist';
+import Navbar from 'components/Navbar/Navbar';
+import LoginForm from 'components/LoginForm/LoginForm';
+
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import './index.css';
 
@@ -23,42 +28,6 @@ function Header() {
   const dispatch = useDispatch();
 
   const [isLoggedIn, setIsLoggedIn] = useState(!!localStorage.getItem('accessToken'));
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [isNavbarModalOpen, setIsNavbarModalOpen] = useState(false);
-  const [isCartModalOpen, setIsCartModalOpen] = useState(false);
-  const [isWishlistModalOpen, setIsWishlistModalOpen] = useState(false);
-
-  const handleMouseEnter = () => {
-    setIsDropdownOpen(true);
-  };
-
-  const handleMouseLeave = () => {
-    setIsDropdownOpen(false);
-  };
-
-  const openNavbarModal = () => {
-    setIsNavbarModalOpen(true);
-  };
-
-  const closeNavbarModal = () => {
-    setIsNavbarModalOpen(false);
-  };
-
-  const openCartModal = () => {
-    setIsCartModalOpen(true);
-  };
-
-  const closeCartModal = () => {
-    setIsCartModalOpen(false);
-  };
-
-  const openWishlistModal = () => {
-    setIsWishlistModalOpen(true);
-  };
-
-  const closeWishlistModal = () => {
-    setIsWishlistModalOpen(false);
-  };
 
   const handleLogout = () => {
     dispatch(actionLogout());
@@ -69,6 +38,17 @@ function Header() {
     const accessToken = localStorage.getItem('accessToken');
     setIsLoggedIn(!!accessToken);
   };
+
+  const validation = useFormik({
+    initialValues: {
+      search: '',
+    },
+    onSubmit: (values, { resetForm }) => {
+      console.log('Search value submitted:', values.search);
+
+      resetForm();
+    },
+  });
 
   useEffect(() => {
     updateLoginStatus();
@@ -99,9 +79,9 @@ function Header() {
                     </a>
                   </p>
                 </li>
-                <li id="menu-item-594" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-594 menu-item-design-default"><Link to="/gioi-thieu" className="nav-top-link">Giới thiệu</Link></li>
-                <li id="menu-item-573" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-573 menu-item-design-default"><Link to="/khuyen-mai" className="nav-top-link">Khuyến mãi</Link></li>
-                <li id="menu-item-27798" className="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-27798 menu-item-design-default"><Link to="/danh-muc/giam-gia-dac-biet" className="nav-top-link">Giảm giá đặc biệt</Link></li>
+                <li id="menu-item-594" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-594 menu-item-design-default"><a href="/gioi-thieu" className="nav-top-link">Giới thiệu</a></li>
+                <li id="menu-item-573" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-573 menu-item-design-default"><a href="/khuyen-mai" className="nav-top-link">Khuyến mãi</a></li>
+                <li id="menu-item-27798" className="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-27798 menu-item-design-default"><a href="/danh-muc/giam-gia-dac-biet" className="nav-top-link">Giảm giá đặc biệt</a></li>
               </ul>
             </div>
 
@@ -111,7 +91,6 @@ function Header() {
 
             <div className="flex-col hide-for-medium flex-right">
               <ul className="nav top-bar-nav nav-right nav-small  nav-">
-                <li className="html custom html_topbar_right"><Link to="/he-thong-cua-hang" aria-label="map"><i className="fal fa-map-marker-alt" /></Link></li>
                 <li className="header-wishlist-icon">
                   <a
                     href="/"
@@ -129,12 +108,12 @@ function Header() {
                   </a>
                 </li>
                 <li className="cart-item has-icon">
-                  <Link to="/gio-hang" className="header-cart-link off-canvas-toggle nav-top-link is-small" data-open="#cart-popup" data-class="off-canvas-cart" title="Cart" data-pos="right">
+                  <a href="/gio-hang" className="header-cart-link off-canvas-toggle nav-top-link is-small" data-open="#cart-popup" data-class="off-canvas-cart" title="Cart" data-pos="right">
                     <span className="image-icon header-cart-icon" data-icon-label="0">
                       <img width="20" height="20" className="cart-img-icon" alt="Cart" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2020%2020'%3E%3C/svg%3E" data-lazy-src={ICShopping} />
                       <noscript><img width="20" height="20" className="cart-img-icon" alt="Cart" src={ICShopping} /></noscript>
                     </span>
-                  </Link>
+                  </a>
 
                   <div id="cart-popup" className="mfp-hide widget_shopping_cart">
                     <div className="cart-popup-inner inner-padding">
@@ -151,17 +130,17 @@ function Header() {
                 </li>
 
                 <li className="account-item has-icon">
-                  <Link
-                    to="/tai-khoan"
+                  <a
+                    href="/tai-khoan"
                     className="nav-top-link nav-top-not-logged-in is-small"
-                    data-open="#login-form-popup"
+                    // data-open="#login-form-popup"
                   >
                     <span>
                       Đăng nhập
                       {' '}
                       <i className="icon-user" />
                     </span>
-                  </Link>
+                  </a>
                 </li>
               </ul>
             </div>
@@ -200,12 +179,12 @@ function Header() {
               </div>
             </div>
             <div id="logo" className="flex-col logo">
-              <Link to="/" title="Nội thất Nhà Xinh - Đồ gỗ nội thất">
+              <a href="/" title="Nội thất Nhà Xinh - Đồ gỗ nội thất">
                 <img width="169" height="90" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20169%2090'%3E%3C/svg%3E" className="header_logo header-logo" alt="Nội thất Nhà Xinh" data-lazy-src={Logo} />
                 <noscript><img width="169" height="90" src="wp-content/uploads/2022/04/logo-nha-xinh-moi-200422.png" className="header_logo header-logo" alt="Nội thất Nhà Xinh" /></noscript>
                 <img width="169" height="90" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20169%2090'%3E%3C/svg%3E" className="header-logo-dark" alt="Nội thất Nhà Xinh" data-lazy-src={Logo} />
                 <noscript><img width="169" height="90" src="wp-content/uploads/2022/04/logo-nha-xinh-moi-200422.png" className="header-logo-dark" alt="Nội thất Nhà Xinh" /></noscript>
-              </Link>
+              </a>
             </div>
 
             <div className="flex-col show-for-medium flex-left">
@@ -231,10 +210,10 @@ function Header() {
             >
               <ul className="header-nav header-nav-main nav nav-left  nav-size-medium nav-uppercase">
                 <li id="menu-item-287" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-287 menu-item-design-container-width menu-item-has-block has-dropdown">
-                  <Link to="/cua-hang" className="nav-top-link">
+                  <a href="/cua-hang" className="nav-top-link">
                     Sản phẩm
                     <i className="icon-angle-down" />
-                  </Link>
+                  </a>
                   <div className="sub-menu nav-dropdown">
                     <section className="section" id="section_917526953">
                       <div className="bg section-bg fill bg-fill  bg-loaded" />
@@ -248,91 +227,91 @@ function Header() {
                                   <div className="col-inner">
                                     <div className="ux-menu stack stack-col justify-start">
                                       <div className="ux-menu-link flex menu-item">
-                                        <Link className="ux-menu-link__link flex" to="/danh-muc/phong-khach/sofa">
+                                        <a className="ux-menu-link__link flex" href="/danh-muc/phong-khach/sofa">
                                           <span className="ux-menu-link__text">
                                             Sofa
                                           </span>
-                                        </Link>
+                                        </a>
                                       </div>
 
                                       <div className="ux-menu-link flex menu-item">
-                                        <Link className="ux-menu-link__link flex" to="/danh-muc/phong-khach/sofa-goc">
+                                        <a className="ux-menu-link__link flex" href="/danh-muc/phong-khach/sofa-goc">
                                           <span className="ux-menu-link__text">
                                             Sofa góc
                                           </span>
-                                        </Link>
+                                        </a>
                                       </div>
 
                                       <div className="ux-menu-link flex menu-item">
-                                        <Link className="ux-menu-link__link flex" to="/danh-muc/phong-khach/ghe-thu-gian">
+                                        <a className="ux-menu-link__link flex" href="/danh-muc/phong-khach/ghe-thu-gian">
                                           <span className="ux-menu-link__text">
                                             Ghế thư giãn
                                           </span>
-                                        </Link>
+                                        </a>
                                       </div>
 
                                       <div className="ux-menu-link flex menu-item">
-                                        <Link className="ux-menu-link__link flex" to="/danh-muc/phong-khach/armchair">
+                                        <a className="ux-menu-link__link flex" href="/danh-muc/phong-khach/armchair">
                                           <span className="ux-menu-link__text">
                                             Armchair
                                           </span>
-                                        </Link>
+                                        </a>
                                       </div>
 
                                       <div className="ux-menu-link flex menu-item">
-                                        <Link className="ux-menu-link__link flex" to="/danh-muc/phong-khach/ghe-dai-don">
+                                        <a className="ux-menu-link__link flex" href="/danh-muc/phong-khach/ghe-dai-don">
                                           <span className="ux-menu-link__text">
                                             Ghế dài &amp; đôn
                                           </span>
-                                        </Link>
+                                        </a>
                                       </div>
 
                                       <div className="ux-menu-link flex menu-item">
-                                        <Link className="ux-menu-link__link flex" to="/danh-muc/phong-khach/ban-ben">
+                                        <a className="ux-menu-link__link flex" href="/danh-muc/phong-khach/ban-ben">
                                           <span className="ux-menu-link__text">
                                             Bàn bên
                                           </span>
-                                        </Link>
+                                        </a>
                                       </div>
 
                                       <div className="ux-menu-link flex menu-item">
-                                        <Link className="ux-menu-link__link flex" to="/danh-muc/phong-khach/ban-nuoc">
+                                        <a className="ux-menu-link__link flex" href="/danh-muc/phong-khach/ban-nuoc">
                                           <span className="ux-menu-link__text">
                                             Bàn nước
                                           </span>
-                                        </Link>
+                                        </a>
                                       </div>
 
                                       <div className="ux-menu-link flex menu-item">
-                                        <Link className="ux-menu-link__link flex" to="/danh-muc/phong-khach/ban-console">
+                                        <a className="ux-menu-link__link flex" href="/danh-muc/phong-khach/ban-console">
                                           <span className="ux-menu-link__text">
                                             Bàn Console
                                           </span>
-                                        </Link>
+                                        </a>
                                       </div>
 
                                       <div className="ux-menu-link flex menu-item">
-                                        <Link className="ux-menu-link__link flex" to="/danh-muc/phong-khach/tu-tivi">
+                                        <a className="ux-menu-link__link flex" href="/danh-muc/phong-khach/tu-tivi">
                                           <span className="ux-menu-link__text">
                                             Tủ tivi
                                           </span>
-                                        </Link>
+                                        </a>
                                       </div>
 
                                       <div className="ux-menu-link flex menu-item">
-                                        <Link className="ux-menu-link__link flex" to="/danh-muc/phong-khach/ke-phong-khach">
+                                        <a className="ux-menu-link__link flex" href="/danh-muc/phong-khach/ke-phong-khach">
                                           <span className="ux-menu-link__text">
                                             Kệ trưng bày
                                           </span>
-                                        </Link>
+                                        </a>
                                       </div>
 
                                       <div className="ux-menu-link flex menu-item">
-                                        <Link className="ux-menu-link__link flex" to="/danh-muc/phong-khach/tu-giay">
+                                        <a className="ux-menu-link__link flex" href="/danh-muc/phong-khach/tu-giay">
                                           <span className="ux-menu-link__text">
                                             Tủ giày
                                           </span>
-                                        </Link>
+                                        </a>
                                       </div>
                                     </div>
                                   </div>
@@ -342,59 +321,59 @@ function Header() {
                                   <div className="col-inner">
                                     <div className="ux-menu stack stack-col justify-start">
                                       <div className="ux-menu-link flex menu-item">
-                                        <Link className="ux-menu-link__link flex" to="/danh-muc/phong-an/ban-an">
+                                        <a className="ux-menu-link__link flex" href="/danh-muc/phong-an/ban-an">
                                           <span className="ux-menu-link__text">
                                             Bàn ăn
                                           </span>
-                                        </Link>
+                                        </a>
                                       </div>
 
                                       <div className="ux-menu-link flex menu-item">
-                                        <Link className="ux-menu-link__link flex" to="/danh-muc/phong-an/ghe-an">
+                                        <a className="ux-menu-link__link flex" href="/danh-muc/phong-an/ghe-an">
                                           <span className="ux-menu-link__text">
                                             Ghế ăn
                                           </span>
-                                        </Link>
+                                        </a>
                                       </div>
 
                                       <div className="ux-menu-link flex menu-item">
-                                        <Link className="ux-menu-link__link flex" to="/danh-muc/phong-an/ghe-bar">
+                                        <a className="ux-menu-link__link flex" href="/danh-muc/phong-an/ghe-bar">
                                           <span className="ux-menu-link__text">
                                             Ghế Bar
                                           </span>
-                                        </Link>
+                                        </a>
                                       </div>
 
                                       <div className="ux-menu-link flex menu-item">
-                                        <Link className="ux-menu-link__link flex" to="/danh-muc/phong-an/tu-ly">
+                                        <a className="ux-menu-link__link flex" href="/danh-muc/phong-an/tu-ly">
                                           <span className="ux-menu-link__text">
                                             Tủ ly
                                           </span>
-                                        </Link>
+                                        </a>
                                       </div>
 
                                       <div className="ux-menu-link flex menu-item">
-                                        <Link className="ux-menu-link__link flex" to="/danh-muc/phong-an/xe-day">
+                                        <a className="ux-menu-link__link flex" href="/danh-muc/phong-an/xe-day">
                                           <span className="ux-menu-link__text">
                                             Xe đẩy
                                           </span>
-                                        </Link>
+                                        </a>
                                       </div>
 
                                       <div className="ux-menu-link flex menu-item">
-                                        <Link className="ux-menu-link__link flex" to="/danh-muc/bep/tu-bep">
+                                        <a className="ux-menu-link__link flex" href="/danh-muc/bep/tu-bep">
                                           <span className="ux-menu-link__text">
                                             Tủ bếp
                                           </span>
-                                        </Link>
+                                        </a>
                                       </div>
 
                                       <div className="ux-menu-link flex menu-item">
-                                        <Link className="ux-menu-link__link flex" to="/danh-muc/bep/phu-kien-bep">
+                                        <a className="ux-menu-link__link flex" href="/danh-muc/bep/phu-kien-bep">
                                           <span className="ux-menu-link__text">
                                             Thiết bị bếp
                                           </span>
-                                        </Link>
+                                        </a>
                                       </div>
                                     </div>
                                   </div>
@@ -404,59 +383,59 @@ function Header() {
                                   <div className="col-inner">
                                     <div className="ux-menu stack stack-col justify-start">
                                       <div className="ux-menu-link flex menu-item">
-                                        <Link className="ux-menu-link__link flex" to="/danh-muc/phong-ngu/giuong">
+                                        <a className="ux-menu-link__link flex" href="/danh-muc/phong-ngu/giuong">
                                           <span className="ux-menu-link__text">
                                             Giường ngủ
                                           </span>
-                                        </Link>
+                                        </a>
                                       </div>
 
                                       <div className="ux-menu-link flex menu-item">
-                                        <Link className="ux-menu-link__link flex" to="/danh-muc/phong-ngu/ban-dau-giuong">
+                                        <a className="ux-menu-link__link flex" href="/danh-muc/phong-ngu/ban-dau-giuong">
                                           <span className="ux-menu-link__text">
                                             Bàn đầu giường
                                           </span>
-                                        </Link>
+                                        </a>
                                       </div>
 
                                       <div className="ux-menu-link flex menu-item">
-                                        <Link className="ux-menu-link__link flex" to="/danh-muc/phong-ngu/ban-trang-diem">
+                                        <a className="ux-menu-link__link flex" href="/danh-muc/phong-ngu/ban-trang-diem">
                                           <span className="ux-menu-link__text">
                                             Bàn trang điểm
                                           </span>
-                                        </Link>
+                                        </a>
                                       </div>
 
                                       <div className="ux-menu-link flex menu-item">
-                                        <Link className="ux-menu-link__link flex" to="/danh-muc/phong-ngu/tu-ao">
+                                        <a className="ux-menu-link__link flex" href="/danh-muc/phong-ngu/tu-ao">
                                           <span className="ux-menu-link__text">
                                             Tủ áo
                                           </span>
-                                        </Link>
+                                        </a>
                                       </div>
 
                                       <div className="ux-menu-link flex menu-item">
-                                        <Link className="ux-menu-link__link flex" to="/danh-muc/phong-ngu/tu-am-tuong">
+                                        <a className="ux-menu-link__link flex" href="/danh-muc/phong-ngu/tu-am-tuong">
                                           <span className="ux-menu-link__text">
                                             Tủ âm tường
                                           </span>
-                                        </Link>
+                                        </a>
                                       </div>
 
                                       <div className="ux-menu-link flex menu-item">
-                                        <Link className="ux-menu-link__link flex" to="/danh-muc/phong-ngu/tu-hoc-keo">
+                                        <a className="ux-menu-link__link flex" href="/danh-muc/phong-ngu/tu-hoc-keo">
                                           <span className="ux-menu-link__text">
                                             Tủ hộc kéo
                                           </span>
-                                        </Link>
+                                        </a>
                                       </div>
 
                                       <div className="ux-menu-link flex menu-item">
-                                        <Link className="ux-menu-link__link flex" to="/danh-muc/phong-ngu/nem">
+                                        <a className="ux-menu-link__link flex" href="/danh-muc/phong-ngu/nem">
                                           <span className="ux-menu-link__text">
                                             Nệm
                                           </span>
-                                        </Link>
+                                        </a>
                                       </div>
                                     </div>
                                   </div>
@@ -466,43 +445,43 @@ function Header() {
                                   <div className="col-inner">
                                     <div className="ux-menu stack stack-col justify-start">
                                       <div className="ux-menu-link flex menu-item">
-                                        <Link className="ux-menu-link__link flex" to="/danh-muc/phong-lam-viec/ban-lam-viec">
+                                        <a className="ux-menu-link__link flex" href="/danh-muc/phong-lam-viec/ban-lam-viec">
                                           <span className="ux-menu-link__text">
                                             Bàn làm việc
                                           </span>
-                                        </Link>
+                                        </a>
                                       </div>
 
                                       <div className="ux-menu-link flex menu-item">
-                                        <Link className="ux-menu-link__link flex" to="/danh-muc/phong-lam-viec/ghe-phong-lam-viec">
+                                        <a className="ux-menu-link__link flex" href="/danh-muc/phong-lam-viec/ghe-phong-lam-viec">
                                           <span className="ux-menu-link__text">
                                             Ghế làm việc
                                           </span>
-                                        </Link>
+                                        </a>
                                       </div>
 
                                       <div className="ux-menu-link flex menu-item">
-                                        <Link className="ux-menu-link__link flex" to="/danh-muc/phong-lam-viec/ke-sach">
+                                        <a className="ux-menu-link__link flex" href="/danh-muc/phong-lam-viec/ke-sach">
                                           <span className="ux-menu-link__text">
                                             Kệ sách
                                           </span>
-                                        </Link>
+                                        </a>
                                       </div>
 
                                       <div className="ux-menu-link flex menu-item">
-                                        <Link className="ux-menu-link__link flex" to="/danh-muc/ngoai-that/ban-ngoai-troi">
+                                        <a className="ux-menu-link__link flex" href="/danh-muc/ngoai-that/ban-ngoai-troi">
                                           <span className="ux-menu-link__text">
                                             Bàn ngoài trời
                                           </span>
-                                        </Link>
+                                        </a>
                                       </div>
 
                                       <div className="ux-menu-link flex menu-item">
-                                        <Link className="ux-menu-link__link flex" to="/danh-muc/ngoai-that/ghe-ngoai-troi">
+                                        <a className="ux-menu-link__link flex" href="/danh-muc/ngoai-that/ghe-ngoai-troi">
                                           <span className="ux-menu-link__text">
                                             Ghế ngoài trời
                                           </span>
-                                        </Link>
+                                        </a>
                                       </div>
                                     </div>
                                   </div>
@@ -512,107 +491,107 @@ function Header() {
                                   <div className="col-inner">
                                     <div className="ux-menu stack stack-col justify-start">
                                       <div className="ux-menu-link flex menu-item">
-                                        <Link className="ux-menu-link__link flex" to="/danh-muc/hang-trang-tri/den">
+                                        <a className="ux-menu-link__link flex" href="/danh-muc/hang-trang-tri/den">
                                           <span className="ux-menu-link__text">
                                             Đèn trang trí
                                           </span>
-                                        </Link>
+                                        </a>
                                       </div>
 
                                       <div className="ux-menu-link flex menu-item">
-                                        <Link className="ux-menu-link__link flex" to="/danh-muc/hang-trang-tri/tham">
+                                        <a className="ux-menu-link__link flex" href="/danh-muc/hang-trang-tri/tham">
                                           <span className="ux-menu-link__text">
                                             Thảm trang trí
                                           </span>
-                                        </Link>
+                                        </a>
                                       </div>
 
                                       <div className="ux-menu-link flex menu-item">
-                                        <Link className="ux-menu-link__link flex" to="hang-trang-tri-michael-aram">
+                                        <a className="ux-menu-link__link flex" href="hang-trang-tri-michael-aram">
                                           <span className="ux-menu-link__text">
                                             Michael Aram
                                           </span>
-                                        </Link>
+                                        </a>
                                       </div>
 
                                       <div className="ux-menu-link flex menu-item">
-                                        <Link className="ux-menu-link__link flex" to="/danh-muc/hang-trang-tri/do-trang-tri-noel">
+                                        <a className="ux-menu-link__link flex" href="/danh-muc/hang-trang-tri/do-trang-tri-noel">
                                           <span className="ux-menu-link__text">
                                             Đồ trang trí noel
                                           </span>
-                                        </Link>
+                                        </a>
                                       </div>
 
                                       <div className="ux-menu-link flex menu-item">
-                                        <Link className="ux-menu-link__link flex" to="/danh-muc/hang-trang-tri/binh-trang-tri">
+                                        <a className="ux-menu-link__link flex" href="/danh-muc/hang-trang-tri/binh-trang-tri">
                                           <span className="ux-menu-link__text">
                                             Bình trang trí
                                           </span>
-                                        </Link>
+                                        </a>
                                       </div>
 
                                       <div className="ux-menu-link flex menu-item">
-                                        <Link className="ux-menu-link__link flex" to="/danh-muc/hang-trang-tri/tranh">
+                                        <a className="ux-menu-link__link flex" href="/danh-muc/hang-trang-tri/tranh">
                                           <span className="ux-menu-link__text">
                                             Tranh
                                           </span>
-                                        </Link>
+                                        </a>
                                       </div>
 
                                       <div className="ux-menu-link flex menu-item">
-                                        <Link className="ux-menu-link__link flex" to="/danh-muc/hang-trang-tri/khung-guong">
+                                        <a className="ux-menu-link__link flex" href="/danh-muc/hang-trang-tri/khung-guong">
                                           <span className="ux-menu-link__text">
                                             Gương
                                           </span>
-                                        </Link>
+                                        </a>
                                       </div>
 
                                       <div className="ux-menu-link flex menu-item">
-                                        <Link className="ux-menu-link__link flex" to="/danh-muc/hang-trang-tri/hoa-cay">
+                                        <a className="ux-menu-link__link flex" href="/danh-muc/hang-trang-tri/hoa-cay">
                                           <span className="ux-menu-link__text">
                                             Hoa và cây
                                           </span>
-                                        </Link>
+                                        </a>
                                       </div>
 
                                       <div className="ux-menu-link flex menu-item">
-                                        <Link className="ux-menu-link__link flex" to="/danh-muc/hang-trang-tri/dong-ho-hang-trang-tri">
+                                        <a className="ux-menu-link__link flex" href="/danh-muc/hang-trang-tri/dong-ho-hang-trang-tri">
                                           <span className="ux-menu-link__text">
                                             Đồng hồ
                                           </span>
-                                        </Link>
+                                        </a>
                                       </div>
 
                                       <div className="ux-menu-link flex menu-item">
-                                        <Link className="ux-menu-link__link flex" to="/danh-muc/hang-trang-tri/khung-hinh">
+                                        <a className="ux-menu-link__link flex" href="/danh-muc/hang-trang-tri/khung-hinh">
                                           <span className="ux-menu-link__text">
                                             Khung hình
                                           </span>
-                                        </Link>
+                                        </a>
                                       </div>
 
                                       <div className="ux-menu-link flex menu-item">
-                                        <Link className="ux-menu-link__link flex" to="/danh-muc/hang-trang-tri/tuong-trang-tri">
+                                        <a className="ux-menu-link__link flex" href="/danh-muc/hang-trang-tri/tuong-trang-tri">
                                           <span className="ux-menu-link__text">
                                             Tượng trang trí
                                           </span>
-                                        </Link>
+                                        </a>
                                       </div>
 
                                       <div className="ux-menu-link flex menu-item">
-                                        <Link className="ux-menu-link__link flex" to="/danh-muc/hang-trang-tri/goi-va-thu-bong">
+                                        <a className="ux-menu-link__link flex" href="/danh-muc/hang-trang-tri/goi-va-thu-bong">
                                           <span className="ux-menu-link__text">
                                             Gối và thú bông
                                           </span>
-                                        </Link>
+                                        </a>
                                       </div>
 
                                       <div className="ux-menu-link flex menu-item">
-                                        <Link className="ux-menu-link__link flex" to="/danh-muc/hang-trang-tri/nen">
+                                        <a className="ux-menu-link__link flex" href="/danh-muc/hang-trang-tri/nen">
                                           <span className="ux-menu-link__text">
                                             Nến &amp; chân nến
                                           </span>
-                                        </Link>
+                                        </a>
                                       </div>
                                     </div>
                                   </div>
@@ -622,19 +601,19 @@ function Header() {
                                   <div className="col-inner">
                                     <div className="ux-menu stack stack-col justify-start ux-menu--divider-solid">
                                       <div className="ux-menu-link flex menu-item">
-                                        <Link className="ux-menu-link__link flex" to="/danh-muc/hang-trang-tri/dung-cu-bep">
+                                        <a className="ux-menu-link__link flex" href="/danh-muc/hang-trang-tri/dung-cu-bep">
                                           <span className="ux-menu-link__text">
                                             Dụng cụ bếp
                                           </span>
-                                        </Link>
+                                        </a>
                                       </div>
 
                                       <div className="ux-menu-link flex menu-item">
-                                        <Link className="ux-menu-link__link flex" to="/danh-muc/hang-trang-tri/hang-trang-tri-khac">
+                                        <a className="ux-menu-link__link flex" href="/danh-muc/hang-trang-tri/hang-trang-tri-khac">
                                           <span className="ux-menu-link__text">
                                             Hàng trang trí khác
                                           </span>
-                                        </Link>
+                                        </a>
                                       </div>
                                     </div>
                                   </div>
@@ -660,26 +639,26 @@ function Header() {
                 </li>
 
                 <li id="menu-item-8010" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-8010 menu-item-design-default has-dropdown">
-                  <Link to="/phong-khach" className="nav-top-link">
+                  <a href="/phong-khach" className="nav-top-link">
                     Phòng
                     <i className="icon-angle-down" />
-                  </Link>
+                  </a>
 
                   <ul className="sub-menu nav-dropdown nav-dropdown-default">
-                    <li id="menu-item-8199" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-8199"><Link to="/phong-khach">Phòng khách</Link></li>
-                    <li id="menu-item-24423" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-24423"><Link to="/phong-an">Phòng ăn</Link></li>
-                    <li id="menu-item-24304" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-24304"><Link to="/phong-ngu">Phòng ngủ</Link></li>
-                    <li id="menu-item-27857" className="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-27857"><Link to="/danh-muc/phong-lam-viec">Phòng làm việc</Link></li>
-                    <li id="menu-item-37292" className="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-37292"><Link to="/danh-muc/bep/tu-bep">Tủ bếp</Link></li>
-                    <li id="menu-item-27856" className="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-27856"><Link to="/danh-muc/hang-trang-tri">Hàng trang trí</Link></li>
-                    <li id="menu-item-27855" className="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-27855"><Link to="/danh-muc/ngoai-that">Ngoại thất</Link></li>
+                    <li id="menu-item-8199" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-8199"><a href="/phong-khach">Phòng khách</a></li>
+                    <li id="menu-item-24423" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-24423"><a href="/phong-an">Phòng ăn</a></li>
+                    <li id="menu-item-24304" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-24304"><a href="/phong-ngu">Phòng ngủ</a></li>
+                    <li id="menu-item-27857" className="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-27857"><a href="/danh-muc/phong-lam-viec">Phòng làm việc</a></li>
+                    <li id="menu-item-37292" className="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-37292"><a href="/danh-muc/bep/tu-bep">Tủ bếp</a></li>
+                    <li id="menu-item-27856" className="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-27856"><a href="/danh-muc/hang-trang-tri">Hàng trang trí</a></li>
+                    <li id="menu-item-27855" className="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-27855"><a href="/danh-muc/ngoai-that">Ngoại thất</a></li>
                   </ul>
                 </li>
 
-                <li id="menu-item-24226" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-24226 menu-item-design-default"><Link to="bo-suu-tap" className="nav-top-link">Bộ sưu tập</Link></li>
-                <li id="menu-item-290" className="menu-item menu-item-type-custom menu-item-object-custom menu-item-290 menu-item-design-default"><Link to="thiet-ke-noi-that" className="nav-top-link">Thiết kế nội thất</Link></li>
-                <li id="menu-item-288" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-288 menu-item-design-default"><Link to="showroom-ao" className="nav-top-link">Cửa hàng 360 độ</Link></li>
-                <li id="menu-item-27825" className="menu-item menu-item-type-custom menu-item-object-custom menu-item-27825 menu-item-design-default"><Link to="cam-hung-nha-xinh-y-tuong" className="nav-top-link">Góc cảm hứng</Link></li>
+                <li id="menu-item-24226" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-24226 menu-item-design-default"><a href="bo-suu-tap" className="nav-top-link">Bộ sưu tập</a></li>
+                <li id="menu-item-290" className="menu-item menu-item-type-custom menu-item-object-custom menu-item-290 menu-item-design-default"><a href="thiet-ke-noi-that" className="nav-top-link">Thiết kế nội thất</a></li>
+                <li id="menu-item-288" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-288 menu-item-design-default"><a href="showroom-ao" className="nav-top-link">Cửa hàng 360 độ</a></li>
+                <li id="menu-item-27825" className="menu-item menu-item-type-custom menu-item-object-custom menu-item-27825 menu-item-design-default"><a href="cam-hung-nha-xinh-y-tuong" className="nav-top-link">Góc cảm hứng</a></li>
               </ul>
             </div>
 
@@ -688,13 +667,19 @@ function Header() {
                 <li className="header-search-form search-form html relative has-icon">
                   <div className="header-search-form-wrapper">
                     <div className="searchform-wrapper ux-search-box relative form-flat is-normal">
-                      <form role="search" method="get" className="searchform" action="https://nhaxinh.com/">
+                      {/* <form role="search" method="get" className="searchform" action="https://nhaxinh.com/">
                         <div className="flex-row relative">
                           <div className="flex-col flex-grow position-relative">
-                            <label className="screen-reader-text" htmlFor="woocommerce-product-search-field-0">Search for:</label>
+                            <label className="screen-reader-text"
+                             htmlFor="woocommerce-product-search-field-0">Search for:</label>
                             <div className="search-container">
-                              <input type="search" id="woocommerce-product-search-field-0" className="search-field mb-0" placeholder="Tìm sản phẩm" value="" name="s" />
-                              <button type="submit" value="Search" className="ux-search-submit submit-button secondary button icon mb-0" aria-label="Submit">
+                              <input type="search"
+                              id="woocommerce-product-search-field-0"
+                              className="search-field mb-0"
+                               placeholder="Tìm sản phẩm" value="" name="s" />
+                              <button type="submit" value="Search"
+                               className="ux-search-submit submit-button
+                                secondary button icon mb-0" aria-label="Submit">
                                 <i className="icon-search" />
                               </button>
                             </div>
@@ -703,6 +688,33 @@ function Header() {
                           </div>
                         </div>
 
+                        <div className="live-search-results text-left z-top" />
+                        <input type="hidden" name="lang" value="vi" />
+                      </form> */}
+
+                      <form role="search" className="searchform" onSubmit={validation.handleSubmit}>
+                        <div className="flex-row relative">
+                          <div className="flex-col flex-grow position-relative">
+                            <label className="screen-reader-text" htmlFor="woocommerce-product-search-field-0">Search for:</label>
+                            <div className="search-container">
+                              <input
+                                type="search"
+                                id="woocommerce-product-search-field-0"
+                                className="search-field mb-0"
+                                placeholder="Tìm sản phẩm"
+                                name="s"
+                                onChange={validation.handleChange}
+                                onBlur={validation.handleBlur}
+                                value={validation.values.search}
+                              />
+                              <button type="submit" value="Search" className="ux-search-submit submit-button secondary button icon mb-0" aria-label="Submit">
+                                <i className="icon-search" />
+                              </button>
+                            </div>
+                            <input type="hidden" name="post_type" value="product" />
+                            <input type="hidden" name="lang" value="vi" />
+                          </div>
+                        </div>
                         <div className="live-search-results text-left z-top" />
                         <input type="hidden" name="lang" value="vi" />
                       </form>
@@ -745,14 +757,14 @@ function Header() {
                     </li>
                   </ul>
                 </li>
-                <li className="html custom html_topbar_right"><Link to="he-thong-cua-hang" aria-label="home"><i className="fal fa-map-marker-alt" /></Link></li>
+                <li className="html custom html_topbar_right"><a href="he-thong-cua-hang" aria-label="home"><i className="fal fa-map-marker-alt" /></a></li>
                 <li className="cart-item has-icon">
-                  <Link to="gio-hang" className="header-cart-link off-canvas-toggle nav-top-link is-small" data-open="#cart-popup" data-class="off-canvas-cart" title="Cart" data-pos="right">
+                  <a href="gio-hang" className="header-cart-link off-canvas-toggle nav-top-link is-small" data-open="#cart-popup" data-class="off-canvas-cart" title="Cart" data-pos="right">
                     <span className="image-icon header-cart-icon" data-icon-label="0">
                       <img width="20" height="20" className="cart-img-icon" alt="Cart" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2020%2020'%3E%3C/svg%3E" data-lazy-src={ICShopping} />
                       <noscript><img width="20" height="20" className="cart-img-icon" alt="Cart" src="wp-content/uploads/2021/09/ic-shopping.png" /></noscript>
                     </span>
-                  </Link>
+                  </a>
                 </li>
               </ul>
             </div>
@@ -766,6 +778,10 @@ function Header() {
           <div className="header-bg-color fill" />
         </div>
       </div>
+
+      <Wishlist />
+      <Navbar />
+      <LoginForm />
     </header>
   );
 }

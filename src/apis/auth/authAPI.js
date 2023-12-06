@@ -1,10 +1,10 @@
 import axiosClient from 'utils/axios';
 
-const endpoint = '/auth';
+const endpoint = '/user';
 
 export default {
   async login(payload) {
-    const path = `${endpoint}/signin`;
+    const path = `${endpoint}/loginUser`;
 
     const response = await axiosClient.post(path, payload);
 
@@ -12,7 +12,7 @@ export default {
   },
 
   async register(payload) {
-    const path = `${endpoint}/signup`;
+    const path = `${endpoint}/register`;
 
     const response = await axiosClient.post(path, payload);
 
@@ -20,9 +20,11 @@ export default {
   },
 
   async refreshToken() {
-    const path = `${endpoint}/refresh-token`;
+    const path = `${endpoint}/refresh`;
 
-    const response = await axiosClient.post(path);
+    const response = await axiosClient.get(path, {
+      withCredentials: true,
+    });
 
     return response.data;
   },

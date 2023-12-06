@@ -24,9 +24,10 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>Nhà Xinh</title>
+    <link rel='stylesheet' id='flatsome-style-csss' href='%PUBLIC_URL%/assets/themes/flatsome-child/assets/css/styles.css'
+      type='text/css' media='all' />
     <link rel='stylesheet' href="%PUBLIC_URL%/assets/css/style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
     <link href="../../themes/flatsome-child/assets/css/owl.carousel.min.css" rel="stylesheet" />
     <link href='https://fonts.gstatic.com/' crossorigin rel='preconnect' />
@@ -115,65 +116,6 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-    <!-- Instagram Feed JS -->
-    <script type="text/javascript">
-    var sbiajaxurl = "../../wp-admin/admin-ajax.html";
-    </script>
-    <div id="ocwma_billing_popup" class="ocwma_billing_popup_class">
-    </div>
-    <div id="ocwma_shipping_popup" class="ocwma_shipping_popup_class">
-    </div>
-
-                  <div id="address_selection_popup_main" class="address_selection_popup_main">
-      <div class="billing_popup_header">
-        <h3>Choice Billing Address</h3>
-      </div>
-      <div class="address_selection_popup_inner">
-        <span class="ocwma_close_choice_section">×</span>
-        <div class="address_selection_popup_body">
-                            </div>
-      </div>
-    </div>
-
-    <script type="text/javascript" language="javascript">
-    jQuery(function() {
-        jQuery(this).bind("contextmenu", function(e) {
-            //e.preventDefault();
-        });
-    });
-    </script>
-    <script>
-        function submitEnable() {
-                     var button = document.getElementById('wp-submit');
-                     if (button === null) {
-                         button = document.getElementById('submit');
-                     }
-                     if (button !== null) {
-                         button.removeAttribute('disabled');
-                     }
-                     var woo_buttons = [".woocommerce-form-login button",".woocommerce-form-register button",".woocommerce-ResetPassword button"];
-                     if (typeof jQuery != 'undefined') {
-                         jQuery.each(woo_buttons,function(i,btn) {
-                             jQuery(btn).removeAttr('disabled');
-                         });
-                     }
-                 }
-        function submitDisable() {
-                     var button = document.getElementById('wp-submit');
-                     if (button === null) {
-                         button = document.getElementById('submit');
-                     }
-                     if (button !== null) {
-                         button.setAttribute('disabled','disabled');
-                     }
-                     var woo_buttons = [".woocommerce-form-login button",".woocommerce-form-register button",".woocommerce-ResetPassword button"];
-                     if (typeof jQuery != 'undefined') {
-                         jQuery.each(woo_buttons,function(i,btn) {
-                            jQuery(btn).attr('disabled','disabled');
-                         });
-                     }
-                 }
-    </script>
     <!-- jQuery (necessary for Bootstrap's JavaScript) -->
     <script src="%PUBLIC_URL%/assets/js/jquery.min.js"></script>
     <script src="%PUBLIC_URL%/assets/js/popper.min.js"></script>
@@ -186,73 +128,18 @@
     <script src="%PUBLIC_URL%/assets/js/menumaker.js"></script>
     <!-- custom js -->
     <script src="%PUBLIC_URL%/assets/js/custom.js"></script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WE0PNPP36D"></script>
 
     <script type="text/javascript" id="flatsome-js-js-extra">
-      var flatsomeVars = {"theme":{"version":"3.14.3"},"ajaxurl":"https:\/\/nhaxinh.com\/wp-admin\/admin-ajax.php","rtl":"","sticky_height":"70","assets_url":"https:\/\/nhaxinh.com\/wp-content\/themes\/flatsome\/assets\/js\/","lightbox":{"close_markup":"<button title=\"%title%\" type=\"button\" class=\"mfp-close\"><svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-x\"><line x1=\"18\" y1=\"6\" x2=\"6\" y2=\"18\"><\/line><line x1=\"6\" y1=\"6\" x2=\"18\" y2=\"18\"><\/line><\/svg><\/button>","close_btn_inside":false},"user":{"can_edit_pages":false},"i18n":{"mainMenu":"Main Menu"},"options":{"cookie_notice_version":"1","swatches_layout":false,"swatches_box_select_event":false,"swatches_box_behavior_selected":false,"swatches_box_update_urls":"1","swatches_box_reset":false,"swatches_box_reset_extent":false,"swatches_box_reset_time":300,"search_result_latency":"0"},"is_mini_cart_reveal":"1"};
+      var flatsomeVars = {"theme":{"version":"3.14.3"},"rtl":"","sticky_height":"70","lightbox":{"close_markup":"<button title=\"%title%\" type=\"button\" class=\"mfp-close\"><svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-x\"><line x1=\"18\" y1=\"6\" x2=\"6\" y2=\"18\"><\/line><line x1=\"6\" y1=\"6\" x2=\"18\" y2=\"18\"><\/line><\/svg><\/button>","close_btn_inside":false},"user":{"can_edit_pages":false},"i18n":{"mainMenu":"Main Menu"},"options":{"cookie_notice_version":"1","swatches_layout":false,"swatches_box_select_event":false,"swatches_box_behavior_selected":false,"swatches_box_update_urls":"1","swatches_box_reset":false,"swatches_box_reset_extent":false,"swatches_box_reset_time":300,"search_result_latency":"0"},"is_mini_cart_reveal":"1"};
     </script>
     <script type="text/javascript" src="%PUBLIC_URL%/assets/js/dist/vendor/wp-polyfill-inert.min.js" id="wp-polyfill-inert-js"></script>
-    <script type="text/javascript" src="%PUBLIC_URL%/assets/js/dist/vendor/regenerator-runtime.min.js" id="regenerator-runtime-js"></script>
     <script type="text/javascript" src="%PUBLIC_URL%/assets/js/dist/vendor/wp-polyfill.min.js" id="wp-polyfill-js"></script>
-    <script type="text/javascript" id="contact-form-7-js-extra">
-    var wpcf7 = {"api":{"root":"https:\/\/nhaxinh.com\/wp-json\/","namespace":"contact-form-7\/v1"},"cached":"1"};
-    </script>
-    <script type="text/javascript" src="%PUBLIC_URL%/assets/plugins/contact-form-7/includes/js/index.js" id="contact-form-7-js"></script>
-    <script type="text/javascript" src="%PUBLIC_URL%/assets/plugins/woocommerce/assets/js/select2/select2.full.min.js" id="select2-js"></script>
-    <script type="text/javascript" id="devvn_tinhthanhpho-js-extra">
-      var vncheckout_array = {"admin_ajax":"https:\/\/nhaxinh.com\/wp-admin\/admin-ajax.php","get_address":"https:\/\/nhaxinh.com\/wp-content\/plugins\/devvn-woo-address-selectbox\/vietnam-checkout\/get-address.php","home_url":"https:\/\/nhaxinh.com","formatNoMatches":"No value","phone_error":"Phone number is incorrect","loading_text":"Loading...","loadaddress_error":"Phone number does not exist","enabled_free_shipping":"","has_vtp":"0"};
-    </script>
-    <script type="text/javascript" src="%PUBLIC_URL%/assets/plugins/devvn-woo-address-selectbox/vietnam-checkout/assets/js/devvn_tinhthanh.js" id="devvn_tinhthanhpho-js"></script>
-    <script type="text/javascript" src="%PUBLIC_URL%/assets/js/dist/hooks.min2ebd.js" id="wp-hooks-js"></script>
-    <script type="text/javascript" src="%PUBLIC_URL%/assets/js/dist/i18n.minf92f.js" id="wp-i18n-js"></script>
-    <script type="text/javascript" id="wp-i18n-js-after">
-    wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
-    </script>
     <script type="text/javascript" src="%PUBLIC_URL%/assets/js/jquery/jquery.form.minb2f9.js" id="jquery-form-js"></script>
-    <script type="text/javascript" src="%PUBLIC_URL%/assets/plugins/woo-related-products-refresh-on-reload/public/owl-carousel/owl.carousel.min.js" id="owl-carousel-js"></script>
     <script type="text/javascript" src="%PUBLIC_URL%/assets/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.mina571.js" id="jquery-blockui-js"></script>
-    <script type="text/javascript" id="wc-add-to-cart-js-extra">
-    var wc_add_to_cart_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%","i18n_view_cart":"Xem gi\u1ecf h\u00e0ng","cart_url":"https:\/\/nhaxinh.com\/gio-hang\/","is_cart":"","cart_redirect_after_add":"no"};
-    </script>
-    <script type="text/javascript" src="%PUBLIC_URL%/assets/plugins/woocommerce/assets/js/frontend/add-to-cart.min74e5.js" id="wc-add-to-cart-js"></script>
-    <script type="text/javascript" src="%PUBLIC_URL%/assets/plugins/woocommerce/assets/js/js-cookie/js.cookie.minb770.js" id="js-cookie-js"></script>
-    <script type="text/javascript" id="woocommerce-js-extra">
-    var woocommerce_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%"};
-    </script>
-    <script type="text/javascript" src="%PUBLIC_URL%/assets/plugins/woocommerce/assets/js/frontend/woocommerce.min74e5.js" id="woocommerce-js"></script>
-    <script type="text/javascript" id="wc-cart-fragments-js-extra">
-    var wc_cart_fragments_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%","cart_hash_key":"wc_cart_hash_dad88cd80e8b5dcb30763391856f9c1b-vi","fragment_name":"wc_fragments_dad88cd80e8b5dcb30763391856f9c1b","request_timeout":"5000"};
-    </script>
-    <script type="text/javascript" src="%PUBLIC_URL%/assets/plugins/woocommerce/assets/js/frontend/cart-fragments.min74e5.js" id="wc-cart-fragments-js"></script>
-    <script type="text/javascript" id="rocket-browser-checker-js-after">
-    "use strict";var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||!1,descriptor.configurable=!0,"value"in descriptor&&(descriptor.writable=!0),Object.defineProperty(target,descriptor.key,descriptor)}}return function(Constructor,protoProps,staticProps){return protoProps&&defineProperties(Constructor.prototype,protoProps),staticProps&&defineProperties(Constructor,staticProps),Constructor}}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor))throw new TypeError("Cannot call a class as a function")}var RocketBrowserCompatibilityChecker=function(){function RocketBrowserCompatibilityChecker(options){_classCallCheck(this,RocketBrowserCompatibilityChecker),this.passiveSupported=!1,this._checkPassiveOption(this),this.options=!!this.passiveSupported&&options}return _createClass(RocketBrowserCompatibilityChecker,[{key:"_checkPassiveOption",value:function(self){try{var options={get passive(){return!(self.passiveSupported=!0)}};window.addEventListener("test",null,options),window.removeEventListener("test",null,options)}catch(err){self.passiveSupported=!1}}},{key:"initRequestIdleCallback",value:function(){!1 in window&&(window.requestIdleCallback=function(cb){var start=Date.now();return setTimeout(function(){cb({didTimeout:!1,timeRemaining:function(){return Math.max(0,50-(Date.now()-start))}})},1)}),!1 in window&&(window.cancelIdleCallback=function(id){return clearTimeout(id)})}},{key:"isDataSaverModeOn",value:function(){return"connection"in navigator&&!0===navigator.connection.saveData}},{key:"supportsLinkPrefetch",value:function(){var elem=document.createElement("link");return elem.relList&&elem.relList.supports&&elem.relList.supports("prefetch")&&window.IntersectionObserver&&"isIntersecting"in IntersectionObserverEntry.prototype}},{key:"isSlowConnection",value:function(){return"connection"in navigator&&"effectiveType"in navigator.connection&&("2g"===navigator.connection.effectiveType||"slow-2g"===navigator.connection.effectiveType)}}]),RocketBrowserCompatibilityChecker}();
-    </script>
-    <script type="text/javascript" id="rocket-preload-links-js-extra">
-    var RocketPreloadLinksConfig = {"excludeUris":"\/(.+\/)?feed\/?.+\/?|\/(?:.+\/)?embed\/|\/thanh-toan\/|\/gio-hang\/|\/tai-khoan\/|\/wc-api\/v(.*)|\/(index\\.php\/)?wp\\-json(\/.*|$)|\/wp-admin\/|\/logout\/|\/wp-login.php","usesTrailingSlash":"1","imageExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif","fileExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|php|pdf|html|htm","siteUrl":"https:\/\/nhaxinh.com","onHoverDelay":"100","rateThrottle":"3"};
-    </script>
-    <script type="text/javascript" id="rocket-preload-links-js-after">
-    (function() {
-    "use strict";var r="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e=function(){function i(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(e,t,n){return t&&i(e.prototype,t),n&&i(e,n),e}}();function i(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}var t=function(){function n(e,t){i(this,n),this.browser=e,this.config=t,this.options=this.browser.options,this.prefetched=new Set,this.eventTime=null,this.threshold=1111,this.numOnHover=0}return e(n,[{key:"init",value:function(){!this.browser.supportsLinkPrefetch()||this.browser.isDataSaverModeOn()||this.browser.isSlowConnection()||(this.regex={excludeUris:RegExp(this.config.excludeUris,"i"),images:RegExp(".("+this.config.imageExt+")$","i"),fileExt:RegExp(".("+this.config.fileExt+")$","i")},this._initListeners(this))}},{key:"_initListeners",value:function(e){-1<this.config.onHoverDelay&&document.addEventListener("mouseover",e.listener.bind(e),e.listenerOptions),document.addEventListener("mousedown",e.listener.bind(e),e.listenerOptions),document.addEventListener("touchstart",e.listener.bind(e),e.listenerOptions)}},{key:"listener",value:function(e){var t=e.target.closest("a"),n=this._prepareUrl(t);if(null!==n)switch(e.type){case"mousedown":case"touchstart":this._addPrefetchLink(n);break;case"mouseover":this._earlyPrefetch(t,n,"mouseout")}}},{key:"_earlyPrefetch",value:function(t,e,n){var i=this,r=setTimeout(function(){if(r=null,0===i.numOnHover)setTimeout(function(){return i.numOnHover=0},1e3);else if(i.numOnHover>i.config.rateThrottle)return;i.numOnHover++,i._addPrefetchLink(e)},this.config.onHoverDelay);t.addEventListener(n,function e(){t.removeEventListener(n,e,{passive:!0}),null!==r&&(clearTimeout(r),r=null)},{passive:!0})}},{key:"_addPrefetchLink",value:function(i){return this.prefetched.add(i.href),new Promise(function(e,t){var n=document.createElement("link");n.rel="prefetch",n.href=i.href,n.onload=e,n.onerror=t,document.head.appendChild(n)}).catch(function(){})}},{key:"_prepareUrl",value:function(e){if(null===e||"object"!==(void 0===e?"undefined":r(e))||!1 in e||-1===["http:","https:"].indexOf(e.protocol))return null;var t=e.href.substring(0,this.config.siteUrl.length),n=this._getPathname(e.href,t),i={original:e.href,protocol:e.protocol,origin:t,pathname:n,href:t+n};return this._isLinkOk(i)?i:null}},{key:"_getPathname",value:function(e,t){var n=t?e.substring(this.config.siteUrl.length):e;return n.startsWith("%PUBLIC_URL%/assets/index.html")||(n="/"+n),this._shouldAddTrailingSlash(n)?n+"/":n}},{key:"_shouldAddTrailingSlash",value:function(e){return this.config.usesTrailingSlash&&!e.endsWith("%PUBLIC_URL%/assets/index.html")&&!this.regex.fileExt.test(e)}},{key:"_isLinkOk",value:function(e){return null!==e&&"object"===(void 0===e?"undefined":r(e))&&(!this.prefetched.has(e.href)&&e.origin===this.config.siteUrl&&-1===e.href.indexOf("?")&&-1===e.href.indexOf("#")&&!this.regex.excludeUris.test(e.href)&&!this.regex.images.test(e.href))}}],[{key:"run",value:function(){"undefined"!=typeof RocketPreloadLinksConfig&&new n(new RocketBrowserCompatibilityChecker({capture:!0,passive:!0}),RocketPreloadLinksConfig).init()}}]),n}();t.run();
-    }());
-    </script>
     <script type="text/javascript" src="%PUBLIC_URL%/assets/js/hoverIntent.min3e5a.js" id="hoverIntent-js"></script>
     <script type="text/javascript" src="%PUBLIC_URL%/assets/themes/flatsome/assets/js/flatsome.js" id="flatsome-js-js"></script>
-    <script type="text/javascript" id="get_recently_products_script-js-extra">
-      var qhAjax = {"ajaxurl":"https:\/\/nhaxinh.com\/wp-admin\/admin-ajax.php"};
-    </script>
-    <script type="text/javascript" src="%PUBLIC_URL%/assets/themes/flatsome-child/assets/js/qh-get-recently-products.js" id="get_recently_products_script-js"></script>
-    <script type="text/javascript" src="%PUBLIC_URL%/assets/themes/flatsome/inc/integrations/wc-yith-wishlist/wishlist.js" id="flatsome-woocommerce-wishlist-js"></script>
-    <script type="text/javascript" src="%PUBLIC_URL%/assets/themes/flatsome-child/assets/js/yith-wishlist.js" id="qh-woocommerce-wishlist-js"></script>
-    <script type="text/javascript" src="%PUBLIC_URL%/assets/themes/flatsome/inc/integrations/wp-rocket/flatsome-wp-rocket.js" id="flatsome-wp-rocket-js"></script>
     <script type="text/javascript" src="%PUBLIC_URL%/assets/themes/flatsome/inc/extensions/flatsome-instant-page/flatsome-instant-page.js" id="flatsome-instant-page-js"></script>
-    <script type="text/javascript" src="%PUBLIC_URL%/assets/themes/flatsome/inc/extensions/flatsome-live-search/flatsome-live-search.js" id="flatsome-live-search-js"></script>
-    <script type="text/javascript" src="%PUBLIC_URL%/assets/plugins/woocommerce-multilingual/res/js/front-scripts.min.js" id="wcml-front-scripts-js"></script>
-    <script type="text/javascript" id="cart-widget-js-extra">
-    var actions = {"is_lang_switched":"0","force_reset":"0"};
-    </script>
-    <script type="text/javascript" src="%PUBLIC_URL%/assets/plugins/woocommerce-multilingual/res/js/cart_widget.min.js" id="cart-widget-js"></script>
     <script type="text/javascript" src="%PUBLIC_URL%/assets/themes/flatsome/inc/extensions/flatsome-lazy-load/flatsome-lazy-load.js" id="flatsome-lazy-js"></script>
-    <script type="text/javascript" src="%PUBLIC_URL%/assets/themes/flatsome/assets/js/woocommerce.js" id="flatsome-theme-woocommerce-js-js"></script>
     <script type="text/javascript" src="%PUBLIC_URL%/assets/themes/flatsome/assets/libs/packery.pkgd.min9dd7.js" id="flatsome-masonry-js-js"></script>
 
     <script>

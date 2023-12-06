@@ -35,7 +35,7 @@ function CollectionPage() {
                   <div className="title-content flex-col flex-right text-right medium-text-center">
                     <div className="title-breadcrumbs pb-half pt-half">
                       <nav className="woocommerce-breadcrumb breadcrumbs ">
-                        <a href="../../index.html">Trang chủ</a>
+                        <a href="/">Trang chủ</a>
                         {' '}
                         <span className="divider">&#47;</span>
                         {' '}
@@ -64,7 +64,7 @@ function CollectionPage() {
                   <div className="ux-menu stack stack-col justify-start menu_left_custom">
 
                     <div className="ux-menu-link flex menu-item active">
-                      <a className="ux-menu-link__link flex" href="../../index.html">
+                      <a className="ux-menu-link__link flex" href="/">
                         <span className="ux-menu-link__text">
                           Bộ sưu tập Nhà Xinh
 
@@ -73,7 +73,7 @@ function CollectionPage() {
                     </div>
 
                     <div className="ux-menu-link flex menu-item">
-                      <a className="ux-menu-link__link flex" href="../../bst-coastal-cam-hung-mien-duyen-hai/index.html">
+                      <a className="ux-menu-link__link flex" href="/bst-coastal-cam-hung-mien-duyen-hai">
                         <span className="ux-menu-link__text">
                           Coastal
 
@@ -82,7 +82,7 @@ function CollectionPage() {
                     </div>
 
                     <div className="ux-menu-link flex menu-item">
-                      <a className="ux-menu-link__link flex" href="../../bo-suu-tap-may/index.html">
+                      <a className="ux-menu-link__link flex" href="/bo-suu-tap-may">
                         <span className="ux-menu-link__text">
                           Mây
 
@@ -91,7 +91,7 @@ function CollectionPage() {
                     </div>
 
                     <div className="ux-menu-link flex menu-item">
-                      <a className="ux-menu-link__link flex" href="../../bo-suu-tap-elegance/index.html">
+                      <a className="ux-menu-link__link flex" href="/bo-suu-tap-elegance">
                         <span className="ux-menu-link__text">
                           Elegance
 
@@ -100,7 +100,7 @@ function CollectionPage() {
                     </div>
 
                     <div className="ux-menu-link flex menu-item">
-                      <a className="ux-menu-link__link flex" href="../../bo-suu-tap-osaka/index.html">
+                      <a className="ux-menu-link__link flex" href="/bo-suu-tap-osaka">
                         <span className="ux-menu-link__text">
                           Osaka
 
@@ -109,7 +109,7 @@ function CollectionPage() {
                     </div>
 
                     <div className="ux-menu-link flex menu-item">
-                      <a className="ux-menu-link__link flex" href="../../bo-suu-tap-bridge/index.html">
+                      <a className="ux-menu-link__link flex" href="/bo-suu-tap-bridge">
                         <span className="ux-menu-link__text">
                           Bridge
 
@@ -118,7 +118,7 @@ function CollectionPage() {
                     </div>
 
                     <div className="ux-menu-link flex menu-item">
-                      <a className="ux-menu-link__link flex" href="../../bo-suu-tap-maxine/index.html">
+                      <a className="ux-menu-link__link flex" href="/bo-suu-tap-maxine">
                         <span className="ux-menu-link__text">
                           Maxine
 
@@ -127,7 +127,7 @@ function CollectionPage() {
                     </div>
 
                     <div className="ux-menu-link flex menu-item">
-                      <a className="ux-menu-link__link flex" href="../../bo-suu-tap-jazz/index.html">
+                      <a className="ux-menu-link__link flex" href="/bo-suu-tap-jazz">
                         <span className="ux-menu-link__text">
                           Jazz
 
@@ -136,7 +136,7 @@ function CollectionPage() {
                     </div>
 
                     <div className="ux-menu-link flex menu-item">
-                      <a className="ux-menu-link__link flex" href="../../bst-cabo-chat-hien-dai/index.html">
+                      <a className="ux-menu-link__link flex" href="/bst-cabo-chat-hien-dai">
                         <span className="ux-menu-link__text">
                           Cabo
 
@@ -145,7 +145,7 @@ function CollectionPage() {
                     </div>
 
                     <div className="ux-menu-link flex menu-item">
-                      <a className="ux-menu-link__link flex" href="../../bo-suu-tap-porto/index.html">
+                      <a className="ux-menu-link__link flex" href="/bo-suu-tap-porto">
                         <span className="ux-menu-link__text">
                           Porto
 
@@ -154,7 +154,7 @@ function CollectionPage() {
                     </div>
 
                     <div className="ux-menu-link flex menu-item">
-                      <a className="ux-menu-link__link flex" href="../../bo-suu-tap-pio/index.html">
+                      <a className="ux-menu-link__link flex" href="/bo-suu-tap-pio">
                         <span className="ux-menu-link__text">
                           Pio
 
@@ -163,7 +163,7 @@ function CollectionPage() {
                     </div>
 
                     <div className="ux-menu-link flex menu-item">
-                      <a className="ux-menu-link__link flex" href="../../bo-suu-tap-miami/index.html">
+                      <a className="ux-menu-link__link flex" href="/bo-suu-tap-miami">
                         <span className="ux-menu-link__text">
                           Miami
 
@@ -172,7 +172,7 @@ function CollectionPage() {
                     </div>
 
                     <div className="ux-menu-link flex menu-item">
-                      <a className="ux-menu-link__link flex" href="../../bo-suu-tap-shadow/index.html">
+                      <a className="ux-menu-link__link flex" href="/bo-suu-tap-shadow">
                         <span className="ux-menu-link__text">
                           Shadow
 
@@ -181,7 +181,7 @@ function CollectionPage() {
                     </div>
 
                     <div className="ux-menu-link flex menu-item">
-                      <a className="ux-menu-link__link flex" href="../../bo-suu-tap-victoria/index.html">
+                      <a className="ux-menu-link__link flex" href="/bo-suu-tap-victoria">
                         <span className="ux-menu-link__text">
                           Victoria
 
@@ -190,7 +190,7 @@ function CollectionPage() {
                     </div>
 
                     <div className="ux-menu-link flex menu-item">
-                      <a className="ux-menu-link__link flex" href="../../bo-suu-tap-pop/index.html">
+                      <a className="ux-menu-link__link flex" href="/bo-suu-tap-pop">
                         <span className="ux-menu-link__text">
                           Pop
 
@@ -199,7 +199,7 @@ function CollectionPage() {
                     </div>
 
                     <div className="ux-menu-link flex menu-item">
-                      <a className="ux-menu-link__link flex" href="../../bo-suu-tap-bui/index.html">
+                      <a className="ux-menu-link__link flex" href="/bo-suu-tap-bui">
                         <span className="ux-menu-link__text">
                           Bụi
 
@@ -208,7 +208,7 @@ function CollectionPage() {
                     </div>
 
                     <div className="ux-menu-link flex menu-item">
-                      <a className="ux-menu-link__link flex" href="../../bo-suu-tap-dubai/index.html">
+                      <a className="ux-menu-link__link flex" href="/bo-suu-tap-dubai">
                         <span className="ux-menu-link__text">
                           Dubai
 
@@ -231,7 +231,7 @@ function CollectionPage() {
 
                     <div className="col post-item">
                       <div className="col-inner">
-                        <a href="../../bst-coastal-cam-hung-mien-duyen-hai/index.html" className="plain">
+                        <a href="/bst-coastal-cam-hung-mien-duyen-hai" className="plain">
                           <div className="box box-normal box-text-bottom box-blog-post has-hover">
                             <div className="box-image">
                               <div className="image-cover" style={{ paddingTop: '56.25%' }}>
@@ -255,7 +255,7 @@ function CollectionPage() {
                     </div>
                     <div className="col post-item">
                       <div className="col-inner">
-                        <a href="../../bst-cabo-chat-hien-dai/index.html" className="plain">
+                        <a href="/bst-cabo-chat-hien-dai" className="plain">
                           <div className="box box-normal box-text-bottom box-blog-post has-hover">
                             <div className="box-image">
                               <div className="image-cover" style={{ paddingTop: '56.25%' }}>
@@ -279,7 +279,7 @@ function CollectionPage() {
                     </div>
                     <div className="col post-item">
                       <div className="col-inner">
-                        <a href="../../bo-suu-tap-osaka/index.html" className="plain">
+                        <a href="/bo-suu-tap-osaka" className="plain">
                           <div className="box box-normal box-text-bottom box-blog-post has-hover">
                             <div className="box-image">
                               <div className="image-cover" style={{ paddingTop: '56.25%' }}>
@@ -303,7 +303,7 @@ function CollectionPage() {
                     </div>
                     <div className="col post-item">
                       <div className="col-inner">
-                        <a href="../../bo-suu-tap-elegance/index.html" className="plain">
+                        <a href="/bo-suu-tap-elegance" className="plain">
                           <div className="box box-normal box-text-bottom box-blog-post has-hover">
                             <div className="box-image">
                               <div className="image-cover" style={{ paddingTop: '56.25%' }}>
@@ -327,7 +327,7 @@ function CollectionPage() {
                     </div>
                     <div className="col post-item">
                       <div className="col-inner">
-                        <a href="../../bo-suu-tap-bridge/index.html" className="plain">
+                        <a href="/bo-suu-tap-bridge" className="plain">
                           <div className="box box-normal box-text-bottom box-blog-post has-hover">
                             <div className="box-image">
                               <div className="image-cover" style={{ paddingTop: '56.25%' }}>
@@ -351,7 +351,7 @@ function CollectionPage() {
                     </div>
                     <div className="col post-item">
                       <div className="col-inner">
-                        <a href="../../bo-suu-tap-may/index.html" className="plain">
+                        <a href="/bo-suu-tap-may" className="plain">
                           <div className="box box-normal box-text-bottom box-blog-post has-hover">
                             <div className="box-image">
                               <div className="image-cover" style={{ paddingTop: '56.25%' }}>
@@ -375,7 +375,7 @@ function CollectionPage() {
                     </div>
                     <div className="col post-item">
                       <div className="col-inner">
-                        <a href="../../bo-suu-tap-maxine/index.html" className="plain">
+                        <a href="/bo-suu-tap-maxine" className="plain">
                           <div className="box box-normal box-text-bottom box-blog-post has-hover">
                             <div className="box-image">
                               <div className="image-cover" style={{ paddingTop: '56.25%' }}>
@@ -399,7 +399,7 @@ function CollectionPage() {
                     </div>
                     <div className="col post-item">
                       <div className="col-inner">
-                        <a href="../../bo-suu-tap-jazz/index.html" className="plain">
+                        <a href="/bo-suu-tap-jazz" className="plain">
                           <div className="box box-normal box-text-bottom box-blog-post has-hover">
                             <div className="box-image">
                               <div className="image-cover" style={{ paddingTop: '56.25%' }}>
@@ -423,7 +423,7 @@ function CollectionPage() {
                     </div>
                     <div className="col post-item">
                       <div className="col-inner">
-                        <a href="../../bo-suu-tap-victoria/index.html" className="plain">
+                        <a href="/bo-suu-tap-victoria" className="plain">
                           <div className="box box-normal box-text-bottom box-blog-post has-hover">
                             <div className="box-image">
                               <div className="image-cover" style={{ paddingTop: '56.25%' }}>
@@ -447,7 +447,7 @@ function CollectionPage() {
                     </div>
                     <div className="col post-item">
                       <div className="col-inner">
-                        <a href="../../bo-suu-tap-shadow/index.html" className="plain">
+                        <a href="/bo-suu-tap-shadow" className="plain">
                           <div className="box box-normal box-text-bottom box-blog-post has-hover">
                             <div className="box-image">
                               <div className="image-cover" style={{ paddingTop: '56.25%' }}>
@@ -471,7 +471,7 @@ function CollectionPage() {
                     </div>
                     <div className="col post-item">
                       <div className="col-inner">
-                        <a href="../../bo-suu-tap-miami/index.html" className="plain">
+                        <a href="/bo-suu-tap-miami" className="plain">
                           <div className="box box-normal box-text-bottom box-blog-post has-hover">
                             <div className="box-image">
                               <div className="image-cover" style={{ paddingTop: '56.25%' }}>
@@ -495,7 +495,7 @@ function CollectionPage() {
                     </div>
                     <div className="col post-item">
                       <div className="col-inner">
-                        <a href="../../bo-suu-tap-pio/index.html" className="plain">
+                        <a href="/bo-suu-tap-pio" className="plain">
                           <div className="box box-normal box-text-bottom box-blog-post has-hover">
                             <div className="box-image">
                               <div className="image-cover" style={{ paddingTop: '56.25%' }}>
@@ -519,7 +519,7 @@ function CollectionPage() {
                     </div>
                     <div className="col post-item">
                       <div className="col-inner">
-                        <a href="../../bo-suu-tap-pop/index.html" className="plain">
+                        <a href="/bo-suu-tap-pop" className="plain">
                           <div className="box box-normal box-text-bottom box-blog-post has-hover">
                             <div className="box-image">
                               <div className="image-cover" style={{ paddingTop: '56.25%' }}>
@@ -543,7 +543,7 @@ function CollectionPage() {
                     </div>
                     <div className="col post-item">
                       <div className="col-inner">
-                        <a href="../../bo-suu-tap-dubai/index.html" className="plain">
+                        <a href="/bo-suu-tap-dubai" className="plain">
                           <div className="box box-normal box-text-bottom box-blog-post has-hover">
                             <div className="box-image">
                               <div className="image-cover" style={{ paddingTop: '56.25%' }}>
@@ -567,7 +567,7 @@ function CollectionPage() {
                     </div>
                     <div className="col post-item">
                       <div className="col-inner">
-                        <a href="../../bo-suu-tap-bui/index.html" className="plain">
+                        <a href="/bo-suu-tap-bui" className="plain">
                           <div className="box box-normal box-text-bottom box-blog-post has-hover">
                             <div className="box-image">
                               <div className="image-cover" style={{ paddingTop: '56.25%' }}>
@@ -591,7 +591,7 @@ function CollectionPage() {
                     </div>
                     <div className="col post-item">
                       <div className="col-inner">
-                        <a href="../../bo-suu-tap-porto/index.html" className="plain">
+                        <a href="/bo-suu-tap-porto" className="plain">
                           <div className="box box-normal box-text-bottom box-blog-post has-hover">
                             <div className="box-image">
                               <div className="image-cover" style={{ paddingTop: '56.25%' }}>
@@ -644,14 +644,7 @@ function CollectionPage() {
                           </div>
 
                           <div id="col-59894249" className="col medium-3 small-12 large-3">
-                            <div className="col-inner text-center">
-
-                              <a href="../../he-thong-cua-hang/index.html" target="_self" className="button white is-outline lowercase expand" style={{ padding: '6px 0px 6px 0px' }}>
-                                <span>Tìm cửa hàng</span>
-                                <i className="icon-angle-right" />
-                              </a>
-
-                            </div>
+                            <div className="col-inner text-center" />
                           </div>
 
                         </div>

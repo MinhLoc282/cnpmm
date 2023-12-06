@@ -1,8 +1,6 @@
 /* eslint-disable jsx-a11y/no-noninteractive-tabindex */
 import React from 'react';
 
-import { Link } from 'react-router-dom';
-
 function Wishlist() {
   return (
     <div id="overlay-right-sidebar" className="mobile-sidebar no-scrollbar mfp-hide">
@@ -28,15 +26,15 @@ function Wishlist() {
                 </span>
               </strong>
             </div>
-            <Link to="/tai-khoan/wishlist" className="wishlist-link is-small">
+            <a href="/tai-khoan/wishlist" className="wishlist-link is-small">
               Xem Wishlist
-            </Link>
-            <Link
-              to="/tai-khoan"
+            </a>
+            <a
+              href="/tai-khoan"
               className="btn btn-login is-small"
             >
               Đăng nhập
-            </Link>
+            </a>
           </div>
         </div>
       </div>

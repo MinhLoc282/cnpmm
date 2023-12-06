@@ -1,5 +1,7 @@
 import React from 'react';
 
+import BannerTuVan from 'assets/images/banner-nha-xinh-khong-gian-tu-van.jpg';
+
 function Home() {
   return (
     <main id="main" className="">
@@ -48,7 +50,7 @@ function Home() {
 
                         </div>
 
-                        <a href="bst-coastal-cam-hung-mien-duyen-hai/index.html" target="_self" className="button white">
+                        <a href="/bst-coastal-cam-hung-mien-duyen-hai" target="_self" className="button white">
                           <span>xem chi tiết</span>
                         </a>
 
@@ -99,7 +101,7 @@ function Home() {
 
                 </div>
                 <div className="banner-layers container">
-                  <a aria-label="Link to Coastal Cam Hung Mien Duyen Hai" className="fill" href="bst-coastal-cam-hung-mien-duyen-hai/index.html"><div className="fill banner-link" /></a>
+                  <a aria-label="Link to Coastal Cam Hung Mien Duyen Hai" className="fill" href="/bst-coastal-cam-hung-mien-duyen-hai"><div className="fill banner-link" /></a>
 
                   <div id="text-box-13400618" className="text-box banner-layer x50 md-x50 lg-x50 y30 md-y50 lg-y50 res-text">
                     <div className="text-box-content text dark">
@@ -107,7 +109,7 @@ function Home() {
                       <div className="text-inner text-center">
 
                         <h4>BỘ SƯU TẬP MỚI COASTAL</h4>
-                        <a href="bst-coastal-cam-hung-mien-duyen-hai/index.html" target="_self" className="button white">
+                        <a href="/bst-coastal-cam-hung-mien-duyen-hai" target="_self" className="button white">
                           <span>xem chi tiết</span>
                         </a>
 
@@ -157,7 +159,7 @@ function Home() {
 
                         </div>
                         <div className="banner-layers container">
-                          <a aria-label="Link to Phòng Khách Sofas" className="fill" href="danh-muc/phong-khach/sofa/index.html"><div className="fill banner-link" /></a>
+                          <a aria-label="Link to Phòng Khách Sofas" className="fill" href="/danh-muc/phong-khach/sofa"><div className="fill banner-link" /></a>
 
                           <div id="text-box-1171943206" className="text-box banner-layer x50 md-x50 lg-x50 y50 md-y50 lg-y50 res-text">
                             <div className="text-box-content text dark">
@@ -188,7 +190,7 @@ function Home() {
                           <div className="overlay" />
                         </div>
                         <div className="banner-layers container">
-                          <a aria-label="Link to Phòng Ăn Bàn Ăn" className="fill" href="danh-muc/phong-an/ban-an/index.html"><div className="fill banner-link" /></a>
+                          <a aria-label="Link to Phòng Ăn Bàn Ăn" className="fill" href="/danh-muc/phong-an/ban-an"><div className="fill banner-link" /></a>
 
                           <div id="text-box-1929009184" className="text-box banner-layer x50 md-x50 lg-x50 y50 md-y50 lg-y50 res-text">
                             <div className="text-box-content text dark">
@@ -220,7 +222,7 @@ function Home() {
 
                         </div>
                         <div className="banner-layers container">
-                          <a aria-label="Link to" className="fill" href="danh-muc/phong-ngu/giuong/index.html"><div className="fill banner-link" /></a>
+                          <a aria-label="Link to" className="fill" href="/danh-muc/phong-ngu/giuong"><div className="fill banner-link" /></a>
 
                           <div id="text-box-1660448018" className="text-box banner-layer x50 md-x50 lg-x50 y50 md-y50 lg-y50 res-text">
                             <div className="text-box-content text dark">
@@ -251,7 +253,7 @@ function Home() {
 
                         </div>
                         <div className="banner-layers container">
-                          <a aria-label="Link to" className="fill" href="danh-muc/phong-khach/armchair/index.html"><div className="fill banner-link" /></a>
+                          <a aria-label="Link to" className="fill" href="/danh-muc/phong-khach/armchair"><div className="fill banner-link" /></a>
 
                           <div id="text-box-1696166676" className="text-box banner-layer x50 md-x50 lg-x50 y50 md-y50 lg-y50 res-text">
                             <div className="text-box-content text dark">
@@ -283,7 +285,7 @@ function Home() {
 
                         </div>
                         <div className="banner-layers container">
-                          <a aria-label="Link to" className="fill" href="danh-muc/phong-an/ghe-an/index.html"><div className="fill banner-link" /></a>
+                          <a aria-label="Link to" className="fill" href="/danh-muc/phong-an/ghe-an"><div className="fill banner-link" /></a>
 
                           <div id="text-box-1318303730" className="text-box banner-layer x50 md-x50 lg-x50 y50 md-y50 lg-y50 res-text">
                             <div className="text-box-content text dark">
@@ -343,8 +345,7 @@ function Home() {
                 <div className="col-inner">
 
                   <div className="img has-hover img_first_left x md-x lg-x y md-y lg-y" id="image_1090924730">
-                    <a className="" href="beta.nhaxinh.com/phong-khach/index.html">
-                      {' '}
+                    <a className="" href="/phong-khach">
                       <div className="img-inner image-zoom dark">
                         <img decoding="async" width="970" height="640" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20970%20640%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://nhaxinh.com/wp-content/uploads/2023/05/mau-phong-khach-nha-xinh-24523.jpg" className="lazy-load attachment-large size-large" alt="" srcSet="" data-srcset="https://nhaxinh.com/wp-content/uploads/2023/05/mau-phong-khach-nha-xinh-24523.jpg 970w, https://nhaxinh.com/wp-content/uploads/2023/05/mau-phong-khach-nha-xinh-24523-606x400.jpg 606w, https://nhaxinh.com/wp-content/uploads/2023/05/mau-phong-khach-nha-xinh-24523-768x507.jpg 768w, https://nhaxinh.com/wp-content/uploads/2023/05/mau-phong-khach-nha-xinh-24523-300x198.jpg 300w, https://nhaxinh.com/wp-content/uploads/2023/05/mau-phong-khach-nha-xinh-24523-600x396.jpg 600w" sizes="(max-width: 970px) 100vw, 970px" />
                       </div>
@@ -358,9 +359,8 @@ function Home() {
                       <h2>Không gian phòng khách</h2>
                       <p>Phòng khách là không gian chính của ngôi nhà, là nơi sum họp gia đình</p>
                       <p>
-                        <a href="phong-khach/index.html">
-&nbsp;MẪU THIẾT KẾ
-                          {' '}
+                        <a href="/phong-khach">
+                          &nbsp;MẪU THIẾT KẾ
                           <i className="fal fa-arrow-right" />
                         </a>
                       </p>
@@ -374,8 +374,7 @@ function Home() {
                 <div className="col-inner">
 
                   <div className="img has-hover img_first_right x md-x lg-x y md-y lg-y" id="image_1999236504">
-                    <a className="" href="danh-muc/hang-trang-tri/index.html">
-                      {' '}
+                    <a className="" href="/danh-muc/hang-trang-tri">
                       <div className="img-inner image-zoom dark">
                         <img decoding="async" width="533" height="600" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20533%20600%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://nhaxinh.com/wp-content/uploads/2022/09/hang-trang-tri-nx-12-9-22.jpg" className="lazy-load attachment-large size-large" alt="" srcSet="" data-srcset="https://nhaxinh.com/wp-content/uploads/2022/09/hang-trang-tri-nx-12-9-22.jpg 533w, https://nhaxinh.com/wp-content/uploads/2022/09/hang-trang-tri-nx-12-9-22-355x400.jpg 355w, https://nhaxinh.com/wp-content/uploads/2022/09/hang-trang-tri-nx-12-9-22-300x338.jpg 300w" sizes="(max-width: 533px) 100vw, 533px" />
                       </div>
@@ -386,43 +385,35 @@ function Home() {
                     <h2>Đồ trang trí</h2>
                     <p>Mang lại những nguồn cảm hứng và nét sinh động cho không gian</p>
                     <p>
-                      <a href="danh-muc/hang-trang-tri/index.html">
+                      <a href="/danh-muc/hang-trang-tri">
                         KHÁM PHÁ
                         {' '}
                         <i className="fal fa-arrow-right" />
                       </a>
                     </p>
                   </div>
-
                 </div>
               </div>
-
             </div>
-            <div className="row secon_design" id="row-1527177608">
 
+            <div className="row secon_design" id="row-1527177608">
               <div id="col-1729942460" className="col medium-6 small-12 large-6">
                 <div className="col-inner">
-
                   <div className="row secon_left" id="row-2001403952">
-
                     <div id="col-1260646593" className="col medium-8 small-12 large-8">
                       <div className="col-inner">
-
                         <div className="img has-hover x md-x lg-x y md-y lg-y" id="image_1640297508">
-                          <a className="" href="phong-ngu/index.html">
-                            {' '}
+                          <a className="" href="/phong-ngu">
                             <div className="img-inner image-zoom dark">
                               <img decoding="async" width="800" height="639" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20800%20639%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://nhaxinh.com/wp-content/uploads/2023/05/mau-phong-ngu-16-5-23.jpg" className="lazy-load attachment-large size-large" alt="" srcSet="" data-srcset="https://nhaxinh.com/wp-content/uploads/2023/05/mau-phong-ngu-16-5-23.jpg 800w, https://nhaxinh.com/wp-content/uploads/2023/05/mau-phong-ngu-16-5-23-501x400.jpg 501w, https://nhaxinh.com/wp-content/uploads/2023/05/mau-phong-ngu-16-5-23-768x613.jpg 768w, https://nhaxinh.com/wp-content/uploads/2023/05/mau-phong-ngu-16-5-23-300x240.jpg 300w, https://nhaxinh.com/wp-content/uploads/2023/05/mau-phong-ngu-16-5-23-600x479.jpg 600w" sizes="(max-width: 800px) 100vw, 800px" />
                             </div>
                           </a>
                         </div>
-
                       </div>
                     </div>
 
                     <div id="col-1233277072" className="col medium-4 small-12 large-4">
                       <div className="col-inner">
-
                         <div className="ct_design">
                           <h2>Không gian phòng ngủ</h2>
                           <p>
@@ -430,19 +421,16 @@ function Home() {
                             giác ấm cúng, gần gũi và thoải mái
                           </p>
                           <p>
-                            <a href="phong-ngu/index.html">
+                            <a href="/phong-ngu">
                               MẪU PHÒNG NGỦ
                               {' '}
                               <i className="fal fa-arrow-right" />
                             </a>
                           </p>
                         </div>
-
                       </div>
                     </div>
-
                   </div>
-
                 </div>
               </div>
 
@@ -450,8 +438,7 @@ function Home() {
                 <div className="col-inner">
 
                   <div className="img has-hover img_secon_right x md-x lg-x y md-y lg-y" id="image_28374993">
-                    <a className="" href="phong-an/index.html">
-                      {' '}
+                    <a className="" href="/phong-an">
                       <div className="img-inner image-zoom dark">
                         <img decoding="async" width="850" height="540" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20850%20540%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://nhaxinh.com/wp-content/uploads/2022/09/banner-phong-an-nha-xinh-12-9-22.jpg" className="lazy-load attachment-large size-large" alt="" srcSet="" data-srcset="https://nhaxinh.com/wp-content/uploads/2022/09/banner-phong-an-nha-xinh-12-9-22.jpg 850w, https://nhaxinh.com/wp-content/uploads/2022/09/banner-phong-an-nha-xinh-12-9-22-630x400.jpg 630w, https://nhaxinh.com/wp-content/uploads/2022/09/banner-phong-an-nha-xinh-12-9-22-768x488.jpg 768w, https://nhaxinh.com/wp-content/uploads/2022/09/banner-phong-an-nha-xinh-12-9-22-300x191.jpg 300w, https://nhaxinh.com/wp-content/uploads/2022/09/banner-phong-an-nha-xinh-12-9-22-600x381.jpg 600w" sizes="(max-width: 850px) 100vw, 850px" />
                       </div>
@@ -465,21 +452,17 @@ function Home() {
                       Không gian phòng ăn đóng vai trò rất quan trọng trong văn hóa Việt
                     </p>
                     <p>
-                      <a href="phong-an/index.html">
+                      <a href="/phong-an">
                         MẪU PHÒNG ĂN
                         {' '}
                         <i className="fal fa-arrow-right" />
                       </a>
                     </p>
                   </div>
-
                 </div>
               </div>
-
             </div>
-
           </div>
-
         </section>
 
         <div className="row row-collapse row-full-width align-middle" id="row-1809592033">
@@ -489,7 +472,7 @@ function Home() {
 
               <h2 style={{ textAlign: 'center' }}>THIẾT KẾ NỘI THẤT</h2>
               <p style={{ textAlign: 'center' }}>Với kinh nghiệm hơn 23 năm trong lĩnh vực thiết kế và hoàn thiện nội thất cùng đội ngũ thiết kế chuyên nghiệp, Nhà Xinh mang đến giải pháp toàn diện trong nội thất.</p>
-              <a href="thiet-ke-noi-that/index.html" target="_self" className="button success is-outline lowercase">
+              <a href="/thiet-ke-noi-that" target="_self" className="button success is-outline lowercase">
                 <span>Xem thêm</span>
               </a>
 
@@ -538,7 +521,7 @@ function Home() {
 
                     </div>
 
-                    <a href="showroom-ao/index.html" target="_self" className="button white">
+                    <a href="/showroom-ao" target="_self" className="button white">
                       <span>xem chi tiết</span>
                     </a>
 
@@ -557,7 +540,7 @@ function Home() {
             <b />
             <span className="section-title-main">Sản phẩm mới</span>
             <b />
-            <a href="cua-hang.html" target="">
+            <a href="/cua-hang" target="">
               xem tất cả
               <i className="icon-angle-right" />
             </a>
@@ -575,7 +558,7 @@ function Home() {
                 <div className="product-small box ">
                   <div className="box-image">
                     <div className="image-fade_in_back">
-                      <a href="san-pham/ghe-an-coastal-kd1085-18/index.html" aria-label="Ghế ăn Coastal KD1085-18">
+                      <a href="/san-pham/ghe-an-coastal-kd1085-18" aria-label="Ghế ăn Coastal KD1085-18">
                         <img decoding="async" width="300" height="200" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20300%20200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://nhaxinh.com/wp-content/uploads/2023/07/Ghe-an-Coastal-xanh-300x200.jpg" className="lazy-load attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" srcSet="" data-srcset="https://nhaxinh.com/wp-content/uploads/2023/07/Ghe-an-Coastal-xanh-300x200.jpg 300w, https://nhaxinh.com/wp-content/uploads/2023/07/Ghe-an-Coastal-xanh-601x400.jpg 601w, https://nhaxinh.com/wp-content/uploads/2023/07/Ghe-an-Coastal-xanh-768x511.jpg 768w, https://nhaxinh.com/wp-content/uploads/2023/07/Ghe-an-Coastal-xanh-600x400.jpg 600w, https://nhaxinh.com/wp-content/uploads/2023/07/Ghe-an-Coastal-xanh.jpg 1000w" sizes="(max-width: 300px) 100vw, 300px" />
                         <img decoding="async" width="300" height="450" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20300%20450%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://nhaxinh.com/wp-content/uploads/2023/07/phong-an-coastal-1-300x450.jpg" className="lazy-load show-on-hover absolute fill hide-for-small back-image" alt="" srcSet="" data-srcset="https://nhaxinh.com/wp-content/uploads/2023/07/phong-an-coastal-1-300x450.jpg 300w, https://nhaxinh.com/wp-content/uploads/2023/07/phong-an-coastal-1-267x400.jpg 267w, https://nhaxinh.com/wp-content/uploads/2023/07/phong-an-coastal-1-534x800.jpg 534w, https://nhaxinh.com/wp-content/uploads/2023/07/phong-an-coastal-1-600x900.jpg 600w, https://nhaxinh.com/wp-content/uploads/2023/07/phong-an-coastal-1.jpg 667w" sizes="(max-width: 300px) 100vw, 300px" />
                         <img decoding="async" width="300" height="200" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20300%20200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://nhaxinh.com/wp-content/uploads/2023/07/phong-an-coastal-300x200.jpg" className="lazy-load show-on-hover absolute fill hide-for-small back-image" alt="" srcSet="" data-srcset="https://nhaxinh.com/wp-content/uploads/2023/07/phong-an-coastal-300x200.jpg 300w, https://nhaxinh.com/wp-content/uploads/2023/07/phong-an-coastal-600x400.jpg 600w, https://nhaxinh.com/wp-content/uploads/2023/07/phong-an-coastal-768x512.jpg 768w, https://nhaxinh.com/wp-content/uploads/2023/07/phong-an-coastal.jpg 1000w" sizes="(max-width: 300px) 100vw, 300px" />
@@ -590,8 +573,7 @@ function Home() {
 
                   <div className="box-text box-text-products">
                     <div className="title-wrapper">
-                      {' '}
-                      <a className="woocommerce-LoopProduct-link woocommerce-loop-product__link" href="san-pham/ghe-an-coastal-kd1085-18/index.html" aria-label="Ghế ăn Coastal KD1085-18">
+                      <a className="woocommerce-LoopProduct-link woocommerce-loop-product__link" href="/san-pham/ghe-an-coastal-kd1085-18" aria-label="Ghế ăn Coastal KD1085-18">
                         Ghế ăn Coastal KD1085-18
                       </a>
                     </div>
@@ -626,7 +608,7 @@ function Home() {
                       <div className="product-box-after">
                         <div className="add-to-cart-button"><a href="indexb0b0.html?add-to-cart=52141" data-quantity="1" className="primary is-small mb-0 button product_type_simple add_to_cart_button ajax_add_to_cart is-outline" data-product_id="52141" data-product_sku="3*111271" aria-label="Add &ldquo;Ghế ăn Coastal KD1085-18&rdquo; to your cart" rel="nofollow">Thêm vào giỏ</a></div>
                         {' '}
-                        <a href="san-pham/ghe-an-coastal-kd1085-18/index.html" className="buy-now button">Xem thêm</a>
+                        <a href="/san-pham/ghe-an-coastal-kd1085-18" className="buy-now button">Xem thêm</a>
                         {' '}
 
                       </div>
@@ -645,7 +627,7 @@ function Home() {
                 <div className="product-small box ">
                   <div className="box-image">
                     <div className="image-fade_in_back">
-                      <a href="san-pham/sofa-coastal-2-cho-vai-sevilla/index.html" aria-label="Sofa Coastal 2 chỗ KD1085-18 xanh M2">
+                      <a href="/san-pham/sofa-coastal-2-cho-vai-sevilla" aria-label="Sofa Coastal 2 chỗ KD1085-18 xanh M2">
                         <img decoding="async" width="300" height="200" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20300%20200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://nhaxinh.com/wp-content/uploads/2023/07/Sofa-Coastal-3-cho-300x200.jpg" className="lazy-load attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" srcSet="" data-srcset="https://nhaxinh.com/wp-content/uploads/2023/07/Sofa-Coastal-3-cho-300x200.jpg 300w, https://nhaxinh.com/wp-content/uploads/2023/07/Sofa-Coastal-3-cho-601x400.jpg 601w, https://nhaxinh.com/wp-content/uploads/2023/07/Sofa-Coastal-3-cho-768x511.jpg 768w, https://nhaxinh.com/wp-content/uploads/2023/07/Sofa-Coastal-3-cho-600x400.jpg 600w, https://nhaxinh.com/wp-content/uploads/2023/07/Sofa-Coastal-3-cho.jpg 1000w" sizes="(max-width: 300px) 100vw, 300px" />
                         <img decoding="async" width="300" height="200" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20300%20200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://nhaxinh.com/wp-content/uploads/2023/07/Sofa-Coastal-3-cho-2-300x200.jpg" className="lazy-load show-on-hover absolute fill hide-for-small back-image" alt="" srcSet="" data-srcset="https://nhaxinh.com/wp-content/uploads/2023/07/Sofa-Coastal-3-cho-2-300x200.jpg 300w, https://nhaxinh.com/wp-content/uploads/2023/07/Sofa-Coastal-3-cho-2-601x400.jpg 601w, https://nhaxinh.com/wp-content/uploads/2023/07/Sofa-Coastal-3-cho-2-768x511.jpg 768w, https://nhaxinh.com/wp-content/uploads/2023/07/Sofa-Coastal-3-cho-2-600x400.jpg 600w, https://nhaxinh.com/wp-content/uploads/2023/07/Sofa-Coastal-3-cho-2.jpg 1000w" sizes="(max-width: 300px) 100vw, 300px" />
                         <img decoding="async" width="300" height="200" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20300%20200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://nhaxinh.com/wp-content/uploads/2023/07/BST-Coastal-3-1-300x200.jpg" className="lazy-load show-on-hover absolute fill hide-for-small back-image" alt="" srcSet="" data-srcset="https://nhaxinh.com/wp-content/uploads/2023/07/BST-Coastal-3-1-300x200.jpg 300w, https://nhaxinh.com/wp-content/uploads/2023/07/BST-Coastal-3-1-600x400.jpg 600w, https://nhaxinh.com/wp-content/uploads/2023/07/BST-Coastal-3-1-768x512.jpg 768w, https://nhaxinh.com/wp-content/uploads/2023/07/BST-Coastal-3-1.jpg 1100w" sizes="(max-width: 300px) 100vw, 300px" />
@@ -664,7 +646,7 @@ function Home() {
                   <div className="box-text box-text-products">
                     <div className="title-wrapper">
                       {' '}
-                      <a className="woocommerce-LoopProduct-link woocommerce-loop-product__link" href="san-pham/sofa-coastal-2-cho-vai-sevilla/index.html" aria-label="Sofa Coastal 2 chỗ KD1085-18 xanh M2">
+                      <a className="woocommerce-LoopProduct-link woocommerce-loop-product__link" href="/san-pham/sofa-coastal-2-cho-vai-sevilla" aria-label="Sofa Coastal 2 chỗ KD1085-18 xanh M2">
                         Sofa Coastal 2 chỗ KD1085-18 xanh M2
                       </a>
                     </div>
@@ -697,7 +679,7 @@ function Home() {
                       </div>
                       {' '}
                       <div className="product-box-after">
-                        <div className="add-to-cart-button"><a href="san-pham/sofa-coastal-2-cho-vai-sevilla/index.html" data-quantity="1" className="primary is-small mb-0 button product_type_simple is-outline" data-product_id="51932" data-product_sku="3*110305" aria-label="Xem thêm về “Sofa Coastal 2 chỗ KD1085-18 xanh M2”" rel="nofollow">Xem thêm</a></div>
+                        <div className="add-to-cart-button"><a href="/san-pham/sofa-coastal-2-cho-vai-sevilla" data-quantity="1" className="primary is-small mb-0 button product_type_simple is-outline" data-product_id="51932" data-product_sku="3*110305" aria-label="Xem thêm về “Sofa Coastal 2 chỗ KD1085-18 xanh M2”" rel="nofollow">Xem thêm</a></div>
                       </div>
                     </div>
                   </div>
@@ -714,26 +696,21 @@ function Home() {
                 <div className="product-small box ">
                   <div className="box-image">
                     <div className="image-fade_in_back">
-                      <a href="san-pham/armchair-coastal-vai-sevilla/index.html" aria-label="Sofa Coastal 1 chỗ KD1085-18 xanh M2">
+                      <a href="/san-pham/armchair-coastal-vai-sevilla" aria-label="Sofa Coastal 1 chỗ KD1085-18 xanh M2">
                         <img decoding="async" width="300" height="200" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20300%20200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://nhaxinh.com/wp-content/uploads/2023/07/Armchair-Coastal-vai-Sevilla-300x200.jpg" className="lazy-load attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" srcSet="" data-srcset="https://nhaxinh.com/wp-content/uploads/2023/07/Armchair-Coastal-vai-Sevilla-300x200.jpg 300w, https://nhaxinh.com/wp-content/uploads/2023/07/Armchair-Coastal-vai-Sevilla-601x400.jpg 601w, https://nhaxinh.com/wp-content/uploads/2023/07/Armchair-Coastal-vai-Sevilla-768x511.jpg 768w, https://nhaxinh.com/wp-content/uploads/2023/07/Armchair-Coastal-vai-Sevilla-600x400.jpg 600w, https://nhaxinh.com/wp-content/uploads/2023/07/Armchair-Coastal-vai-Sevilla.jpg 1000w" sizes="(max-width: 300px) 100vw, 300px" />
                         <img decoding="async" width="300" height="200" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20300%20200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://nhaxinh.com/wp-content/uploads/2023/07/Armchair-Coastal-vai-Sevilla-1-300x200.jpg" className="lazy-load show-on-hover absolute fill hide-for-small back-image" alt="" srcSet="" data-srcset="https://nhaxinh.com/wp-content/uploads/2023/07/Armchair-Coastal-vai-Sevilla-1-300x200.jpg 300w, https://nhaxinh.com/wp-content/uploads/2023/07/Armchair-Coastal-vai-Sevilla-1-601x400.jpg 601w, https://nhaxinh.com/wp-content/uploads/2023/07/Armchair-Coastal-vai-Sevilla-1-768x511.jpg 768w, https://nhaxinh.com/wp-content/uploads/2023/07/Armchair-Coastal-vai-Sevilla-1-600x400.jpg 600w, https://nhaxinh.com/wp-content/uploads/2023/07/Armchair-Coastal-vai-Sevilla-1.jpg 1000w" sizes="(max-width: 300px) 100vw, 300px" />
                         <img decoding="async" width="300" height="200" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20300%20200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://nhaxinh.com/wp-content/uploads/2023/07/BST-Coastal-3-1-300x200.jpg" className="lazy-load show-on-hover absolute fill hide-for-small back-image" alt="" srcSet="" data-srcset="https://nhaxinh.com/wp-content/uploads/2023/07/BST-Coastal-3-1-300x200.jpg 300w, https://nhaxinh.com/wp-content/uploads/2023/07/BST-Coastal-3-1-600x400.jpg 600w, https://nhaxinh.com/wp-content/uploads/2023/07/BST-Coastal-3-1-768x512.jpg 768w, https://nhaxinh.com/wp-content/uploads/2023/07/BST-Coastal-3-1.jpg 1100w" sizes="(max-width: 300px) 100vw, 300px" />
-                        {' '}
-
                       </a>
                     </div>
                     <div className="image-tools is-small top right show-on-hover" />
                     <div className="image-tools is-small hide-for-small bottom left show-on-hover" />
                     <div className="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover" />
                     <div className="out-of-stock-label">Không có sẵn</div>
-                    {' '}
-
                   </div>
 
                   <div className="box-text box-text-products">
                     <div className="title-wrapper">
-                      {' '}
-                      <a className="woocommerce-LoopProduct-link woocommerce-loop-product__link" href="san-pham/armchair-coastal-vai-sevilla/index.html" aria-label="Sofa Coastal 1 chỗ KD1085-18 xanh M2">
+                      <a className="woocommerce-LoopProduct-link woocommerce-loop-product__link" href="/san-pham/armchair-coastal-vai-sevilla" aria-label="Sofa Coastal 1 chỗ KD1085-18 xanh M2">
                         Sofa Coastal 1 chỗ KD1085-18 xanh M2
                       </a>
                     </div>
@@ -766,7 +743,7 @@ function Home() {
                       </div>
                       {' '}
                       <div className="product-box-after">
-                        <div className="add-to-cart-button"><a href="san-pham/armchair-coastal-vai-sevilla/index.html" data-quantity="1" className="primary is-small mb-0 button product_type_simple is-outline" data-product_id="51927" data-product_sku="3*110304" aria-label="Xem thêm về “Sofa Coastal 1 chỗ KD1085-18 xanh M2”" rel="nofollow">Xem thêm</a></div>
+                        <div className="add-to-cart-button"><a href="/san-pham/armchair-coastal-vai-sevilla" data-quantity="1" className="primary is-small mb-0 button product_type_simple is-outline" data-product_id="51927" data-product_sku="3*110304" aria-label="Xem thêm về “Sofa Coastal 1 chỗ KD1085-18 xanh M2”" rel="nofollow">Xem thêm</a></div>
                       </div>
                     </div>
                   </div>
@@ -783,12 +760,10 @@ function Home() {
                 <div className="product-small box ">
                   <div className="box-image">
                     <div className="image-fade_in_back">
-                      <a href="san-pham/ban-lam-viec-wing-mau-den/index.html" aria-label="Bàn làm việc Wing màu đen">
+                      <a href="/san-pham/ban-lam-viec-wing-mau-den" aria-label="Bàn làm việc Wing màu đen">
                         <img decoding="async" width="300" height="200" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20300%20200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://nhaxinh.com/wp-content/uploads/2023/06/BAN-LAM-VIEC-WING-MAU-DEN-300x200.jpg" className="lazy-load attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" srcSet="" data-srcset="https://nhaxinh.com/wp-content/uploads/2023/06/BAN-LAM-VIEC-WING-MAU-DEN-300x200.jpg 300w, https://nhaxinh.com/wp-content/uploads/2023/06/BAN-LAM-VIEC-WING-MAU-DEN-601x400.jpg 601w, https://nhaxinh.com/wp-content/uploads/2023/06/BAN-LAM-VIEC-WING-MAU-DEN-768x511.jpg 768w, https://nhaxinh.com/wp-content/uploads/2023/06/BAN-LAM-VIEC-WING-MAU-DEN-600x400.jpg 600w, https://nhaxinh.com/wp-content/uploads/2023/06/BAN-LAM-VIEC-WING-MAU-DEN.jpg 1000w" sizes="(max-width: 300px) 100vw, 300px" />
                         <img decoding="async" width="300" height="200" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20300%20200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://nhaxinh.com/wp-content/uploads/2023/06/BAN-LAM-VIEC-WING-MAU-DEN-1-300x200.jpg" className="lazy-load show-on-hover absolute fill hide-for-small back-image" alt="" srcSet="" data-srcset="https://nhaxinh.com/wp-content/uploads/2023/06/BAN-LAM-VIEC-WING-MAU-DEN-1-300x200.jpg 300w, https://nhaxinh.com/wp-content/uploads/2023/06/BAN-LAM-VIEC-WING-MAU-DEN-1-601x400.jpg 601w, https://nhaxinh.com/wp-content/uploads/2023/06/BAN-LAM-VIEC-WING-MAU-DEN-1-768x511.jpg 768w, https://nhaxinh.com/wp-content/uploads/2023/06/BAN-LAM-VIEC-WING-MAU-DEN-1-600x400.jpg 600w, https://nhaxinh.com/wp-content/uploads/2023/06/BAN-LAM-VIEC-WING-MAU-DEN-1.jpg 1000w" sizes="(max-width: 300px) 100vw, 300px" />
                         <img decoding="async" width="300" height="199" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20300%20199%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://nhaxinh.com/wp-content/uploads/2023/06/ban-wing-300x199.jpg" className="lazy-load show-on-hover absolute fill hide-for-small back-image" alt="" srcSet="" data-srcset="https://nhaxinh.com/wp-content/uploads/2023/06/ban-wing-300x199.jpg 300w, https://nhaxinh.com/wp-content/uploads/2023/06/ban-wing-603x400.jpg 603w, https://nhaxinh.com/wp-content/uploads/2023/06/ban-wing-768x509.jpg 768w, https://nhaxinh.com/wp-content/uploads/2023/06/ban-wing-600x398.jpg 600w, https://nhaxinh.com/wp-content/uploads/2023/06/ban-wing.jpg 1000w" sizes="(max-width: 300px) 100vw, 300px" />
-                        {' '}
-
                       </a>
                     </div>
                     <div className="image-tools is-small top right show-on-hover" />
@@ -798,8 +773,7 @@ function Home() {
 
                   <div className="box-text box-text-products">
                     <div className="title-wrapper">
-                      {' '}
-                      <a className="woocommerce-LoopProduct-link woocommerce-loop-product__link" href="san-pham/ban-lam-viec-wing-mau-den/index.html" aria-label="Bàn làm việc Wing màu đen">
+                      <a className="woocommerce-LoopProduct-link woocommerce-loop-product__link" href="/san-pham/ban-lam-viec-wing-mau-den" aria-label="Bàn làm việc Wing màu đen">
                         Bàn làm việc Wing màu đen
                       </a>
                     </div>
@@ -834,9 +808,7 @@ function Home() {
                       <div className="product-box-after">
                         <div className="add-to-cart-button"><a href="indexe13b.html?add-to-cart=51554" data-quantity="1" className="primary is-small mb-0 button product_type_simple add_to_cart_button ajax_add_to_cart is-outline" data-product_id="51554" data-product_sku="3*102593" aria-label="Add &ldquo;Bàn làm việc Wing màu đen&rdquo; to your cart" rel="nofollow">Thêm vào giỏ</a></div>
                         {' '}
-                        <a href="san-pham/ban-lam-viec-wing-mau-den/index.html" className="buy-now button">Xem thêm</a>
-                        {' '}
-
+                        <a href="/san-pham/ban-lam-viec-wing-mau-den" className="buy-now button">Xem thêm</a>
                       </div>
                     </div>
                   </div>
@@ -857,7 +829,7 @@ function Home() {
                 <div className="product-small box ">
                   <div className="box-image">
                     <div className="image-fade_in_back">
-                      <a href="san-pham/giuong-coastal-1m8-vang/index.html" aria-label="Giường Coastal vàng 1m8">
+                      <a href="/san-pham/giuong-coastal-1m8-vang" aria-label="Giường Coastal vàng 1m8">
                         <img decoding="async" width="300" height="200" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20300%20200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://nhaxinh.com/wp-content/uploads/2023/07/Giuong-Coastal-1m8-vang-2-300x200.jpg" className="lazy-load attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" srcSet="" data-srcset="https://nhaxinh.com/wp-content/uploads/2023/07/Giuong-Coastal-1m8-vang-2-300x200.jpg 300w, https://nhaxinh.com/wp-content/uploads/2023/07/Giuong-Coastal-1m8-vang-2-601x400.jpg 601w, https://nhaxinh.com/wp-content/uploads/2023/07/Giuong-Coastal-1m8-vang-2-768x511.jpg 768w, https://nhaxinh.com/wp-content/uploads/2023/07/Giuong-Coastal-1m8-vang-2-600x400.jpg 600w, https://nhaxinh.com/wp-content/uploads/2023/07/Giuong-Coastal-1m8-vang-2.jpg 1000w" sizes="(max-width: 300px) 100vw, 300px" />
                         <img decoding="async" width="300" height="200" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20300%20200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://nhaxinh.com/wp-content/uploads/2023/07/Giuong-Coastal-1m8-vang-1-300x200.jpg" className="lazy-load show-on-hover absolute fill hide-for-small back-image" alt="" srcSet="" data-srcset="https://nhaxinh.com/wp-content/uploads/2023/07/Giuong-Coastal-1m8-vang-1-300x200.jpg 300w, https://nhaxinh.com/wp-content/uploads/2023/07/Giuong-Coastal-1m8-vang-1-601x400.jpg 601w, https://nhaxinh.com/wp-content/uploads/2023/07/Giuong-Coastal-1m8-vang-1-768x511.jpg 768w, https://nhaxinh.com/wp-content/uploads/2023/07/Giuong-Coastal-1m8-vang-1-600x400.jpg 600w, https://nhaxinh.com/wp-content/uploads/2023/07/Giuong-Coastal-1m8-vang-1.jpg 1000w" sizes="(max-width: 300px) 100vw, 300px" />
                         <img decoding="async" width="300" height="200" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20300%20200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://nhaxinh.com/wp-content/uploads/2023/07/Giuong-Coastal-1m8-vang-1-300x200.jpg" className="lazy-load show-on-hover absolute fill hide-for-small back-image" alt="" srcSet="" data-srcset="https://nhaxinh.com/wp-content/uploads/2023/07/Giuong-Coastal-1m8-vang-1-300x200.jpg 300w, https://nhaxinh.com/wp-content/uploads/2023/07/Giuong-Coastal-1m8-vang-1-601x400.jpg 601w, https://nhaxinh.com/wp-content/uploads/2023/07/Giuong-Coastal-1m8-vang-1-768x511.jpg 768w, https://nhaxinh.com/wp-content/uploads/2023/07/Giuong-Coastal-1m8-vang-1-600x400.jpg 600w, https://nhaxinh.com/wp-content/uploads/2023/07/Giuong-Coastal-1m8-vang-1.jpg 1000w" sizes="(max-width: 300px) 100vw, 300px" />
@@ -872,13 +844,11 @@ function Home() {
 
                   <div className="box-text box-text-products">
                     <div className="title-wrapper">
-                      {' '}
-                      <a className="woocommerce-LoopProduct-link woocommerce-loop-product__link" href="san-pham/giuong-coastal-1m8-vang/index.html" aria-label="Giường Coastal vàng 1m8">
+                      <a className="woocommerce-LoopProduct-link woocommerce-loop-product__link" href="/san-pham/giuong-coastal-1m8-vang" aria-label="Giường Coastal vàng 1m8">
                         Giường Coastal vàng 1m8
                       </a>
                     </div>
                     <div className="sub-title-wrapper">
-                      {' '}
                       <div className="wishlist-icon">
                         <button type="button" className="wishlist-button button is-outline circle icon" aria-label="Wishlist">
                           <i className="icon-heart-o" />
@@ -907,10 +877,8 @@ function Home() {
                       {' '}
                       <div className="product-box-after">
                         <div className="add-to-cart-button"><a href="indexad7c.html?add-to-cart=52144" data-quantity="1" className="primary is-small mb-0 button product_type_simple add_to_cart_button ajax_add_to_cart is-outline" data-product_id="52144" data-product_sku="3*111277" aria-label="Add &ldquo;Giường Coastal vàng 1m8&rdquo; to your cart" rel="nofollow">Thêm vào giỏ</a></div>
-                        {' '}
-                        <a href="san-pham/giuong-coastal-1m8-vang/index.html" className="buy-now button">Xem thêm</a>
-                        {' '}
 
+                        <a href="/san-pham/giuong-coastal-1m8-vang" className="buy-now button">Xem thêm</a>
                       </div>
                     </div>
                   </div>
@@ -927,12 +895,10 @@ function Home() {
                 <div className="product-small box ">
                   <div className="box-image">
                     <div className="image-fade_in_back">
-                      <a href="san-pham/ban-lam-viec-coastal/index.html" aria-label="Bàn làm việc Coastal">
+                      <a href="/san-pham/ban-lam-viec-coastal" aria-label="Bàn làm việc Coastal">
                         <img decoding="async" width="300" height="200" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20300%20200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://nhaxinh.com/wp-content/uploads/2023/07/Ban-lam-viec-Coastal-300x200.jpg" className="lazy-load attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" srcSet="" data-srcset="https://nhaxinh.com/wp-content/uploads/2023/07/Ban-lam-viec-Coastal-300x200.jpg 300w, https://nhaxinh.com/wp-content/uploads/2023/07/Ban-lam-viec-Coastal-601x400.jpg 601w, https://nhaxinh.com/wp-content/uploads/2023/07/Ban-lam-viec-Coastal-768x511.jpg 768w, https://nhaxinh.com/wp-content/uploads/2023/07/Ban-lam-viec-Coastal-600x400.jpg 600w, https://nhaxinh.com/wp-content/uploads/2023/07/Ban-lam-viec-Coastal.jpg 1000w" sizes="(max-width: 300px) 100vw, 300px" />
                         <img decoding="async" width="300" height="200" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20300%20200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://nhaxinh.com/wp-content/uploads/2023/07/Ban-lam-viec-Coastal-1-300x200.jpg" className="lazy-load show-on-hover absolute fill hide-for-small back-image" alt="" srcSet="" data-srcset="https://nhaxinh.com/wp-content/uploads/2023/07/Ban-lam-viec-Coastal-1-300x200.jpg 300w, https://nhaxinh.com/wp-content/uploads/2023/07/Ban-lam-viec-Coastal-1-601x400.jpg 601w, https://nhaxinh.com/wp-content/uploads/2023/07/Ban-lam-viec-Coastal-1-768x511.jpg 768w, https://nhaxinh.com/wp-content/uploads/2023/07/Ban-lam-viec-Coastal-1-600x400.jpg 600w, https://nhaxinh.com/wp-content/uploads/2023/07/Ban-lam-viec-Coastal-1.jpg 1000w" sizes="(max-width: 300px) 100vw, 300px" />
                         <img decoding="async" width="300" height="200" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20300%20200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://nhaxinh.com/wp-content/uploads/2023/07/BST-Coastal-4-300x200.jpg" className="lazy-load show-on-hover absolute fill hide-for-small back-image" alt="" srcSet="" data-srcset="https://nhaxinh.com/wp-content/uploads/2023/07/BST-Coastal-4-300x200.jpg 300w, https://nhaxinh.com/wp-content/uploads/2023/07/BST-Coastal-4-600x400.jpg 600w, https://nhaxinh.com/wp-content/uploads/2023/07/BST-Coastal-4-768x512.jpg 768w, https://nhaxinh.com/wp-content/uploads/2023/07/BST-Coastal-4.jpg 1000w" sizes="(max-width: 300px) 100vw, 300px" />
-                        {' '}
-
                       </a>
                     </div>
                     <div className="image-tools is-small top right show-on-hover" />
@@ -942,13 +908,11 @@ function Home() {
 
                   <div className="box-text box-text-products">
                     <div className="title-wrapper">
-                      {' '}
-                      <a className="woocommerce-LoopProduct-link woocommerce-loop-product__link" href="san-pham/ban-lam-viec-coastal/index.html" aria-label="Bàn làm việc Coastal">
+                      <a className="woocommerce-LoopProduct-link woocommerce-loop-product__link" href="/san-pham/ban-lam-viec-coastal" aria-label="Bàn làm việc Coastal">
                         Bàn làm việc Coastal
                       </a>
                     </div>
                     <div className="sub-title-wrapper">
-                      {' '}
                       <div className="wishlist-icon">
                         <button type="button" className="wishlist-button button is-outline circle icon" aria-label="Wishlist">
                           <i className="icon-heart-o" />
@@ -974,13 +938,11 @@ function Home() {
                           </span>
                         </span>
                       </div>
-                      {' '}
+
                       <div className="product-box-after">
                         <div className="add-to-cart-button"><a href="index4a4c.html?add-to-cart=52143" data-quantity="1" className="primary is-small mb-0 button product_type_simple add_to_cart_button ajax_add_to_cart is-outline" data-product_id="52143" data-product_sku="3*106832" aria-label="Add &ldquo;Bàn làm việc Coastal&rdquo; to your cart" rel="nofollow">Thêm vào giỏ</a></div>
-                        {' '}
-                        <a href="san-pham/ban-lam-viec-coastal/index.html" className="buy-now button">Xem thêm</a>
-                        {' '}
 
+                        <a href="/san-pham/ban-lam-viec-coastal" className="buy-now button">Xem thêm</a>
                       </div>
                     </div>
                   </div>
@@ -997,12 +959,10 @@ function Home() {
                 <div className="product-small box ">
                   <div className="box-image">
                     <div className="image-fade_in_back">
-                      <a href="san-pham/tu-tivi-elegance-mau-nau-2/index.html" aria-label="Tủ Cabinet Coastal">
+                      <a href="/san-pham/tu-tivi-elegance-mau-nau-2" aria-label="Tủ Cabinet Coastal">
                         <img decoding="async" width="300" height="200" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20300%20200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://nhaxinh.com/wp-content/uploads/2023/07/Tu-Cabinet-Coastal-300x200.jpg" className="lazy-load attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" srcSet="" data-srcset="https://nhaxinh.com/wp-content/uploads/2023/07/Tu-Cabinet-Coastal-300x200.jpg 300w, https://nhaxinh.com/wp-content/uploads/2023/07/Tu-Cabinet-Coastal-601x400.jpg 601w, https://nhaxinh.com/wp-content/uploads/2023/07/Tu-Cabinet-Coastal-768x511.jpg 768w, https://nhaxinh.com/wp-content/uploads/2023/07/Tu-Cabinet-Coastal-600x400.jpg 600w, https://nhaxinh.com/wp-content/uploads/2023/07/Tu-Cabinet-Coastal.jpg 1000w" sizes="(max-width: 300px) 100vw, 300px" />
                         <img decoding="async" width="300" height="200" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20300%20200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://nhaxinh.com/wp-content/uploads/2023/07/Tu-Cabinet-Coastal-1-300x200.jpg" className="lazy-load show-on-hover absolute fill hide-for-small back-image" alt="" srcSet="" data-srcset="https://nhaxinh.com/wp-content/uploads/2023/07/Tu-Cabinet-Coastal-1-300x200.jpg 300w, https://nhaxinh.com/wp-content/uploads/2023/07/Tu-Cabinet-Coastal-1-601x400.jpg 601w, https://nhaxinh.com/wp-content/uploads/2023/07/Tu-Cabinet-Coastal-1-768x511.jpg 768w, https://nhaxinh.com/wp-content/uploads/2023/07/Tu-Cabinet-Coastal-1-600x400.jpg 600w, https://nhaxinh.com/wp-content/uploads/2023/07/Tu-Cabinet-Coastal-1.jpg 1000w" sizes="(max-width: 300px) 100vw, 300px" />
                         <img decoding="async" width="300" height="200" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20300%20200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://nhaxinh.com/wp-content/uploads/2023/07/Tu-Cabinet-Coastal-1-300x200.jpg" className="lazy-load show-on-hover absolute fill hide-for-small back-image" alt="" srcSet="" data-srcset="https://nhaxinh.com/wp-content/uploads/2023/07/Tu-Cabinet-Coastal-1-300x200.jpg 300w, https://nhaxinh.com/wp-content/uploads/2023/07/Tu-Cabinet-Coastal-1-601x400.jpg 601w, https://nhaxinh.com/wp-content/uploads/2023/07/Tu-Cabinet-Coastal-1-768x511.jpg 768w, https://nhaxinh.com/wp-content/uploads/2023/07/Tu-Cabinet-Coastal-1-600x400.jpg 600w, https://nhaxinh.com/wp-content/uploads/2023/07/Tu-Cabinet-Coastal-1.jpg 1000w" sizes="(max-width: 300px) 100vw, 300px" />
-                        {' '}
-
                       </a>
                     </div>
                     <div className="image-tools is-small top right show-on-hover" />
@@ -1012,19 +972,17 @@ function Home() {
 
                   <div className="box-text box-text-products">
                     <div className="title-wrapper">
-                      {' '}
-                      <a className="woocommerce-LoopProduct-link woocommerce-loop-product__link" href="san-pham/tu-tivi-elegance-mau-nau-2/index.html" aria-label="Tủ Cabinet Coastal">
+                      <a className="woocommerce-LoopProduct-link woocommerce-loop-product__link" href="/san-pham/tu-tivi-elegance-mau-nau-2" aria-label="Tủ Cabinet Coastal">
                         Tủ Cabinet Coastal
                       </a>
                     </div>
+
                     <div className="sub-title-wrapper">
-                      {' '}
                       <div className="wishlist-icon">
                         <button type="button" className="wishlist-button button is-outline circle icon" aria-label="Wishlist">
                           <i className="icon-heart-o" />
                         </button>
                         <div className="wishlist-popup dark">
-
                           <div
                             className="yith-wcwl-add-to-wishlist add-to-wishlist-51937  wishlist-fragment on-first-load"
                             data-fragment-ref="51937"
@@ -1033,6 +991,7 @@ function Home() {
                         </div>
                       </div>
                     </div>
+
                     <div className="box-text-footer">
                       <div className="price-wrapper">
                         <span className="price">
@@ -1044,13 +1003,11 @@ function Home() {
                           </span>
                         </span>
                       </div>
-                      {' '}
+
                       <div className="product-box-after">
                         <div className="add-to-cart-button"><a href="index04b9.html?add-to-cart=51937" data-quantity="1" className="primary is-small mb-0 button product_type_simple add_to_cart_button ajax_add_to_cart is-outline" data-product_id="51937" data-product_sku="3*106819" aria-label="Add &ldquo;Tủ Cabinet Coastal&rdquo; to your cart" rel="nofollow">Thêm vào giỏ</a></div>
-                        {' '}
-                        <a href="san-pham/tu-tivi-elegance-mau-nau-2/index.html" className="buy-now button">Xem thêm</a>
-                        {' '}
 
+                        <a href="/san-pham/tu-tivi-elegance-mau-nau-2" className="buy-now button">Xem thêm</a>
                       </div>
                     </div>
                   </div>
@@ -1067,12 +1024,11 @@ function Home() {
                 <div className="product-small box ">
                   <div className="box-image">
                     <div className="image-fade_in_back">
-                      <a href="san-pham/ban-lam-viec-wing-mau-trang/index.html" aria-label="Bàn làm việc Wing màu trắng">
+                      <a href="/san-pham/ban-lam-viec-wing-mau-trang" aria-label="Bàn làm việc Wing màu trắng">
                         <img decoding="async" width="300" height="200" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20300%20200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://nhaxinh.com/wp-content/uploads/2023/06/BAN-LAM-VIEC-WING-MAU-TRANG-300x200.jpg" className="lazy-load attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" srcSet="" data-srcset="https://nhaxinh.com/wp-content/uploads/2023/06/BAN-LAM-VIEC-WING-MAU-TRANG-300x200.jpg 300w, https://nhaxinh.com/wp-content/uploads/2023/06/BAN-LAM-VIEC-WING-MAU-TRANG-601x400.jpg 601w, https://nhaxinh.com/wp-content/uploads/2023/06/BAN-LAM-VIEC-WING-MAU-TRANG-768x511.jpg 768w, https://nhaxinh.com/wp-content/uploads/2023/06/BAN-LAM-VIEC-WING-MAU-TRANG-600x400.jpg 600w, https://nhaxinh.com/wp-content/uploads/2023/06/BAN-LAM-VIEC-WING-MAU-TRANG.jpg 1000w" sizes="(max-width: 300px) 100vw, 300px" />
-                        {' '}
-
                       </a>
                     </div>
+
                     <div className="image-tools is-small top right show-on-hover" />
                     <div className="image-tools is-small hide-for-small bottom left show-on-hover" />
                     <div className="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover" />
@@ -1080,13 +1036,11 @@ function Home() {
 
                   <div className="box-text box-text-products">
                     <div className="title-wrapper">
-                      {' '}
-                      <a className="woocommerce-LoopProduct-link woocommerce-loop-product__link" href="san-pham/ban-lam-viec-wing-mau-trang/index.html" aria-label="Bàn làm việc Wing màu trắng">
+                      <a className="woocommerce-LoopProduct-link woocommerce-loop-product__link" href="/san-pham/ban-lam-viec-wing-mau-trang" aria-label="Bàn làm việc Wing màu trắng">
                         Bàn làm việc Wing màu trắng
                       </a>
                     </div>
                     <div className="sub-title-wrapper">
-                      {' '}
                       <div className="wishlist-icon">
                         <button type="button" className="wishlist-button button is-outline circle icon" aria-label="Wishlist">
                           <i className="icon-heart-o" />
@@ -1112,13 +1066,11 @@ function Home() {
                           </span>
                         </span>
                       </div>
-                      {' '}
+
                       <div className="product-box-after">
                         <div className="add-to-cart-button"><a href="index4716.html?add-to-cart=51550" data-quantity="1" className="primary is-small mb-0 button product_type_simple add_to_cart_button ajax_add_to_cart is-outline" data-product_id="51550" data-product_sku="3*110550" aria-label="Add &ldquo;Bàn làm việc Wing màu trắng&rdquo; to your cart" rel="nofollow">Thêm vào giỏ</a></div>
-                        {' '}
-                        <a href="san-pham/ban-lam-viec-wing-mau-trang/index.html" className="buy-now button">Xem thêm</a>
-                        {' '}
 
+                        <a href="/san-pham/ban-lam-viec-wing-mau-trang" className="buy-now button">Xem thêm</a>
                       </div>
                     </div>
                   </div>
@@ -1139,7 +1091,7 @@ function Home() {
                 <div className="product-small box ">
                   <div className="box-image">
                     <div className="image-fade_in_back">
-                      <a href="san-pham/sofa-ona-him-3-cho-da-nau-s3/index.html" aria-label="Sofa ONA HIM 3 chỗ da nâu S3">
+                      <a href="/san-pham/sofa-ona-him-3-cho-da-nau-s3" aria-label="Sofa ONA HIM 3 chỗ da nâu S3">
                         <img decoding="async" width="300" height="200" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20300%20200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://nhaxinh.com/wp-content/uploads/2023/08/sofa-ona-him-3-cho-da-nau-300x200.jpg" className="lazy-load attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" srcSet="" data-srcset="https://nhaxinh.com/wp-content/uploads/2023/08/sofa-ona-him-3-cho-da-nau-300x200.jpg 300w, https://nhaxinh.com/wp-content/uploads/2023/08/sofa-ona-him-3-cho-da-nau-601x400.jpg 601w, https://nhaxinh.com/wp-content/uploads/2023/08/sofa-ona-him-3-cho-da-nau-768x511.jpg 768w, https://nhaxinh.com/wp-content/uploads/2023/08/sofa-ona-him-3-cho-da-nau-600x400.jpg 600w, https://nhaxinh.com/wp-content/uploads/2023/08/sofa-ona-him-3-cho-da-nau.jpg 1000w" sizes="(max-width: 300px) 100vw, 300px" />
                         <img decoding="async" width="300" height="200" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20300%20200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://nhaxinh.com/wp-content/uploads/2023/08/sofa-ona-him-3-cho-da-nau-1-300x200.jpg" className="lazy-load show-on-hover absolute fill hide-for-small back-image" alt="" srcSet="" data-srcset="https://nhaxinh.com/wp-content/uploads/2023/08/sofa-ona-him-3-cho-da-nau-1-300x200.jpg 300w, https://nhaxinh.com/wp-content/uploads/2023/08/sofa-ona-him-3-cho-da-nau-1-601x400.jpg 601w, https://nhaxinh.com/wp-content/uploads/2023/08/sofa-ona-him-3-cho-da-nau-1-768x511.jpg 768w, https://nhaxinh.com/wp-content/uploads/2023/08/sofa-ona-him-3-cho-da-nau-1-600x400.jpg 600w, https://nhaxinh.com/wp-content/uploads/2023/08/sofa-ona-him-3-cho-da-nau-1.jpg 1000w" sizes="(max-width: 300px) 100vw, 300px" />
                         <img decoding="async" width="300" height="200" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20300%20200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://nhaxinh.com/wp-content/uploads/2023/08/ona-him-da-xanh-nau-300x200.jpg" className="lazy-load show-on-hover absolute fill hide-for-small back-image" alt="" srcSet="" data-srcset="https://nhaxinh.com/wp-content/uploads/2023/08/ona-him-da-xanh-nau-300x200.jpg 300w, https://nhaxinh.com/wp-content/uploads/2023/08/ona-him-da-xanh-nau-601x400.jpg 601w, https://nhaxinh.com/wp-content/uploads/2023/08/ona-him-da-xanh-nau-768x511.jpg 768w, https://nhaxinh.com/wp-content/uploads/2023/08/ona-him-da-xanh-nau-600x400.jpg 600w, https://nhaxinh.com/wp-content/uploads/2023/08/ona-him-da-xanh-nau.jpg 1000w" sizes="(max-width: 300px) 100vw, 300px" />
@@ -1155,7 +1107,7 @@ function Home() {
                   <div className="box-text box-text-products">
                     <div className="title-wrapper">
                       {' '}
-                      <a className="woocommerce-LoopProduct-link woocommerce-loop-product__link" href="san-pham/sofa-ona-him-3-cho-da-nau-s3/index.html" aria-label="Sofa ONA HIM 3 chỗ da nâu S3">
+                      <a className="woocommerce-LoopProduct-link woocommerce-loop-product__link" href="/san-pham/sofa-ona-him-3-cho-da-nau-s3" aria-label="Sofa ONA HIM 3 chỗ da nâu S3">
                         Sofa ONA HIM 3 chỗ da nâu S3
                       </a>
                     </div>
@@ -1190,7 +1142,7 @@ function Home() {
                       <div className="product-box-after">
                         <div className="add-to-cart-button"><a href="index50ac.html?add-to-cart=53924" data-quantity="1" className="primary is-small mb-0 button product_type_simple add_to_cart_button ajax_add_to_cart is-outline" data-product_id="53924" data-product_sku="3*111019" aria-label="Add &ldquo;Sofa ONA HIM 3 chỗ da nâu S3&rdquo; to your cart" rel="nofollow">Thêm vào giỏ</a></div>
                         {' '}
-                        <a href="san-pham/sofa-ona-him-3-cho-da-nau-s3/index.html" className="buy-now button">Xem thêm</a>
+                        <a href="/san-pham/sofa-ona-him-3-cho-da-nau-s3" className="buy-now button">Xem thêm</a>
                         {' '}
 
                       </div>
@@ -1209,7 +1161,7 @@ function Home() {
                 <div className="product-small box ">
                   <div className="box-image">
                     <div className="image-fade_in_back">
-                      <a href="san-pham/sofa-ona-her-3-cho-da-xanh-s4/index.html" aria-label="Sofa ONA HER 3 chỗ da xanh S4">
+                      <a href="/san-pham/sofa-ona-her-3-cho-da-xanh-s4" aria-label="Sofa ONA HER 3 chỗ da xanh S4">
                         <img decoding="async" width="300" height="200" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20300%20200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://nhaxinh.com/wp-content/uploads/2023/08/sofa-ona-her-3-cho-da-xanh-s4-300x200.jpg" className="lazy-load attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" srcSet="" data-srcset="https://nhaxinh.com/wp-content/uploads/2023/08/sofa-ona-her-3-cho-da-xanh-s4-300x200.jpg 300w, https://nhaxinh.com/wp-content/uploads/2023/08/sofa-ona-her-3-cho-da-xanh-s4-601x400.jpg 601w, https://nhaxinh.com/wp-content/uploads/2023/08/sofa-ona-her-3-cho-da-xanh-s4-768x511.jpg 768w, https://nhaxinh.com/wp-content/uploads/2023/08/sofa-ona-her-3-cho-da-xanh-s4-600x400.jpg 600w, https://nhaxinh.com/wp-content/uploads/2023/08/sofa-ona-her-3-cho-da-xanh-s4.jpg 1000w" sizes="(max-width: 300px) 100vw, 300px" />
                         <img decoding="async" width="300" height="200" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20300%20200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://nhaxinh.com/wp-content/uploads/2023/08/sofa-ona-her-3-cho-da-xanh-s4-1-300x200.jpg" className="lazy-load show-on-hover absolute fill hide-for-small back-image" alt="" srcSet="" data-srcset="https://nhaxinh.com/wp-content/uploads/2023/08/sofa-ona-her-3-cho-da-xanh-s4-1-300x200.jpg 300w, https://nhaxinh.com/wp-content/uploads/2023/08/sofa-ona-her-3-cho-da-xanh-s4-1-601x400.jpg 601w, https://nhaxinh.com/wp-content/uploads/2023/08/sofa-ona-her-3-cho-da-xanh-s4-1-768x511.jpg 768w, https://nhaxinh.com/wp-content/uploads/2023/08/sofa-ona-her-3-cho-da-xanh-s4-1-600x400.jpg 600w, https://nhaxinh.com/wp-content/uploads/2023/08/sofa-ona-her-3-cho-da-xanh-s4-1.jpg 1000w" sizes="(max-width: 300px) 100vw, 300px" />
                         <img decoding="async" width="300" height="200" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20300%20200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://nhaxinh.com/wp-content/uploads/2023/08/ona-him-da-xanh-300x200.jpg" className="lazy-load show-on-hover absolute fill hide-for-small back-image" alt="" srcSet="" data-srcset="https://nhaxinh.com/wp-content/uploads/2023/08/ona-him-da-xanh-300x200.jpg 300w, https://nhaxinh.com/wp-content/uploads/2023/08/ona-him-da-xanh-600x400.jpg 600w, https://nhaxinh.com/wp-content/uploads/2023/08/ona-him-da-xanh-768x512.jpg 768w, https://nhaxinh.com/wp-content/uploads/2023/08/ona-him-da-xanh.jpg 1000w" sizes="(max-width: 300px) 100vw, 300px" />
@@ -1225,7 +1177,7 @@ function Home() {
                   <div className="box-text box-text-products">
                     <div className="title-wrapper">
                       {' '}
-                      <a className="woocommerce-LoopProduct-link woocommerce-loop-product__link" href="san-pham/sofa-ona-her-3-cho-da-xanh-s4/index.html" aria-label="Sofa ONA HER 3 chỗ da xanh S4">
+                      <a className="woocommerce-LoopProduct-link woocommerce-loop-product__link" href="/san-pham/sofa-ona-her-3-cho-da-xanh-s4" aria-label="Sofa ONA HER 3 chỗ da xanh S4">
                         Sofa ONA HER 3 chỗ da xanh S4
                       </a>
                     </div>
@@ -1260,7 +1212,7 @@ function Home() {
                       <div className="product-box-after">
                         <div className="add-to-cart-button"><a href="index94e9.html?add-to-cart=53922" data-quantity="1" className="primary is-small mb-0 button product_type_simple add_to_cart_button ajax_add_to_cart is-outline" data-product_id="53922" data-product_sku="3*111021" aria-label="Add &ldquo;Sofa ONA HER 3 chỗ da xanh S4&rdquo; to your cart" rel="nofollow">Thêm vào giỏ</a></div>
                         {' '}
-                        <a href="san-pham/sofa-ona-her-3-cho-da-xanh-s4/index.html" className="buy-now button">Xem thêm</a>
+                        <a href="/san-pham/sofa-ona-her-3-cho-da-xanh-s4" className="buy-now button">Xem thêm</a>
                         {' '}
 
                       </div>
@@ -1279,12 +1231,10 @@ function Home() {
                 <div className="product-small box ">
                   <div className="box-image">
                     <div className="image-fade_in_back">
-                      <a href="san-pham/sofa-ona-him-1-cho-da-nau-s3/index.html" aria-label="Sofa ONA HIM 1 chỗ da nâu S3">
+                      <a href="/san-pham/sofa-ona-him-1-cho-da-nau-s3" aria-label="Sofa ONA HIM 1 chỗ da nâu S3">
                         <img decoding="async" width="300" height="200" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20300%20200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://nhaxinh.com/wp-content/uploads/2023/08/sofa-ona-him-1-cho-da-nau-s3-2-300x200.jpg" className="lazy-load attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" srcSet="" data-srcset="https://nhaxinh.com/wp-content/uploads/2023/08/sofa-ona-him-1-cho-da-nau-s3-2-300x200.jpg 300w, https://nhaxinh.com/wp-content/uploads/2023/08/sofa-ona-him-1-cho-da-nau-s3-2-601x400.jpg 601w, https://nhaxinh.com/wp-content/uploads/2023/08/sofa-ona-him-1-cho-da-nau-s3-2-768x511.jpg 768w, https://nhaxinh.com/wp-content/uploads/2023/08/sofa-ona-him-1-cho-da-nau-s3-2-600x400.jpg 600w, https://nhaxinh.com/wp-content/uploads/2023/08/sofa-ona-him-1-cho-da-nau-s3-2.jpg 1000w" sizes="(max-width: 300px) 100vw, 300px" />
                         <img decoding="async" width="300" height="200" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20300%20200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://nhaxinh.com/wp-content/uploads/2023/08/sofa-ona-him-1-cho-da-nau-s3-3-300x200.jpg" className="lazy-load show-on-hover absolute fill hide-for-small back-image" alt="" srcSet="" data-srcset="https://nhaxinh.com/wp-content/uploads/2023/08/sofa-ona-him-1-cho-da-nau-s3-3-300x200.jpg 300w, https://nhaxinh.com/wp-content/uploads/2023/08/sofa-ona-him-1-cho-da-nau-s3-3-601x400.jpg 601w, https://nhaxinh.com/wp-content/uploads/2023/08/sofa-ona-him-1-cho-da-nau-s3-3-768x511.jpg 768w, https://nhaxinh.com/wp-content/uploads/2023/08/sofa-ona-him-1-cho-da-nau-s3-3-600x400.jpg 600w, https://nhaxinh.com/wp-content/uploads/2023/08/sofa-ona-him-1-cho-da-nau-s3-3.jpg 1000w" sizes="(max-width: 300px) 100vw, 300px" />
                         <img decoding="async" width="300" height="200" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20300%20200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://nhaxinh.com/wp-content/uploads/2023/08/ona-him-da-xanh-300x200.jpg" className="lazy-load show-on-hover absolute fill hide-for-small back-image" alt="" srcSet="" data-srcset="https://nhaxinh.com/wp-content/uploads/2023/08/ona-him-da-xanh-300x200.jpg 300w, https://nhaxinh.com/wp-content/uploads/2023/08/ona-him-da-xanh-600x400.jpg 600w, https://nhaxinh.com/wp-content/uploads/2023/08/ona-him-da-xanh-768x512.jpg 768w, https://nhaxinh.com/wp-content/uploads/2023/08/ona-him-da-xanh.jpg 1000w" sizes="(max-width: 300px) 100vw, 300px" />
-                        {' '}
-
                       </a>
                     </div>
                     <div className="image-tools is-small top right show-on-hover" />
@@ -1294,13 +1244,12 @@ function Home() {
 
                   <div className="box-text box-text-products">
                     <div className="title-wrapper">
-                      {' '}
-                      <a className="woocommerce-LoopProduct-link woocommerce-loop-product__link" href="san-pham/sofa-ona-him-1-cho-da-nau-s3/index.html" aria-label="Sofa ONA HIM 1 chỗ da nâu S3">
+                      <a className="woocommerce-LoopProduct-link woocommerce-loop-product__link" href="/san-pham/sofa-ona-him-1-cho-da-nau-s3" aria-label="Sofa ONA HIM 1 chỗ da nâu S3">
                         Sofa ONA HIM 1 chỗ da nâu S3
                       </a>
                     </div>
+
                     <div className="sub-title-wrapper">
-                      {' '}
                       <div className="wishlist-icon">
                         <button type="button" className="wishlist-button button is-outline circle icon" aria-label="Wishlist">
                           <i className="icon-heart-o" />
@@ -1330,7 +1279,7 @@ function Home() {
                       <div className="product-box-after">
                         <div className="add-to-cart-button"><a href="indexac7f.html?add-to-cart=53907" data-quantity="1" className="primary is-small mb-0 button product_type_simple add_to_cart_button ajax_add_to_cart is-outline" data-product_id="53907" data-product_sku="3*111454" aria-label="Add &ldquo;Sofa ONA HIM 1 chỗ da nâu S3&rdquo; to your cart" rel="nofollow">Thêm vào giỏ</a></div>
                         {' '}
-                        <a href="san-pham/sofa-ona-him-1-cho-da-nau-s3/index.html" className="buy-now button">Xem thêm</a>
+                        <a href="/san-pham/sofa-ona-him-1-cho-da-nau-s3" className="buy-now button">Xem thêm</a>
                         {' '}
 
                       </div>
@@ -1349,12 +1298,10 @@ function Home() {
                 <div className="product-small box ">
                   <div className="box-image">
                     <div className="image-fade_in_back">
-                      <a href="san-pham/sofa-ona-him-1-cho-da-xanh-s4/index.html" aria-label="Sofa ONA HIM 1 chỗ da xanh S4">
+                      <a href="/san-pham/sofa-ona-him-1-cho-da-xanh-s4" aria-label="Sofa ONA HIM 1 chỗ da xanh S4">
                         <img decoding="async" width="300" height="200" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20300%20200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://nhaxinh.com/wp-content/uploads/2023/08/sofa-1-cho-ona-him-da-xanh-2-300x200.jpg" className="lazy-load attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" srcSet="" data-srcset="https://nhaxinh.com/wp-content/uploads/2023/08/sofa-1-cho-ona-him-da-xanh-2-300x200.jpg 300w, https://nhaxinh.com/wp-content/uploads/2023/08/sofa-1-cho-ona-him-da-xanh-2-601x400.jpg 601w, https://nhaxinh.com/wp-content/uploads/2023/08/sofa-1-cho-ona-him-da-xanh-2-768x511.jpg 768w, https://nhaxinh.com/wp-content/uploads/2023/08/sofa-1-cho-ona-him-da-xanh-2-600x400.jpg 600w, https://nhaxinh.com/wp-content/uploads/2023/08/sofa-1-cho-ona-him-da-xanh-2.jpg 1000w" sizes="(max-width: 300px) 100vw, 300px" />
                         <img decoding="async" width="300" height="200" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20300%20200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://nhaxinh.com/wp-content/uploads/2023/08/sofa-1-cho-ona-him-da-xanh-3-300x200.jpg" className="lazy-load show-on-hover absolute fill hide-for-small back-image" alt="" srcSet="" data-srcset="https://nhaxinh.com/wp-content/uploads/2023/08/sofa-1-cho-ona-him-da-xanh-3-300x200.jpg 300w, https://nhaxinh.com/wp-content/uploads/2023/08/sofa-1-cho-ona-him-da-xanh-3-601x400.jpg 601w, https://nhaxinh.com/wp-content/uploads/2023/08/sofa-1-cho-ona-him-da-xanh-3-768x511.jpg 768w, https://nhaxinh.com/wp-content/uploads/2023/08/sofa-1-cho-ona-him-da-xanh-3-600x400.jpg 600w, https://nhaxinh.com/wp-content/uploads/2023/08/sofa-1-cho-ona-him-da-xanh-3.jpg 1000w" sizes="(max-width: 300px) 100vw, 300px" />
                         <img decoding="async" width="300" height="200" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20300%20200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://nhaxinh.com/wp-content/uploads/2023/08/ona-him-da-xanh-300x200.jpg" className="lazy-load show-on-hover absolute fill hide-for-small back-image" alt="" srcSet="" data-srcset="https://nhaxinh.com/wp-content/uploads/2023/08/ona-him-da-xanh-300x200.jpg 300w, https://nhaxinh.com/wp-content/uploads/2023/08/ona-him-da-xanh-600x400.jpg 600w, https://nhaxinh.com/wp-content/uploads/2023/08/ona-him-da-xanh-768x512.jpg 768w, https://nhaxinh.com/wp-content/uploads/2023/08/ona-him-da-xanh.jpg 1000w" sizes="(max-width: 300px) 100vw, 300px" />
-                        {' '}
-
                       </a>
                     </div>
                     <div className="image-tools is-small top right show-on-hover" />
@@ -1364,19 +1311,18 @@ function Home() {
 
                   <div className="box-text box-text-products">
                     <div className="title-wrapper">
-                      {' '}
-                      <a className="woocommerce-LoopProduct-link woocommerce-loop-product__link" href="san-pham/sofa-ona-him-1-cho-da-xanh-s4/index.html" aria-label="Sofa ONA HIM 1 chỗ da xanh S4">
+                      <a className="woocommerce-LoopProduct-link woocommerce-loop-product__link" href="/san-pham/sofa-ona-him-1-cho-da-xanh-s4" aria-label="Sofa ONA HIM 1 chỗ da xanh S4">
                         Sofa ONA HIM 1 chỗ da xanh S4
                       </a>
                     </div>
+
                     <div className="sub-title-wrapper">
-                      {' '}
                       <div className="wishlist-icon">
                         <button type="button" className="wishlist-button button is-outline circle icon" aria-label="Wishlist">
                           <i className="icon-heart-o" />
                         </button>
-                        <div className="wishlist-popup dark">
 
+                        <div className="wishlist-popup dark">
                           <div
                             className="yith-wcwl-add-to-wishlist add-to-wishlist-53904  wishlist-fragment on-first-load"
                             data-fragment-ref="53904"
@@ -1385,6 +1331,7 @@ function Home() {
                         </div>
                       </div>
                     </div>
+
                     <div className="box-text-footer">
                       <div className="price-wrapper">
                         <span className="price">
@@ -1396,13 +1343,11 @@ function Home() {
                           </span>
                         </span>
                       </div>
-                      {' '}
+
                       <div className="product-box-after">
                         <div className="add-to-cart-button"><a href="index024e.html?add-to-cart=53904" data-quantity="1" className="primary is-small mb-0 button product_type_simple add_to_cart_button ajax_add_to_cart is-outline" data-product_id="53904" data-product_sku="3*111455" aria-label="Add &ldquo;Sofa ONA HIM 1 chỗ da xanh S4&rdquo; to your cart" rel="nofollow">Thêm vào giỏ</a></div>
-                        {' '}
-                        <a href="san-pham/sofa-ona-him-1-cho-da-xanh-s4/index.html" className="buy-now button">Xem thêm</a>
-                        {' '}
 
+                        <a href="/san-pham/sofa-ona-him-1-cho-da-xanh-s4" className="buy-now button">Xem thêm</a>
                       </div>
                     </div>
                   </div>
@@ -1433,7 +1378,7 @@ function Home() {
                       <h2>Sản phẩm giá tốt</h2>
                     </div>
 
-                    <a data-animate="fadeInRight" href="san-pham-gia-tot/index.html" target="_self" className="button secondary">
+                    <a data-animate="fadeInRight" href="/san-pham-gia-tot" target="_self" className="button secondary">
                       <span>mua ngay</span>
                     </a>
 
@@ -1475,15 +1420,13 @@ function Home() {
 
           <div className="col post-item" data-animate="fadeInUp">
             <div className="col-inner">
-              <a href="ban-wing-lua-chon-hoan-hao-cho-khong-gian-lam-viec/index.html" className="plain">
+              <a href="/ban-wing-lua-chon-hoan-hao-cho-khong-gian-lam-viec" className="plain">
                 <div className="box box-normal box-text-bottom box-blog-post has-hover">
                   <div className="box-image">
                     <div className="image-overlay-remove image-cover" style={{ paddingTop: '56%' }}>
                       <img decoding="async" width="1000" height="725" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%201000%20725%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://nhaxinh.com/wp-content/uploads/2023/11/ban-lam-viec-wing-mau-trang-hien-dai-6.jpg" className="lazy-load attachment-large size-large wp-post-image" alt="" srcSet="" data-srcset="https://nhaxinh.com/wp-content/uploads/2023/11/ban-lam-viec-wing-mau-trang-hien-dai-6.jpg 1000w, https://nhaxinh.com/wp-content/uploads/2023/11/ban-lam-viec-wing-mau-trang-hien-dai-6-552x400.jpg 552w, https://nhaxinh.com/wp-content/uploads/2023/11/ban-lam-viec-wing-mau-trang-hien-dai-6-768x557.jpg 768w, https://nhaxinh.com/wp-content/uploads/2023/11/ban-lam-viec-wing-mau-trang-hien-dai-6-300x218.jpg 300w, https://nhaxinh.com/wp-content/uploads/2023/11/ban-lam-viec-wing-mau-trang-hien-dai-6-600x435.jpg 600w" sizes="(max-width: 1000px) 100vw, 1000px" />
-                      {' '}
-                      <div className="overlay" style={{ backgroundColor: 'rgba(0, 0, 0, 0.09)' }} />
-                      {' '}
 
+                      <div className="overlay" style={{ backgroundColor: 'rgba(0, 0, 0, 0.09)' }} />
                     </div>
                   </div>
                   <div className="box-text show-on-hover hover-bounce text-center is-small">
@@ -1501,15 +1444,13 @@ function Home() {
           </div>
           <div className="col post-item" data-animate="fadeInUp">
             <div className="col-inner">
-              <a href="den-nha-xinh-chon-qua-tinh-te/index.html" className="plain">
+              <a href="/den-nha-xinh-chon-qua-tinh-te" className="plain">
                 <div className="box box-normal box-text-bottom box-blog-post has-hover">
                   <div className="box-image">
                     <div className="image-overlay-remove image-cover" style={{ paddingTop: '56%' }}>
                       <img decoding="async" width="1020" height="680" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%201020%20680%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://nhaxinh.com/wp-content/uploads/2023/11/den-nha-xinh-chon-qua-hop-y-10-1200x800.jpg" className="lazy-load attachment-large size-large wp-post-image" alt="" srcSet="" data-srcset="https://nhaxinh.com/wp-content/uploads/2023/11/den-nha-xinh-chon-qua-hop-y-10-1200x800.jpg 1200w, https://nhaxinh.com/wp-content/uploads/2023/11/den-nha-xinh-chon-qua-hop-y-10-600x400.jpg 600w, https://nhaxinh.com/wp-content/uploads/2023/11/den-nha-xinh-chon-qua-hop-y-10-768x512.jpg 768w, https://nhaxinh.com/wp-content/uploads/2023/11/den-nha-xinh-chon-qua-hop-y-10-1536x1024.jpg 1536w, https://nhaxinh.com/wp-content/uploads/2023/11/den-nha-xinh-chon-qua-hop-y-10-300x200.jpg 300w, https://nhaxinh.com/wp-content/uploads/2023/11/den-nha-xinh-chon-qua-hop-y-10.jpg 1800w" sizes="(max-width: 1020px) 100vw, 1020px" />
-                      {' '}
-                      <div className="overlay" style={{ backgroundColor: 'rgba(0, 0, 0, 0.09)' }} />
-                      {' '}
 
+                      <div className="overlay" style={{ backgroundColor: 'rgba(0, 0, 0, 0.09)' }} />
                     </div>
                   </div>
                   <div className="box-text show-on-hover hover-bounce text-center is-small">
@@ -1527,15 +1468,13 @@ function Home() {
           </div>
           <div className="col post-item" data-animate="fadeInUp">
             <div className="col-inner">
-              <a href="phan-loai-va-goi-y-cach-chon-den-trang-tri/index.html" className="plain">
+              <a href="/phan-loai-va-goi-y-cach-chon-den-trang-tri" className="plain">
                 <div className="box box-normal box-text-bottom box-blog-post has-hover">
                   <div className="box-image">
                     <div className="image-overlay-remove image-cover" style={{ paddingTop: '56%' }}>
                       <img decoding="async" width="1020" height="624" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%201020%20624%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://nhaxinh.com/wp-content/uploads/2023/11/cach-chon-den-trang-tri-1-1307x800.jpg" className="lazy-load attachment-large size-large wp-post-image" alt="" srcSet="" data-srcset="https://nhaxinh.com/wp-content/uploads/2023/11/cach-chon-den-trang-tri-1-1307x800.jpg 1307w, https://nhaxinh.com/wp-content/uploads/2023/11/cach-chon-den-trang-tri-1-654x400.jpg 654w, https://nhaxinh.com/wp-content/uploads/2023/11/cach-chon-den-trang-tri-1-768x470.jpg 768w, https://nhaxinh.com/wp-content/uploads/2023/11/cach-chon-den-trang-tri-1-300x184.jpg 300w, https://nhaxinh.com/wp-content/uploads/2023/11/cach-chon-den-trang-tri-1-600x367.jpg 600w, https://nhaxinh.com/wp-content/uploads/2023/11/cach-chon-den-trang-tri-1.jpg 1402w" sizes="(max-width: 1020px) 100vw, 1020px" />
-                      {' '}
-                      <div className="overlay" style={{ backgroundColor: 'rgba(0, 0, 0, 0.09)' }} />
-                      {' '}
 
+                      <div className="overlay" style={{ backgroundColor: 'rgba(0, 0, 0, 0.09)' }} />
                     </div>
                   </div>
                   <div className="box-text show-on-hover hover-bounce text-center is-small">
@@ -1553,15 +1492,13 @@ function Home() {
           </div>
           <div className="col post-item" data-animate="fadeInUp">
             <div className="col-inner">
-              <a href="nghe-thuat-chon-den-trang-tri-cho-khong-gian-hien-dai/index.html" className="plain">
+              <a href="/nghe-thuat-chon-den-trang-tri-cho-khong-gian-hien-dai" className="plain">
                 <div className="box box-normal box-text-bottom box-blog-post has-hover">
                   <div className="box-image">
                     <div className="image-overlay-remove image-cover" style={{ paddingTop: '56%' }}>
                       <img decoding="async" width="1020" height="680" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%201020%20680%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://nhaxinh.com/wp-content/uploads/2023/11/nghe-thuat-chon-den-trang-tri-1200x800.jpg" className="lazy-load attachment-large size-large wp-post-image" alt="" srcSet="" data-srcset="https://nhaxinh.com/wp-content/uploads/2023/11/nghe-thuat-chon-den-trang-tri-1200x800.jpg 1200w, https://nhaxinh.com/wp-content/uploads/2023/11/nghe-thuat-chon-den-trang-tri-600x400.jpg 600w, https://nhaxinh.com/wp-content/uploads/2023/11/nghe-thuat-chon-den-trang-tri-768x512.jpg 768w, https://nhaxinh.com/wp-content/uploads/2023/11/nghe-thuat-chon-den-trang-tri-1536x1024.jpg 1536w, https://nhaxinh.com/wp-content/uploads/2023/11/nghe-thuat-chon-den-trang-tri-300x200.jpg 300w, https://nhaxinh.com/wp-content/uploads/2023/11/nghe-thuat-chon-den-trang-tri.jpg 1800w" sizes="(max-width: 1020px) 100vw, 1020px" />
-                      {' '}
-                      <div className="overlay" style={{ backgroundColor: 'rgba(0, 0, 0, 0.09)' }} />
-                      {' '}
 
+                      <div className="overlay" style={{ backgroundColor: 'rgba(0, 0, 0, 0.09)' }} />
                     </div>
                   </div>
                   <div className="box-text show-on-hover hover-bounce text-center is-small">
@@ -1579,7 +1516,7 @@ function Home() {
           </div>
           <div className="col post-item" data-animate="fadeInUp">
             <div className="col-inner">
-              <a href="tao-lap-phong-an-chat-luong-voi-5-cach-don-gian/index.html" className="plain">
+              <a href="/tao-lap-phong-an-chat-luong-voi-5-cach-don-gian" className="plain">
                 <div className="box box-normal box-text-bottom box-blog-post has-hover">
                   <div className="box-image">
                     <div className="image-overlay-remove image-cover" style={{ paddingTop: '56%' }}>
@@ -1605,7 +1542,7 @@ function Home() {
           </div>
           <div className="col post-item" data-animate="fadeInUp">
             <div className="col-inner">
-              <a href="noi-that-go-soi-su-giao-thoa-cua-ve-dep-va-chat-luong-2/index.html" className="plain">
+              <a href="/noi-that-go-soi-su-giao-thoa-cua-ve-dep-va-chat-luong-2" className="plain">
                 <div className="box box-normal box-text-bottom box-blog-post has-hover">
                   <div className="box-image">
                     <div className="image-overlay-remove image-cover" style={{ paddingTop: '56%' }}>
@@ -1631,7 +1568,7 @@ function Home() {
           </div>
           <div className="col post-item" data-animate="fadeInUp">
             <div className="col-inner">
-              <a href="noi-that-go-soi-su-giao-thoa-cua-ve-dep-va-chat-luong/index.html" className="plain">
+              <a href="/noi-that-go-soi-su-giao-thoa-cua-ve-dep-va-chat-luong" className="plain">
                 <div className="box box-normal box-text-bottom box-blog-post has-hover">
                   <div className="box-image">
                     <div className="image-overlay-remove image-cover" style={{ paddingTop: '56%' }}>
@@ -1657,7 +1594,7 @@ function Home() {
           </div>
           <div className="col post-item" data-animate="fadeInUp">
             <div className="col-inner">
-              <a href="nhung-y-tuong-trang-tri-phong-khach-noi-bat/index.html" className="plain">
+              <a href="/nhung-y-tuong-trang-tri-phong-khach-noi-bat" className="plain">
                 <div className="box box-normal box-text-bottom box-blog-post has-hover">
                   <div className="box-image">
                     <div className="image-overlay-remove image-cover" style={{ paddingTop: '56%' }}>
@@ -1711,7 +1648,7 @@ function Home() {
 
                   </div>
 
-                  <a data-animate="fadeInRight" href="gioi-thieu/index.html" target="_self" className="button success">
+                  <a data-animate="fadeInRight" href="/gioi-thieu" target="_self" className="button success">
                     <span>về nhà xinh</span>
                   </a>
 
@@ -1749,7 +1686,7 @@ function Home() {
 
           <div className="col post-item" data-animate="fadeInUp">
             <div className="col-inner">
-              <a href="chien-luoc-phu-dong-cua-cong-ty-dung-sau-thuong-hieu-nha-xinh/index.html" className="plain">
+              <a href="/chien-luoc-phu-dong-cua-cong-ty-dung-sau-thuong-hieu-nha-xinh" className="plain">
                 <div className="box box-normal box-text-bottom box-blog-post has-hover">
                   <div className="box-image">
                     <div className="image-overlay-remove image-cover" style={{ paddingTop: '56%' }}>
@@ -1775,7 +1712,7 @@ function Home() {
           </div>
           <div className="col post-item" data-animate="fadeInUp">
             <div className="col-inner">
-              <a href="design-talk-2-gap-go-nha-thiet-ke-nguyen-dinh-hoa/index.html" className="plain">
+              <a href="/design-talk-2-gap-go-nha-thiet-ke-nguyen-dinh-hoa" className="plain">
                 <div className="box box-normal box-text-bottom box-blog-post has-hover">
                   <div className="box-image">
                     <div className="image-overlay-remove image-cover" style={{ paddingTop: '56%' }}>
@@ -1801,7 +1738,7 @@ function Home() {
           </div>
           <div className="col post-item" data-animate="fadeInUp">
             <div className="col-inner">
-              <a href="design-talk-1-chuyen-tro-ve-nhung-xu-huong-noi-that/index.html" className="plain">
+              <a href="/design-talk-1-chuyen-tro-ve-nhung-xu-huong-noi-that" className="plain">
                 <div className="box box-normal box-text-bottom box-blog-post has-hover">
                   <div className="box-image">
                     <div className="image-overlay-remove image-cover" style={{ paddingTop: '56%' }}>
@@ -1827,7 +1764,7 @@ function Home() {
           </div>
           <div className="col post-item" data-animate="fadeInUp">
             <div className="col-inner">
-              <a href="quy-trinh-boc-nem-sofa-da-cao-cap-khung-go/index.html" className="plain">
+              <a href="/quy-trinh-boc-nem-sofa-da-cao-cap-khung-go" className="plain">
                 <div className="box box-normal box-text-bottom box-blog-post has-hover">
                   <div className="box-image">
                     <div className="image-overlay-remove image-cover" style={{ paddingTop: '56%' }}>
@@ -1853,7 +1790,7 @@ function Home() {
           </div>
           <div className="col post-item" data-animate="fadeInUp">
             <div className="col-inner">
-              <a href="den-nha-xinh-tro-chuyen-ve-hanh-trinh-sang-tao/index.html" className="plain">
+              <a href="/den-nha-xinh-tro-chuyen-ve-hanh-trinh-sang-tao" className="plain">
                 <div className="box box-normal box-text-bottom box-blog-post has-hover">
                   <div className="box-image">
                     <div className="image-overlay-remove image-cover" style={{ paddingTop: '56%' }}>
@@ -1879,7 +1816,7 @@ function Home() {
           </div>
           <div className="col post-item" data-animate="fadeInUp">
             <div className="col-inner">
-              <a href="chiem-nguong-aa-tay-ninh-nha-may-san-xuat-noi-that-hien-dai-voi-quy-mo-50ha/index.html" className="plain">
+              <a href="/chiem-nguong-aa-tay-ninh-nha-may-san-xuat-noi-that-hien-dai-voi-quy-mo-50ha" className="plain">
                 <div className="box box-normal box-text-bottom box-blog-post has-hover">
                   <div className="box-image">
                     <div className="image-overlay-remove image-cover" style={{ paddingTop: '56%' }}>
@@ -1905,7 +1842,7 @@ function Home() {
           </div>
           <div className="col post-item" data-animate="fadeInUp">
             <div className="col-inner">
-              <a href="kham-pha-quy-trinh-tao-ra-san-pham-bridge-va-elegance/index.html" className="plain">
+              <a href="/kham-pha-quy-trinh-tao-ra-san-pham-bridge-va-elegance" className="plain">
                 <div className="box box-normal box-text-bottom box-blog-post has-hover">
                   <div className="box-image">
                     <div className="image-overlay-remove image-cover" style={{ paddingTop: '56%' }}>
@@ -1931,7 +1868,7 @@ function Home() {
           </div>
           <div className="col post-item" data-animate="fadeInUp">
             <div className="col-inner">
-              <a href="the-gioi-sac-mau-trong-toa-dam-sac-son/index.html" className="plain">
+              <a href="/the-gioi-sac-mau-trong-toa-dam-sac-son" className="plain">
                 <div className="box box-normal box-text-bottom box-blog-post has-hover">
                   <div className="box-image">
                     <div className="image-overlay-remove image-cover" style={{ paddingTop: '56%' }}>
@@ -1957,77 +1894,66 @@ function Home() {
           </div>
         </div>
 
-        <div className="row" id="row-904604227">
-
-          <div id="col-602698234" className="col small-12 large-12" data-animate="fadeInUp">
-            <div className="col-inner">
-
-              <div className="lienhe margin-t80">
-                <div className="container">
+        <div className="row">
+          <div className="col-sm-12 col-md-6 pr-0">
+            <div className="form_lh">
+              <div className="hotline">
+                <i className="fal fa-phone-volume" />
+                {' '}
+                Hotline: 1800 7200
+              </div>
+              <div className="title">
+                <h3>Bạn cần hỗ trợ?</h3>
+                <p>Xin vui lòng để lại yêu cầu hỗ trợ của bạn.</p>
+              </div>
+              <div role="form" className="wpcf7" id="wpcf7-f10-p97-o1" lang="en-US" dir="ltr">
+                <div className="screen-reader-response">
+                  <p role="status" aria-live="polite" aria-atomic="true" />
+                  {' '}
+                  <ul />
+                </div>
+                <form action="/#wpcf7-f10-p97-o1" method="post" className="wpcf7-form init" encType="multipart/form-data" noValidate="novalidate" data-status="init">
+                  <div style={{ display: 'none' }}>
+                    <input type="hidden" name="_wpcf7" value="10" />
+                    <input type="hidden" name="_wpcf7_version" value="5.5.2" />
+                    <input type="hidden" name="_wpcf7_locale" value="en_US" />
+                    <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f10-p97-o1" />
+                    <input type="hidden" name="_wpcf7_container_post" value="97" />
+                    <input type="hidden" name="_wpcf7_posted_data_hash" value="" />
+                    <input type="hidden" name="_wpcf7_recaptcha_response" value="03AFcWeA4gAT41kQydudmD7JZyO2mQBJYjKei5z5fjJIZi38yYNYVB8iecKdz9JWfj0XTfG81GDoTV9bHSwPj3UFtewlhTUQEWGTXvklZFTqB_t2HEtKXm_dfYDaY6IW4Mt79NRneUVdupjWHZaA3qI1l6SXH9_0ISmegAPAQymvdhrVQajS463L_53RkEyhUehJee28VpxwmbcbOlVlpwjPrXKwfBoBII6kIJYTqIAczqT01aNkodizzIh3d6BjT2-ktVfbAi4MtU7y4WCupflGDjTcadic4T89TzRsk1K-F0Su0usaW0bF3N8rWgJl6U-A5E9R287oA6g_J-L8Et5dh1Nag5Lt62Tb8kao9iu3XdP_Atc64C2cJ3VuBSz-jM-OjK0I7A8sh6xd52loUx06fAnMJyp9_T7tmbrVONKo51qGzsx7xkgjqIkdf-v4nq0peAyxR2KtBjoSHwC0ZmUtvf7RL3KsENNi-M6twcoiIyNq4XiHTgShI1kcaRMG-1qmvDKbWnXDiM_aBy4THYaRxoXJmwp93aGnOQJdTh3PSVqPyQXRonUf7YZilY5KGmoN2-aI9WDUuJIPoiMbjV3_ZaT6sabX_y3--4m_rPE2o--z3Zc930twlEwTPrHTXmEs6jtRnD9spM" />
+                  </div>
                   <div className="row">
-                    <div className="col-sm-12 col-md-6 pr-0">
-                      <div className="form_lh">
-                        <div className="hotline">
-                          <i className="fal fa-phone-volume" />
-                          {' '}
-                          Hotline: 1800 7200
-                        </div>
-                        <div className="title">
-                          <h3>Bạn cần hỗ trợ?</h3>
-                          <p>Xin vui lòng để lại yêu cầu hỗ trợ của bạn.</p>
-                        </div>
-                        <div role="form" className="wpcf7" id="wpcf7-f10-p97-o1" lang="en-US" dir="ltr">
-                          <div className="screen-reader-response">
-                            <p role="status" aria-live="polite" aria-atomic="true" />
-                            {' '}
-                            <ul />
-                          </div>
-                          <form action="https://nhaxinh.com/#wpcf7-f10-p97-o1" method="post" className="wpcf7-form init" encType="multipart/form-data" noValidate="novalidate" data-status="init">
-                            <div style={{ display: 'none' }}>
-                              <input type="hidden" name="_wpcf7" value="10" />
-                              <input type="hidden" name="_wpcf7_version" value="5.5.2" />
-                              <input type="hidden" name="_wpcf7_locale" value="en_US" />
-                              <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f10-p97-o1" />
-                              <input type="hidden" name="_wpcf7_container_post" value="97" />
-                              <input type="hidden" name="_wpcf7_posted_data_hash" value="" />
-                              <input type="hidden" name="_wpcf7_recaptcha_response" value="" />
-                            </div>
-                            <div className="row">
-                              <div className="col">
-                                <span className="wpcf7-form-control-wrap text-54"><input type="text" name="text-54" value="" size="40" className="wpcf7-form-control wpcf7-text form-control" aria-invalid="false" placeholder="Họ tên" /></span>
-                              </div>
-                              <div className="col">
-                                <span className="wpcf7-form-control-wrap tel-585"><input type="tel" name="tel-585" value="" size="40" className="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-tel form-control" aria-invalid="false" placeholder="+(84) 0123 456" /></span>
-                              </div>
-                            </div>
-                            <div className="form-group">
-                              <span className="wpcf7-form-control-wrap email-638"><input type="email" name="email-638" value="" size="40" className="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email form-control" aria-required="true" aria-invalid="false" placeholder="Enter email" /></span>
-                            </div>
-                            <div className="form-group">
-                              <span className="wpcf7-form-control-wrap textarea-798"><textarea name="textarea-798" cols="40" rows="10" className="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required form-control" aria-required="true" aria-invalid="false" placeholder="Nội dung liên hệ" /></span>
-                            </div>
-                            <div className="form-group" />
-                            <div className="row">
-                              <div className="col"><span className="wpcf7-form-control-wrap file-4"><input type="file" name="file-4" size="40" className="wpcf7-form-control wpcf7-file" accept=".jpg,.jpeg,.png,.gif,.pdf,.doc,.docx,.ppt,.pptx,.odt,.avi,.ogg,.m4a,.mov,.mp3,.mp4,.mpg,.wav,.wmv" aria-invalid="false" /></span></div>
-                              <div className="col text-right"><input type="submit" value="Gửi yêu cầu" className="wpcf7-form-control has-spinner wpcf7-submit btn" /></div>
-                            </div>
-                            <div className="wpcf7-response-output" aria-hidden="true" />
-                          </form>
-
-                        </div>
-                      </div>
+                    <div className="col">
+                      <span className="wpcf7-form-control-wrap text-54"><input type="text" name="text-54" value="" size="40" className="wpcf7-form-control wpcf7-text form-control" aria-invalid="false" placeholder="Họ tên" /></span>
                     </div>
-                    <div className="col-sm-12 col-md-6">
-                      <img decoding="async" className="lazy-load img_lienhe" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20100%20100%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="/wp-content/uploads/2023/07/banner-nha-xinh-khong-gian-tu-van.jpg" alt="img liên hệ" />
+                    <div className="col">
+                      <span className="wpcf7-form-control-wrap tel-585"><input type="tel" name="tel-585" value="" size="40" className="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-tel form-control" aria-invalid="false" placeholder="+(84) 0123 456" /></span>
                     </div>
                   </div>
-                </div>
+                  <div className="form-group">
+                    <span className="wpcf7-form-control-wrap email-638"><input type="email" name="email-638" value="" size="40" className="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email form-control" aria-required="true" aria-invalid="false" placeholder="Enter email" /></span>
+                  </div>
+                  <div className="form-group">
+                    <span className="wpcf7-form-control-wrap textarea-798"><textarea name="textarea-798" cols="40" rows="10" className="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required form-control" aria-required="true" aria-invalid="false" placeholder="Nội dung liên hệ" /></span>
+                  </div>
+                  <div className="form-group" />
+                  <div className="row">
+                    <div className="col"><span className="wpcf7-form-control-wrap file-4"><input type="file" name="file-4" size="40" className="wpcf7-form-control wpcf7-file" accept=".jpg,.jpeg,.png,.gif,.pdf,.doc,.docx,.ppt,.pptx,.odt,.avi,.ogg,.m4a,.mov,.mp3,.mp4,.mpg,.wav,.wmv" aria-invalid="false" /></span></div>
+                    <div className="col text-right">
+                      <input type="submit" value="Gửi yêu cầu" className="wpcf7-form-control has-spinner wpcf7-submit btn" />
+                      <span className="wpcf7-spinner" />
+                    </div>
+                  </div>
+                  <div className="wpcf7-response-output" aria-hidden="true" />
+                </form>
               </div>
-
             </div>
           </div>
-
+          <div className="col-sm-12 col-md-6">
+            <img decoding="async" className="img_lienhe lazy-load-active" src={BannerTuVan} data-src={BannerTuVan} alt="img liên hệ" />
+          </div>
         </div>
+
         <div id="gap-698061554" className="gap-element clearfix" style={{ display: 'block', height: 'auto' }} />
 
         <div className="row row-collapse row-full-width bg_footer" id="row-728544454">
@@ -2060,14 +1986,7 @@ function Home() {
                       </div>
 
                       <div id="col-1041114562" className="col small-12 large-12">
-                        <div className="col-inner text-center">
-
-                          <a href="he-thong-cua-hang/index.html" target="_self" className="button white is-outline lowercase">
-                            <span>Tìm cửa hàng</span>
-                            <i className="icon-angle-right" />
-                          </a>
-
-                        </div>
+                        <div className="col-inner text-center" />
                       </div>
 
                     </div>

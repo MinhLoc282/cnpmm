@@ -614,7 +614,7 @@ function AboutPage() {
                       <div className="box box-normal box-text-bottom box-blog-post has-hover">
                         <div className="box-image">
                           <div className="image-cover" style={{ paddingTop: '56.25%' }}>
-                            <img decoding="async" width="600" height="400" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20600%20400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="../../assets/images/toa-dam-sac-son-9-600x400.jpg" className="lazy-load attachment-medium size-medium wp-post-image" alt="" srcSet="" data-srcset="../../assets/images/toa-dam-sac-son-9-600x400.jpg 600w, ../../assets/images/toa-dam-sac-son-9-768x512.jpg 768w, ../../assets/images/toa-dam-sac-son-9-300x200.jpg 300w, ../../assets/images/toa-dam-sac-son-9.jpg 1200w" sizes="(max-width: 600px) 100vw, 600px" />
+                            <img decoding="async" width="600" height="400" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20600%20400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="../../assets/images/toa-dam-sac-son-9.jpg" className="lazy-load attachment-medium size-medium wp-post-image" alt="" srcSet="" data-srcset="../../assets/images/toa-dam-sac-son-9.jpg 600w, ../../assets/images/toa-dam-sac-son-9-768x512.jpg 768w, ../../assets/images/toa-dam-sac-son-9-300x200.jpg 300w, ../../assets/images/toa-dam-sac-son-9.jpg 1200w" sizes="(max-width: 600px) 100vw, 600px" />
                             {' '}
 
                           </div>
@@ -674,14 +674,7 @@ function AboutPage() {
                       </div>
 
                       <div id="col-633394158" className="col small-12 large-12">
-                        <div className="col-inner text-center">
-
-                          <a href="https://nhaxinh.com/he-thong-cua-hang/" target="_self" className="button white is-outline is-large lowercase">
-                            <span>Tìm cửa hàng</span>
-                            <i className="icon-angle-right" />
-                          </a>
-
-                        </div>
+                        <div className="col-inner text-center" />
                       </div>
 
                     </div>
