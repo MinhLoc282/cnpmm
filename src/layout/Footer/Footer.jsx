@@ -1,6 +1,9 @@
 /* eslint-disable react/no-unknown-property */
 import React from 'react';
 
+import * as Yup from 'yup';
+import { useFormik } from 'formik';
+
 import Logo from 'assets/images/logo.png';
 import CorrLogo from 'assets/images/aa-corporation-logo-2311.png';
 import AkaLogo from 'assets/images/aka-logo-2311.png';
@@ -14,7 +17,30 @@ import LignerosetLogo from 'assets/images/ligneroset-logo-2311.png';
 import LagoLogo from 'assets/images/lago-logo-2311.png';
 import AdamosLogo from 'assets/images/adamos-logo-2311.png';
 
+import {
+  EMAIL_REGEX,
+} from 'constants/index';
+
 function Footer() {
+  const validation = useFormik({
+    enableReinitialize: true,
+
+    initialValues: {
+      email: '',
+    },
+
+    validationSchema: Yup.object({
+      email: Yup.string()
+        .trim()
+        .required('Email is required.')
+        .matches(EMAIL_REGEX, 'Invalid email format'),
+    }),
+
+    onSubmit: (values) => {
+      console.log(values);
+    },
+  });
+
   return (
     <footer id="footer" className="footer-wrapper">
       <div className="footer-widgets footer footer-2 dark">
@@ -85,10 +111,14 @@ function Footer() {
             <div role="form" className="wpcf7" id="wpcf7-f9-o2" lang="en-US" dir="ltr">
               <div className="screen-reader-response">
                 <p role="status" aria-live="polite" aria-atomic="true" />
-                {' '}
+
                 <ul />
               </div>
-              <form action="https://nhaxinh.com/#wpcf7-f9-o2" method="post" className="wpcf7-form init" noValidate="novalidate" data-status="init">
+              <form
+                className="wpcf7-form init"
+                data-status="init"
+                onSubmit={validation.handleSubmit}
+              >
                 <div style={{ display: 'none' }}>
                   <input type="hidden" name="_wpcf7" value="9" />
                   <input type="hidden" name="_wpcf7_version" value="5.5.2" />
@@ -100,7 +130,21 @@ function Footer() {
                 </div>
                 <div className="flex-row form-flat medium-flex-wrap">
                   <div className="flex-col flex-grow">
-                    <span className="wpcf7-form-control-wrap your-email"><input type="email" name="your-email" value="" size="40" className="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="Nhập email của bạn" /></span>
+                    <span className="wpcf7-form-control-wrap your-email">
+                      <input
+                        type="email"
+                        name="email"
+                        id="email"
+                        value={validation.values.email}
+                        onChange={validation.handleChange}
+                        onBlur={validation.handleBlur}
+                        size="40"
+                        className="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email"
+                        aria-required="true"
+                        aria-invalid="false"
+                        placeholder="Nhập email của bạn"
+                      />
+                    </span>
                   </div>
                   <div className="flex-col ml-half">
                     <input type="submit" value="Đăng ký" className="wpcf7-form-control has-spinner wpcf7-submit button" />
@@ -108,7 +152,6 @@ function Footer() {
                 </div>
                 <div className="wpcf7-response-output" aria-hidden="true" />
               </form>
-
             </div>
           </div>
 
