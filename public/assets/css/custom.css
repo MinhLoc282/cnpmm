@@ -866,3 +866,38 @@
 #gap-1300533652 {
   padding-top: 30px;
 }
+
+.shop-page-title.featured-title .title-bg {
+  background-image: url(../images/banner-trang-chu-san-pham-dep-oki.jpg);
+}
+
+@media screen and (min-width: 550px) {
+  .products .box-vertical .box-image {
+      min-width: 300px!important;
+      width: 300px!important;
+  }
+}
+
+#text-160565849 {
+  text-align: center;
+}
+
+#image_140137184 {
+  width: 100%;
+}
+
+#image_1360979314 {
+  width: 100%;
+}
+#section_1269107064 {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+#image_1595276186 {
+  width: 100%;
+}
+
+#image_394955833 {
+  width: 100%;
+}

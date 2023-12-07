@@ -6,7 +6,9 @@ export default {
   async login(payload) {
     const path = `${endpoint}/loginUser`;
 
-    const response = await axiosClient.post(path, payload);
+    const response = await axiosClient.post(path, payload, {
+      withCredentials: true,
+    });
 
     return response.data;
   },
