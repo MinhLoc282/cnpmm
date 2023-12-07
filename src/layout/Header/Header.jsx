@@ -667,31 +667,6 @@ function Header() {
                 <li className="header-search-form search-form html relative has-icon">
                   <div className="header-search-form-wrapper">
                     <div className="searchform-wrapper ux-search-box relative form-flat is-normal">
-                      {/* <form role="search" method="get" className="searchform" action="https://nhaxinh.com/">
-                        <div className="flex-row relative">
-                          <div className="flex-col flex-grow position-relative">
-                            <label className="screen-reader-text"
-                             htmlFor="woocommerce-product-search-field-0">Search for:</label>
-                            <div className="search-container">
-                              <input type="search"
-                              id="woocommerce-product-search-field-0"
-                              className="search-field mb-0"
-                               placeholder="Tìm sản phẩm" value="" name="s" />
-                              <button type="submit" value="Search"
-                               className="ux-search-submit submit-button
-                                secondary button icon mb-0" aria-label="Submit">
-                                <i className="icon-search" />
-                              </button>
-                            </div>
-                            <input type="hidden" name="post_type" value="product" />
-                            <input type="hidden" name="lang" value="vi" />
-                          </div>
-                        </div>
-
-                        <div className="live-search-results text-left z-top" />
-                        <input type="hidden" name="lang" value="vi" />
-                      </form> */}
-
                       <form role="search" className="searchform" onSubmit={validation.handleSubmit}>
                         <div className="flex-row relative">
                           <div className="flex-col flex-grow position-relative">
@@ -702,7 +677,7 @@ function Header() {
                                 id="woocommerce-product-search-field-0"
                                 className="search-field mb-0"
                                 placeholder="Tìm sản phẩm"
-                                name="s"
+                                name="search"
                                 onChange={validation.handleChange}
                                 onBlur={validation.handleBlur}
                                 value={validation.values.search}
