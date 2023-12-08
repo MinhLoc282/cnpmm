@@ -13,8 +13,9 @@ import {
   GET_PRODUCT_ROOM_FAILED,
 } from './actionTypes';
 
-export const actionGetAllProduct = () => ({
+export const actionGetAllProduct = (payload) => ({
   type: GET_ALL_PRODUCT,
+  payload,
 });
 
 export const actionGetAllProductSuccess = (payload) => ({

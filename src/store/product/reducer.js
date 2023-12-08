@@ -16,6 +16,7 @@ import {
 const initialState = {
   loading: false,
   allProducts: [],
+  totalProducts: 0,
   productDetail: null,
   productCategory: [],
   productRoom: [],
@@ -36,7 +37,8 @@ const productReducer = (state = initialState, action) => {
       return {
         ...state,
         loading: false,
-        allProducts: action.payload,
+        allProducts: action.payload.product,
+        totalProducts: action.payload.total,
       };
 
     case GET_PRODUCT_DETAIL_SUCCESS:

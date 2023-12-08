@@ -1,7 +1,19 @@
 /* eslint-disable jsx-a11y/no-noninteractive-tabindex */
-import React from 'react';
+import WishlistItem from 'components/WishlistItem/WishlistItem';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+
+import { actionGetUserWishlist } from 'store/actions';
+import { formatPriceWithCommas } from 'utils';
 
 function Wishlist() {
+  const dispatch = useDispatch();
+  const wishlist = useSelector((state) => state.Wishlist.wishlist);
+
+  useEffect(() => {
+    dispatch(actionGetUserWishlist());
+  }, []);
+
   return (
     <div id="overlay-right-sidebar" className="mobile-sidebar no-scrollbar mfp-hide">
       <div className="sidebar-menu no-scrollbar ">
@@ -9,10 +21,15 @@ function Wishlist() {
           <div className="wishlist-view-sidebar-header">
             <h4>
               Wishlist
-              <span>0</span>
+              {' '}
+              <span>{wishlist.length > 0 ? wishlist.length : 0}</span>
             </h4>
           </div>
-          <div className="wishlist-view-sidebar-content wishlist_table cart" data-token="" />
+          <div className="wishlist-view-sidebar-content wishlist_table cart">
+            {wishlist ? wishlist.map((product) => (
+              <WishlistItem key={product._id} product={product} />
+            )) : ''}
+          </div>
           <div className="wishlist-view-sidebar-footer">
             <div className="total_price_wrapper">
               <span>Tổng cộng</span>
@@ -20,7 +37,12 @@ function Wishlist() {
               <strong>
                 <span className="woocommerce-Price-amount amount">
                   <bdi>
-                    0
+                    {formatPriceWithCommas(wishlist.reduce((accumulator, product) => {
+                      const { price, priceSale } = product;
+                      const totalPrice = priceSale < price ? priceSale : price;
+
+                      return accumulator + totalPrice;
+                    }, 0))}
                     <span className="woocommerce-Price-currencySymbol">&#8363;</span>
                   </bdi>
                 </span>

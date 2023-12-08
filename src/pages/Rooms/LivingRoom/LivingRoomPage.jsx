@@ -4,17 +4,13 @@ import React from 'react';
 function LivingRoomPage() {
   return (
     <main id="main" className="">
-
       <div id="content" role="main" className="content-area">
-
         <section className="section" id="section_1714886044">
           <div className="bg section-bg fill bg-fill bg-loaded" />
 
           <div className="section-content relative">
-
             <div id="page-header-1012911620" className="page-header-wrapper">
               <div className="page-title dark featured-title">
-
                 <div className="page-title-bg">
                   <div className="title-bg fill bg-fill parallax-active" data-parallax-container=".page-title" data-parallax-background="" data-parallax="-" />
                   <div className="title-overlay fill" />
@@ -24,25 +20,18 @@ function LivingRoomPage() {
                   <div className="title-wrapper is-xlarge flex-col text-left medium-text-center">
                     <h1 className="entry-title mb-0">
                       Phòng khách
-                      {' '}
-
                     </h1>
                   </div>
                   <div className="title-content flex-col flex-right text-right medium-text-center">
                     <div className="title-breadcrumbs pb-half pt-half">
                       <nav className="woocommerce-breadcrumb breadcrumbs ">
                         <a href="/">Trang chủ</a>
-                        {' '}
                         <span className="divider">/</span>
-                        {' '}
                         Phòng khách
                       </nav>
                     </div>
-                    {' '}
-
                   </div>
                 </div>
-
               </div>
             </div>
 

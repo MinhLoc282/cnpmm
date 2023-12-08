@@ -1,5 +1,6 @@
 import { toast } from 'react-toastify';
 import jwt from 'jsonwebtoken';
+import getSlug from 'speakingurl';
 
 export const apiErrorHandler = (error, showToast = true) => {
   let message = 'Error';
@@ -68,3 +69,7 @@ export const decodeJWT = (token) => {
     return null;
   }
 };
+
+export const convertToSlug = (text) => getSlug(text, { lang: 'vn' });
+
+export const formatPriceWithCommas = (price) => price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');

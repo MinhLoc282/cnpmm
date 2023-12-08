@@ -7,7 +7,7 @@ Version: 3.0
 */
 
 /*************** ADD CUSTOM CSS HERE.   ***************/
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&amp;display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 body{
   font-family: 'Poppins', sans-serif;
   font-size: 18px;
@@ -2269,7 +2269,8 @@ p.stock.out-of-stock {
   margin-top: 50px;
 }
 .mfp-close{
-  display: none;
+  left: 405px;
+  right: auto;
 }
 .lang a[hreflang="en"]{
 	/* display: none; */

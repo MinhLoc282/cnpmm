@@ -1875,10 +1875,6 @@
                   this.emitEvent("dragEnd", [t, e])
               }
               ,
-              n.onclick = function(t) {
-                  this.isPreventingClicks && t.preventDefault()
-              }
-              ,
               n._staticClick = function(t, e) {
                   this.isIgnoringMouseUp && "mouseup" == t.type || (this.staticClick(t, e),
                   "mouseup" != t.type && (this.isIgnoringMouseUp = !0,

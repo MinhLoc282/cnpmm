@@ -12,7 +12,7 @@ export default {
   },
 
   async getCateByRoom(payload) {
-    const path = `${endpoint}/getCateByRoom${payload.id}`;
+    const path = `${endpoint}/getCateByRoom/${payload.id}`;
 
     const response = await axiosClient.get(path);
 

@@ -1,10 +1,10 @@
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 import { useFormik } from 'formik';
 
-import { actionLogout } from 'store/actions';
+import { actionGetCart, actionGetUserWishlist, actionLogout } from 'store/actions';
 
 import { LOCATION } from 'constants/index';
 
@@ -20,12 +20,15 @@ import NhaXinhPhongKhachHienDai311021 from 'assets/images/nha-xinh-phong-khach-h
 import Wishlist from 'components/Wishlist/Wishlist';
 import Navbar from 'components/Navbar/Navbar';
 import LoginForm from 'components/LoginForm/LoginForm';
+import Cart from 'components/Cart/Cart';
 
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import './index.css';
 
 function Header() {
   const dispatch = useDispatch();
+  const wishlistCount = useSelector((state) => state.Wishlist.wishlist.length);
+  const cartCount = useSelector((state) => state.Cart.cart.length);
 
   const [isLoggedIn, setIsLoggedIn] = useState(!!localStorage.getItem('accessToken'));
 
@@ -52,6 +55,8 @@ function Header() {
 
   useEffect(() => {
     updateLoginStatus();
+    dispatch(actionGetUserWishlist());
+    dispatch(actionGetCart());
   }, []);
 
   return (
@@ -103,30 +108,24 @@ function Header() {
                     aria-controls="overlay-right-sidebar"
                     aria-expanded="false"
                   >
-
-                    <i className="wishlist-icon icon-heart-o" />
+                    <i
+                      className="wishlist-icon icon-heart-o"
+                      data-icon-label={wishlistCount > 0 ? wishlistCount : null}
+                    />
                   </a>
                 </li>
                 <li className="cart-item has-icon">
                   <a href="/gio-hang" className="header-cart-link off-canvas-toggle nav-top-link is-small" data-open="#cart-popup" data-class="off-canvas-cart" title="Cart" data-pos="right">
-                    <span className="image-icon header-cart-icon" data-icon-label="0">
+                    <span
+                      className="image-icon header-cart-icon"
+                      data-icon-label={cartCount > 0 ? cartCount : null}
+                    >
                       <img width="20" height="20" className="cart-img-icon" alt="Cart" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2020%2020'%3E%3C/svg%3E" data-lazy-src={ICShopping} />
                       <noscript><img width="20" height="20" className="cart-img-icon" alt="Cart" src={ICShopping} /></noscript>
                     </span>
                   </a>
 
-                  <div id="cart-popup" className="mfp-hide widget_shopping_cart">
-                    <div className="cart-popup-inner inner-padding">
-                      <div className="cart-popup-title text-center">
-                        <h4 className="uppercase">Cart</h4>
-                        <div className="is-divider" />
-                      </div>
-                      <div className="widget_shopping_cart_content">
-                        <p className="woocommerce-mini-cart__empty-message">Không có sản phẩm nào trong giỏ hàng</p>
-                      </div>
-                      <div className="cart-sidebar-content relative" />
-                    </div>
-                  </div>
+                  <Cart />
                 </li>
 
                 <li className="account-item has-icon">

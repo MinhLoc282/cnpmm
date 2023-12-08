@@ -40,12 +40,13 @@ function App() {
           <Route path={LOCATION.CONTACT} element={<ContactPage />} />
           <Route path={LOCATION.INTERIOR_DESIGN} element={<InteriorDesignPage />} />
           <Route path={LOCATION.INSPIRATION} element={<InspirationPage />} />
-          <Route path={LOCATION.SHOP} element={<ShopPage />} />
+          <Route path={`${LOCATION.SHOP}`} element={<ShopPage />} />
+          <Route path={`${LOCATION.SHOP}/page/:pageNumber`} element={<ShopPage />} />
           <Route path={LOCATION.LIVING_ROOM} element={<LivingRoomPage />} />
           <Route path={LOCATION.DINING_ROOM} element={<DiningRoomPage />} />
           <Route path={LOCATION.BEDROOM} element={<BedroomPage />} />
           <Route path={LOCATION.PRODUCT_CATEGORY} element={<ProductCategoryPage />} />
-          <Route path={`${LOCATION.PRODUCT_CATEGORY}/:id`} element={<ProductPage />} />
+          <Route path={`${LOCATION.PRODUCT_CATEGORY}/:slug`} element={<ProductPage />} />
           <Route path={LOCATION.PROMOTION} element={<PromotionPage />} />
           <Route path={LOCATION.SHOWROOM} element={<ShowroomPage />} />
           <Route path={LOCATION.ACCOUNT} element={<AccountPage />} />
