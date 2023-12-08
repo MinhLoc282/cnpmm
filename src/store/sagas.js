@@ -10,6 +10,7 @@ import Room from 'store/room/saga';
 import Cart from 'store/cart/saga';
 import Product from 'store/product/saga';
 import Wishlist from 'store/wishlist/saga';
+import Coupon from 'store/coupon/saga';
 
 export default function* rootSaga() {
   yield all([
@@ -23,5 +24,6 @@ export default function* rootSaga() {
     fork(Cart),
     fork(Product),
     fork(Wishlist),
+    fork(Coupon),
   ]);
 }

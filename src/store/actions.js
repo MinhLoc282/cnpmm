@@ -8,3 +8,4 @@ export * from 'store/product/actions';
 export * from 'store/room/actions';
 export * from 'store/cart/actions';
 export * from 'store/wishlist/actions';
+export * from 'store/coupon/actions';

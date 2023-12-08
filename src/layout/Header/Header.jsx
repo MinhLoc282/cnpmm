@@ -27,8 +27,8 @@ import './index.css';
 
 function Header() {
   const dispatch = useDispatch();
-  const wishlistCount = useSelector((state) => state.Wishlist.wishlist.length);
-  const cartCount = useSelector((state) => state.Cart.cart.length);
+  const wishlistCount = useSelector((state) => state.Wishlist?.wishlist?.length);
+  const cartCount = useSelector((state) => state.Cart?.cart?.length);
 
   const [isLoggedIn, setIsLoggedIn] = useState(!!localStorage.getItem('accessToken'));
 

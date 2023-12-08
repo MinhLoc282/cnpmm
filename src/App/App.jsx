@@ -27,6 +27,7 @@ import WishlistPage from 'pages/Wishlist/WishlistPage';
 import CartPage from 'pages/Cart/CartPage';
 
 import './App.css';
+import CheckoutPage from 'pages/Checkout/CheckoutPage';
 
 function App() {
   return (
@@ -52,6 +53,7 @@ function App() {
           <Route path={LOCATION.ACCOUNT} element={<AccountPage />} />
           <Route path={LOCATION.WISHLIST} element={<WishlistPage />} />
           <Route path={LOCATION.CART} element={<CartPage />} />
+          <Route path={LOCATION.CHECKOUT} element={<CheckoutPage />} />
         </Route>
       </Routes>
     </BrowserRouter>

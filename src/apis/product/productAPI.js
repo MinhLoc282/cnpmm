@@ -12,7 +12,7 @@ export default {
   },
 
   async getProductDetail(payload) {
-    const path = `${endpoint}/product-detail/${payload.id}`;
+    const path = `${endpoint}/product-detail/${payload.slug}`;
 
     const response = await axiosClient.get(path);
 
