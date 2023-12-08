@@ -9,3 +9,4 @@ export * from 'store/room/actions';
 export * from 'store/cart/actions';
 export * from 'store/wishlist/actions';
 export * from 'store/coupon/actions';
+export * from 'store/order/actions';

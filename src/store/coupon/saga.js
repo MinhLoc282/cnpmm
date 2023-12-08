@@ -19,6 +19,8 @@ function* getCoupon(action) {
 
     yield put(actionGetCouponSuccess(response.data));
 
+    localStorage.setItem('coupon', response.data);
+
     toast.success('Code is valid');
   } catch (error) {
     toast.error('Code is not valid');

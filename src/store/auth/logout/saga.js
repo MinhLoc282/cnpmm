@@ -12,6 +12,9 @@ import {
 
 function* logout() {
   try {
+    const token = localStorage.getItem('accessToken');
+
+    axiosClient.defaults.headers.Authorization = `Bearer ${token}`;
     yield call(authAPI.logout);
 
     localStorage.removeItem('accessToken');
