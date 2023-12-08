@@ -1,3 +1,6 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
@@ -31,6 +34,11 @@ function Header() {
   const cartCount = useSelector((state) => state.Cart?.cart?.length);
 
   const [isLoggedIn, setIsLoggedIn] = useState(!!localStorage.getItem('accessToken'));
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleDropdown = () => {
+    setIsOpen(!isOpen);
+  };
 
   const handleLogout = () => {
     dispatch(actionLogout());
@@ -128,19 +136,53 @@ function Header() {
                   <Cart />
                 </li>
 
-                <li className="account-item has-icon">
-                  <a
-                    href="/tai-khoan"
-                    className="nav-top-link nav-top-not-logged-in is-small"
-                    // data-open="#login-form-popup"
-                  >
-                    <span>
-                      Đăng nhập
-                      {' '}
+                {isLoggedIn ? (
+                  <li>
+                    <a
+                      title="Tài khoản của tôi"
+                      onClick={toggleDropdown}
+                    >
+                      <span className="header-account-title">
+                        Tài khoản của tôi
+                      </span>
+
                       <i className="icon-user" />
-                    </span>
-                  </a>
-                </li>
+                    </a>
+
+                    {isOpen && (
+                    <ul className="di">
+                      <li>
+                        <a href="https://nhaxinh.com/tai-khoan/edit-account/">Thông tin của tôi</a>
+                      </li>
+                      <li>
+                        <a href="https://nhaxinh.com/tai-khoan/orders/">Đơn hàng</a>
+                      </li>
+                      <li>
+                        <a href="https://nhaxinh.com/tai-khoan/recently-viewed-products/">Sản phẩm vừa xem</a>
+                      </li>
+                      <li>
+                        <a href="https://nhaxinh.com/tai-khoan/wishlist/?wishlist-action">Wishlist</a>
+                      </li>
+                      <li>
+                        <a onClick={handleLogout}>Đăng xuất</a>
+                      </li>
+                    </ul>
+                    )}
+                  </li>
+                ) : (
+                  <li className="account-item has-icon">
+                    <a
+                      href="/tai-khoan"
+                      className="nav-top-link nav-top-not-logged-in is-small"
+                    >
+                      <span>
+                        Đăng nhập
+                        {' '}
+                        <i className="icon-user" />
+                      </span>
+                    </a>
+                  </li>
+                )}
               </ul>
             </div>
 

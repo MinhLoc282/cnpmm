@@ -11,6 +11,7 @@ import Cart from 'store/cart/reducer';
 import Product from 'store/product/reducer';
 import Wishlist from 'store/wishlist/reducer';
 import Coupon from 'store/coupon/reducer';
+import Order from 'store/order/reducer';
 
 const rootReducer = combineReducers({
   Login,
@@ -24,6 +25,7 @@ const rootReducer = combineReducers({
   Product,
   Wishlist,
   Coupon,
+  Order,
 });
 
 export default rootReducer;

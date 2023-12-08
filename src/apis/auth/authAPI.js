@@ -34,7 +34,9 @@ export default {
   async logout() {
     const path = `${endpoint}/logout`;
 
-    const response = await axiosClient.post(path);
+    const response = await axiosClient.get(path, {
+      withCredentials: true,
+    });
 
     return response.data;
   },

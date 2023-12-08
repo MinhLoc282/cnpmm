@@ -1,42 +1,79 @@
+/* eslint-disable no-unsafe-optional-chaining */
+/* eslint-disable no-nested-ternary */
 /* eslint-disable max-len */
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
-// import * as Yup from 'yup';
-// import { useFormik } from 'formik';
-// import { useDispatch } from 'react-redux';
+import * as Yup from 'yup';
+import { useFormik } from 'formik';
+
+import { actionCreateOrder, actionGetCart } from 'store/actions';
+import { formatPriceWithCommas } from 'utils';
+import CheckoutItem from './CheckoutItem/CheckoutItem';
 
 function CheckoutPage() {
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
+  const cart = useSelector((state) => state.Cart.cart);
 
-  // const addressValidation = useFormik({
-  //   enableReinitialize: true,
+  const coupon = localStorage.getItem('coupon');
 
-  //   initialValues: {
-  //     billing_first_name: '',
-  //     billing_phone: '',
-  //     billing_email: '',
-  //     billing_state: '',
-  //     billing_city: '',
-  //     billing_address_1: '',
-  //     createaccount: false,
-  //     order_comments: '',
-  //   },
+  const addressSchema = Yup.object().shape({
+    province: Yup.string().trim().required('Tỉnh không được bỏ trống.'),
+    district: Yup.string().trim().required('Huyện không được bỏ trống.'),
+    ward: Yup.string().trim().required('Xã không được bỏ trống.'),
+    note: Yup.string().trim(),
+  });
 
-  //   validationSchema: Yup.object({
-  //     billing_first_name: Yup.string().trim().required('Họ và tên không được bỏ trống.'),
-  //     billing_phone: Yup.string().trim().required('Số điện thoại không được bỏ trống.'),
-  //     billing_email: Yup.string().trim().email('Địa chỉ email không hợp lệ.').required('Địa chỉ email không được bỏ trống.'),
-  //     billing_state: Yup.string().trim().required('Tỉnh / Thành phố không được bỏ trống.'),
-  //     billing_city: Yup.string().trim().required('Quận / Huyện không được bỏ trống.'),
-  //     billing_address_1: Yup.string().trim().required('Địa chỉ không được bỏ trống.'),
-  //     createaccount: Yup.boolean(),
-  //     order_comments: Yup.string(),
-  //   }),
+  const addressValidation = useFormik({
+    enableReinitialize: true,
 
-  //   onSubmit: (values) => {
-  //     dispatch(action);
-  //   },
-  // });
+    initialValues: {
+      PaymentMethod: 'COD',
+      name: '',
+      email: '',
+      phoneNumber: '',
+      addressShipping: {
+        province: 'Ho Chi Minh City',
+        district: '',
+        ward: '',
+        note: '',
+      },
+      couponApplied: '',
+    },
+
+    validationSchema: Yup.object({
+      PaymentMethod: Yup.string().trim().required('Phương thức thanh toán không được bỏ trống.'),
+      name: Yup.string().trim().required('Họ và tên không được bỏ trống.'),
+      email: Yup.string().trim().email('Địa chỉ email không hợp lệ.').required('Địa chỉ email không được bỏ trống.'),
+      phoneNumber: Yup.string().trim().required('Số điện thoại không được bỏ trống.'),
+      addressShipping: addressSchema.required('Địa chỉ giao hàng không được bỏ trống.'),
+      couponApplied: Yup.string().trim(),
+    }),
+  });
+
+  const [province, setProvince] = useState('');
+
+  const handleCreateOrder = () => {
+    if (coupon) {
+      addressValidation.values.couponApplied = coupon.code;
+    }
+
+    dispatch(actionCreateOrder(
+      addressValidation.values,
+    ));
+    // addressValidation.handleSubmit();
+  };
+
+  useEffect(() => {
+    dispatch(actionGetCart());
+  }, [dispatch]);
+
+  useEffect(() => {
+    addressValidation.handleChange(
+      { target: { name: 'province', value: addressValidation.values?.addressShipping?.province } },
+      'addressShipping.province',
+    );
+  }, [addressValidation.values?.addressShipping?.province]);
 
   return (
     <main id="main" className="">
@@ -45,7 +82,7 @@ function CheckoutPage() {
         <div className="woocommerce">
           <div className="woocommerce-notices-wrapper" />
           <div className="woocommerce-notices-wrapper" />
-          <form name="checkout" className="checkout woocommerce-checkout ">
+          <form name="checkout" className="checkout woocommerce-checkout " onSubmit={addressValidation.handleSubmit}>
             <div className="row pt-0 ">
               <div className="large-7 col  ">
                 <div id="customer_details">
@@ -55,33 +92,76 @@ function CheckoutPage() {
 
                       <div className="woocommerce-billing-fields__field-wrapper">
                         <p className="form-row form-row-wide validate-required" id="billing_first_name_field" data-priority="10">
-                          <label htmlFor="billing_first_name" className="">
+                          <label htmlFor="name" className="">
                             Họ và tên&nbsp;
                             <abbr className="required" title="required">*</abbr>
                           </label>
-                          <span className="woocommerce-input-wrapper"><input type="text" className="input-text " name="billing_first_name" id="billing_first_name" placeholder="Nhập họ và tên" value="" /></span>
+                          <span className="woocommerce-input-wrapper">
+                            <input
+                              type="text"
+                              className="input-text"
+                              name="name"
+                              id="billing_first_name"
+                              placeholder="Nhập họ và tên"
+                              value={addressValidation.values.name}
+                              onChange={addressValidation.handleChange}
+                            />
+                          </span>
                         </p>
+
                         <p className="form-row form-row-first validate-required validate-phone" id="billing_phone_field" data-priority="20">
-                          <label htmlFor="billing_phone" className="">
+                          <label htmlFor="phoneNumber" className="">
                             Số điện thoại&nbsp;
                             <abbr className="required" title="required">*</abbr>
                           </label>
-                          <span className="woocommerce-input-wrapper"><input type="tel" className="input-text " name="billing_phone" id="billing_phone" placeholder="Nhập số điện thoại của bạn" value="" autoComplete="tel" /></span>
+                          <span className="woocommerce-input-wrapper">
+                            <input
+                              type="text"
+                              className="input-text"
+                              name="phoneNumber"
+                              id="billing_phone"
+                              placeholder="Nhập số điện thoại của bạn"
+                              value={addressValidation.values.phoneNumber}
+                              onChange={addressValidation.handleChange}
+                              autoComplete="tel"
+                            />
+                          </span>
                         </p>
+
                         <p className="form-row form-row-last validate-required validate-email" id="billing_email_field" data-priority="21">
-                          <label htmlFor="billing_email" className="">
+                          <label htmlFor="email" className="">
                             Địa chỉ email&nbsp;
                             <abbr className="required" title="required">*</abbr>
                           </label>
-                          <span className="woocommerce-input-wrapper"><input type="email" className="input-text " name="billing_email" id="billing_email" placeholder="Nhập email" value="" autoComplete="email username" /></span>
+                          <span className="woocommerce-input-wrapper">
+                            <input
+                              type="email"
+                              className="input-text"
+                              name="email"
+                              id="billing_email"
+                              placeholder="Nhập email"
+                              value={addressValidation.values.email}
+                              onChange={addressValidation.handleChange}
+                              autoComplete="email username"
+                            />
+                          </span>
                         </p>
                         <p className="form-row form-row-first devvn-address-field validate-required" id="billing_state_field" data-priority="30">
-                          <label htmlFor="billing_state" className="">
+                          <label htmlFor="province" className="">
                             Tỉnh / Thành phố&nbsp;
                             <abbr className="required" title="required">*</abbr>
                           </label>
                           <span className="woocommerce-input-wrapper">
-                            <select name="billing_state" id="billing_state" className="select select2-hidden-accessible" data-allow_clear="true" data-placeholder="Chọn tỉnh / thành phố" tabIndex="-1" aria-hidden="true">
+                            <select
+                              name="province"
+                              id="province"
+                              className="select"
+                              data-placeholder="Chọn tỉnh / thành phố"
+                              tabIndex="-1"
+                              aria-hidden="true"
+                              value={province}
+                              onChange={(e) => setProvince(e.target.value)}
+                            >
                               <option value="" selected="selected">Chọn tỉnh / thành phố</option>
                               <option value="HANOI">Hà Nội</option>
                               <option value="HOCHIMINH">Tp. Hồ Chí Minh</option>
@@ -147,25 +227,28 @@ function CheckoutPage() {
                               <option value="VINHPHUC">Vĩnh Phúc</option>
                               <option value="YENBAI">Yên Bái</option>
                             </select>
-                            <span className="select2 select2-container select2-container--default" dir="ltr" style={{ width: '355.188px' }}>
-                              <span className="selection">
-                                <span className="select2-selection select2-selection--single" role="combobox" aria-controls="dropdown-list" aria-haspopup="true" aria-expanded="false" tabIndex="0" aria-labelledby="select2-billing_state-container">
-                                  <span className="select2-selection__rendered" id="select2-billing_state-container"><span className="select2-selection__placeholder">Chọn tỉnh / thành phố</span></span>
-                                  <span className="select2-selection__arrow" role="presentation"><b role="presentation" /></span>
-                                </span>
-                              </span>
-                              <span className="dropdown-wrapper" aria-hidden="true" />
-                            </span>
                           </span>
                         </p>
                         <p className="form-row form-row-last address-field update_totals_on_change validate-required validate-required" id="billing_city_field" data-priority="40">
-                          <label htmlFor="billing_city" className="">
+                          <label htmlFor="district" className="">
                             Quận / Huyện
                             <abbr className="required" title="required">*</abbr>
                           </label>
-                          <select name="billing_city" id="billing_city" className="select select2-hidden-accessible" data-allow_clear="true" data-placeholder="Chọn quận / huyện" tabIndex="-1" aria-hidden="true">
-                            <option value="" selected="selected">Chọn quận / huyện</option>
-                          </select>
+                          {/* <span className="woocommerce-input-wrapper">
+                            <select
+                              name="billing_city"
+                              id="billing_city"
+                              className="select select2-hidden-accessible"
+                              data-allow_clear="true"
+                              data-placeholder="Chọn quận / huyện"
+                              tabIndex="-1"
+                              aria-hidden="true"
+                              value={addressValidation.values.addressShipping.district}
+                              onChange={addressValidation.handleChange}
+                            >
+                              <option value="" selected="selected">Chọn quận / huyện</option>
+                            </select>
+                          </span>
                           <span className="select2 select2-container select2-container--default" dir="ltr" style={{ width: '355.188px' }}>
                             <span className="selection">
                               <span className="select2-selection select2-selection--single" role="combobox" aria-controls="dropdown-list" aria-expanded="false" aria-haspopup="true" tabIndex="0" aria-labelledby="select2-billing_city-container">
@@ -174,31 +257,72 @@ function CheckoutPage() {
                               </span>
                             </span>
                             <span className="dropdown-wrapper" aria-hidden="true" />
+                          </span> */}
+                          <span className="woocommerce-input-wrapper">
+                            <input
+                              type="text"
+                              name="district"
+                              id="district"
+                              className="input-text"
+                              placeholder="Nhập quận / huyện"
+                              value={addressValidation.values.addressShipping.district}
+                              onChange={(e) => {
+                                const newValue = e.target.value;
+                                addressValidation.handleChange({
+                                  target: { name: 'addressShipping.district', value: newValue },
+                                });
+                              }}
+                            />
                           </span>
                         </p>
-                        <p className="form-row form-row-wide validate-required" id="billing_address_1_field" data-priority="60">
-                          <label htmlFor="billing_address_1" className="">
-                            Địa chỉ&nbsp;
+
+                        <p className="form-row form-row-last address-field update_totals_on_change validate-required validate-required" id="billing_city_field" data-priority="40">
+                          <label htmlFor="ward" className="">
+                            Xã
                             <abbr className="required" title="required">*</abbr>
                           </label>
-                          <span className="woocommerce-input-wrapper"><input type="text" className="input-text " name="billing_address_1" id="billing_address_1" placeholder="Nhập địa chỉ" value="" autoComplete="address-line1" /></span>
+                          {/* <span className="woocommerce-input-wrapper">
+                            <select
+                              name="billing_ward"
+                              id="billing_ward"
+                              className="select select2-hidden-accessible"
+                              data-allow_clear="true"
+                              data-placeholder="Chọn xã"
+                              tabIndex="-1"
+                              aria-hidden="true"
+                              value={addressValidation.values.addressShipping.ward}
+                              onChange={addressValidation.handleChange}
+                            >
+                              <option value="" selected="selected">Chọn xã</option>
+                            </select>
+                          </span>
+                          <span className="select2 select2-container select2-container--default" dir="ltr" style={{ width: '355.188px' }}>
+                            <span className="selection">
+                              <span className="select2-selection select2-selection--single" role="combobox" aria-controls="dropdown-list" aria-expanded="false" aria-haspopup="true" tabIndex="0" aria-labelledby="select2-billing_city-container">
+                                <span className="select2-selection__rendered" id="select2-billing_city-container"><span className="select2-selection__placeholder">Chọn quận / huyện</span></span>
+                                <span className="select2-selection__arrow" role="presentation"><b role="presentation" /></span>
+                              </span>
+                            </span>
+                            <span className="dropdown-wrapper" aria-hidden="true" />
+                          </span> */}
+                          <span className="woocommerce-input-wrapper">
+                            <input
+                              type="text"
+                              name="ward"
+                              id="ward"
+                              className="input-text"
+                              placeholder="Nhập xã"
+                              value={addressValidation.values.addressShipping.ward}
+                              onChange={(e) => {
+                                const newValue = e.target.value;
+                                addressValidation.handleChange({
+                                  target: { name: 'addressShipping.ward', value: newValue },
+                                });
+                              }}
+                            />
+                          </span>
                         </p>
-                        {' '}
-
                       </div>
-
-                    </div>
-
-                    <div className="woocommerce-account-fields">
-
-                      <p className="form-row form-row-wide create-account woocommerce-validated">
-                        <label className="woocommerce-form__label woocommerce-form__label-for-checkbox checkbox">
-                          <input className="woocommerce-form__input woocommerce-form__input-checkbox input-checkbox" id="createaccount" type="checkbox" name="createaccount" value="1" />
-                          {' '}
-                          <span>Create an account?</span>
-                        </label>
-                      </p>
-
                     </div>
                   </div>
 
@@ -210,26 +334,49 @@ function CheckoutPage() {
 
                       <div className="woocommerce-additional-fields__field-wrapper">
                         <p className="form-row notes" id="order_comments_field" data-priority="">
-                          <label htmlFor="order_comments" className="">
+                          <label htmlFor="note" className="">
                             Lưu ý cho đơn hàng&nbsp;
                             <span className="optional">(tuỳ chọn)</span>
                           </label>
-                          <span className="woocommerce-input-wrapper"><textarea name="order_comments" className="input-text " id="order_comments" placeholder="Viết các lưu ý cho đơn hàng của bạn, ví dụ: lưu ý đặc biệt khi vận chuyển." rows="2" cols="5" /></span>
+                          <span className="woocommerce-input-wrapper">
+                            <textarea
+                              name="note"
+                              className="input-text "
+                              id="note"
+                              placeholder="Viết các lưu ý cho đơn hàng của bạn, ví dụ: lưu ý đặc biệt khi vận chuyển."
+                              rows="2"
+                              cols="5"
+                              value={addressValidation.values.addressShipping.note}
+                              onChange={(e) => {
+                                const newValue = e.target.value;
+                                addressValidation.handleChange({
+                                  target: { name: 'addressShipping.note', value: newValue },
+                                });
+                              }}
+                              onBlur={addressValidation.handleBlur}
+                            />
+                          </span>
                         </p>
-                        {' '}
-
                       </div>
-
                     </div>
                   </div>
                 </div>
 
                 <h3>Phương thức thanh toán</h3>
+
                 <div className="wc_payment_methods payment_methods methods">
                   <div className="payment-method-wrapper">
                     <div className="wc_payment_method payment_method_bacs">
-                      <input id="payment_method_bacs" type="radio" className="input-radio" name="payment_method" value="bacs" data-order_button_text="" />
-
+                      <input
+                        id="payment_method_bacs"
+                        type="radio"
+                        className="input-radio"
+                        name="PaymentMethod"
+                        value="bacs"
+                        data-order_button_text=""
+                        onChange={addressValidation.handleChange}
+                        checked={addressValidation.values.PaymentMethod === 'BACS'}
+                      />
                       <label htmlFor="payment_method_bacs">
                         <img className="lazy-load-active" decoding="async" src="https://nhaxinh.com/wp-content/themes/flatsome-child/assets/images/ic-bacs.png" data-src="https://nhaxinh.com/wp-content/themes/flatsome-child/assets/images/ic-bacs.png" alt="bacs" />
                         Chuyển khoản ngân hàng
@@ -237,21 +384,29 @@ function CheckoutPage() {
                       </label>
                     </div>
                     <div className="wc_payment_method payment_method_cod">
-                      <input id="payment_method_cod" type="radio" className="input-radio" name="payment_method" value="cod" data-order_button_text="" />
-
+                      <input
+                        id="payment_method_cod"
+                        type="radio"
+                        className="input-radio"
+                        name="PaymentMethod"
+                        value="cod"
+                        data-order_button_text=""
+                        onChange={addressValidation.handleChange}
+                        checked={addressValidation.values.PaymentMethod === 'COD'}
+                      />
                       <label htmlFor="payment_method_cod">
                         <img className="lazy-load-active" decoding="async" src="https://nhaxinh.com/wp-content/themes/flatsome-child/assets/images/ic-cod.png" data-src="https://nhaxinh.com/wp-content/themes/flatsome-child/assets/images/ic-cod.png" alt="cod" />
                         Thanh toán khi nhận hàng
-
                       </label>
                     </div>
                   </div>
+
                   <div className="payment-method-content-wrapper">
                     <div className="payment_box payment_method_bacs">
                       <div>
                         <h4>Ngân hàng Vietcombank</h4>
                         <div>
-                          <p>Số tài khoản : 0071000745809</p>
+                          <p>Số tài khoản : 000000000****</p>
                           <p>Tên chủ tài khoản:</p>
                           <p>CT CP NOI THAT AKA VIETCOMBANK – CHI NHÁNH TP.HCM.</p>
                         </div>
@@ -262,14 +417,11 @@ function CheckoutPage() {
                     </div>
                   </div>
                 </div>
-
               </div>
 
               <div className="large-5 col">
-
                 <div className="col-inner has-border">
                   <div className="checkout-sidebar sm-touch-scroll">
-
                     <h3 id="order_review_heading">Tóm tắt đơn hàng</h3>
 
                     <div id="order_review" className="woocommerce-checkout-review-order">
@@ -280,7 +432,12 @@ function CheckoutPage() {
                             <td>
                               <span className="woocommerce-Price-amount amount">
                                 <bdi>
-                                  14,500,000
+                                  {cart && formatPriceWithCommas(cart?.reduce((accumulator, item) => {
+                                    const { totalPriceItem } = item;
+                                    const totalPrice = totalPriceItem;
+
+                                    return accumulator + totalPrice;
+                                  }, 0))}
                                   <span className="woocommerce-Price-currencySymbol">₫</span>
                                 </bdi>
                               </span>
@@ -300,7 +457,6 @@ function CheckoutPage() {
                                           <label className="shipping__list_label" htmlFor="shipping_method_0_flat_rate4">Liên hệ phí vận chuyển sau</label>
                                         </li>
                                       </ul>
-
                                     </td>
                                   </tr>
                                 </tbody>
@@ -314,42 +470,45 @@ function CheckoutPage() {
                               <strong>
                                 <span className="woocommerce-Price-amount amount">
                                   <bdi>
-                                    14,500,000
+                                    {cart && Array.isArray(cart) && cart.length > 0 ? (
+                                      coupon && coupon.discount ? (
+                                        formatPriceWithCommas(
+                                          (coupon.discount / 100)
+                                          * cart?.reduce((accumulator, item) => {
+                                            const { totalPriceItem } = item;
+                                            const totalPrice = totalPriceItem;
+                                            return accumulator + totalPrice;
+                                          }, 0),
+                                        )
+                                      ) : (
+                                        formatPriceWithCommas(
+                                          cart?.reduce((accumulator, item) => {
+                                            const { totalPriceItem } = item;
+                                            const totalPrice = totalPriceItem;
+                                            return accumulator + totalPrice;
+                                          }, 0),
+                                        )
+                                      )
+                                    ) : (
+                                      0
+                                    )}
                                     <span className="woocommerce-Price-currencySymbol">₫</span>
                                   </bdi>
                                 </span>
                               </strong>
-                              {' '}
                             </td>
                           </tr>
 
                           <tr className="product-title">
                             <th colSpan="2">
                               Sản phẩm
-                              <span className="total_count">1</span>
+                              <span className="total_count">{cart && cart.length > 0 ? cart.length : 0}</span>
                             </th>
                           </tr>
-                          <tr className="cart_item">
-                            <td className="product-name">
-                              <div className="product-thumbnails">
-                                <a aria-label="product" href="https://nhaxinh.com/san-pham/ban-an-8-cho-coastal/"><img width="300" height="200" src="https://nhaxinh.com/wp-content/uploads/2023/07/Ban-an-8-cho-Coastal-1-300x200.jpg" className="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" decoding="async" srcSet="https://nhaxinh.com/wp-content/uploads/2023/07/Ban-an-8-cho-Coastal-1-300x200.jpg 300w, https://nhaxinh.com/wp-content/uploads/2023/07/Ban-an-8-cho-Coastal-1-601x400.jpg 601w, https://nhaxinh.com/wp-content/uploads/2023/07/Ban-an-8-cho-Coastal-1-768x511.jpg 768w, https://nhaxinh.com/wp-content/uploads/2023/07/Ban-an-8-cho-Coastal-1-600x400.jpg 600w, https://nhaxinh.com/wp-content/uploads/2023/07/Ban-an-8-cho-Coastal-1.jpg 1000w" sizes="(max-width: 300px) 100vw, 300px" /></a>
-                              </div>
-                              Bàn ăn 8 chỗ Coastal&nbsp;&nbsp;
-                              {' '}
-                              <strong className="product-quantity">×&nbsp;1</strong>
-                            </td>
-                            <td className="product-total">
-                              <span className="woocommerce-Price-amount amount">
-                                <bdi>
-                                  14,500,000
-                                  <span className="woocommerce-Price-currencySymbol">₫</span>
-                                </bdi>
-                              </span>
-                            </td>
-                          </tr>
 
+                          {cart
+                          && cart.map((item) => <CheckoutItem key={item._id} item={item} />)}
                         </tbody>
-
                       </table>
 
                       <input type="hidden" name="lang" value="vi" />
@@ -555,12 +714,7 @@ function CheckoutPage() {
                             </p>
                           </div>
 
-                          <button type="submit" className="button alt" name="woocommerce_checkout_place_order" id="place_order" value="Đặt mua" data-value="Đặt mua">Đặt mua</button>
-
-                          <input type="hidden" id="woocommerce-process-checkout-nonce" name="woocommerce-process-checkout-nonce" value="5a61f2cdb5" />
-                          <input type="hidden" name="_wp_http_referer" value="/?wc-ajax=update_order_review" />
-                          {' '}
-
+                          <button type="submit" onClick={handleCreateOrder} className="button alt">Đặt mua</button>
                         </div>
                       </div>
 

@@ -8,6 +8,12 @@ import {
   UPDATE_ORDER_STATUS,
   UPDATE_ORDER_STATUS_SUCCESS,
   UPDATE_ORDER_STATUS_FAILED,
+  GET_USER_ORDERS,
+  GET_USER_ORDERS_SUCCESS,
+  GET_USER_ORDERS_FAILED,
+  GET_ORDER_DETAIL,
+  GET_ORDER_DETAIL_SUCCESS,
+  GET_ORDER_DETAIL_FAILED,
 } from './actionTypes';
 
 // Create Order
@@ -52,4 +58,33 @@ export const actionUpdateOrderStatusSuccess = (payload) => ({
 
 export const actionUpdateOrderStatusFailed = () => ({
   type: UPDATE_ORDER_STATUS_FAILED,
+});
+
+// Get User Orders
+export const actionGetUserOrders = () => ({
+  type: GET_USER_ORDERS,
+});
+
+export const actionGetUserOrdersSuccess = (payload) => ({
+  type: GET_USER_ORDERS_SUCCESS,
+  payload,
+});
+
+export const actionGetUserOrdersFailed = () => ({
+  type: GET_USER_ORDERS_FAILED,
+});
+
+// Get Order Detail
+export const actionGetOrderDetail = (orderId) => ({
+  type: GET_ORDER_DETAIL,
+  payload: { orderId },
+});
+
+export const actionGetOrderDetailSuccess = (payload) => ({
+  type: GET_ORDER_DETAIL_SUCCESS,
+  payload,
+});
+
+export const actionGetOrderDetailFailed = () => ({
+  type: GET_ORDER_DETAIL_FAILED,
 });
