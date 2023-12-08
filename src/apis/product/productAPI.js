@@ -3,10 +3,10 @@ import axiosClient from 'utils/axios';
 const endpoint = '/product';
 
 export default {
-  async getAllProduct() {
+  async getAllProduct(payload) {
     const path = `${endpoint}/getAllProduct`;
 
-    const response = await axiosClient.get(path);
+    const response = await axiosClient.get(path, { params: payload });
 
     return response.data;
   },

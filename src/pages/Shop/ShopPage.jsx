@@ -1,8 +1,67 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+
+import { actionGetAllProduct, actionGetUserWishlist } from 'store/actions';
 
 import ProductItem from 'components/ProductItem/ProductItem';
 
 function ShopPage() {
+  const { pageNumber } = useParams();
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const products = useSelector((state) => state.Product.allProducts);
+  const wishlist = useSelector((state) => state.Wishlist.wishlist);
+  const totalProducts = useSelector((state) => state.Product.totalProducts);
+
+  const totalPages = Math.ceil(totalProducts / 20);
+
+  const isInWishlist = (productId) => wishlist && wishlist.some((item) => item._id === productId);
+
+  const generatePageNumbers = (currentPage) => {
+    const pageNumbers = [];
+    const maxVisiblePages = 5;
+
+    if (!totalPages) {
+      return [pageNumbers];
+    }
+
+    if (totalPages <= maxVisiblePages) {
+      for (let i = 1; i <= totalPages; i += 1) {
+        pageNumbers.push(i);
+      }
+    } else {
+      const startPage = Math.max(1, parseInt(currentPage, 10) - Math.floor(maxVisiblePages / 2));
+      const endPage = Math.min(totalPages, startPage + maxVisiblePages - 1);
+
+      if (startPage > 1) {
+        pageNumbers.push(1, '...');
+      }
+
+      for (let i = startPage; i <= endPage; i += 1) {
+        pageNumbers.push(i);
+      }
+
+      if (endPage < totalPages) {
+        pageNumbers.push('...', totalPages);
+      }
+    }
+
+    return pageNumbers;
+  };
+
+  useEffect(() => {
+    dispatch(actionGetUserWishlist());
+  }, [dispatch]);
+
+  useEffect(() => {
+    if (pageNumber === undefined || Number.isNaN(Number(pageNumber))) {
+      navigate('/cua-hang/page/1');
+    } else {
+      dispatch(actionGetAllProduct({ page: parseInt(pageNumber, 10), limit: 20 }));
+    }
+  }, [dispatch, pageNumber, navigate]);
+
   return (
     <>
       <div className="shop-page-title category-page-title page-title featured-title dark ">
@@ -58,7 +117,7 @@ function ShopPage() {
       <div className="custom-category-header">
         <div className="yith-wcan-filters no-title enhanced" id="preset_509" data-preset-id="509" data-target="">
           <div className="filters-container">
-            <form method="POST">
+            <form>
               <div className="yith-wcan-filter filter-orderby" id="filter_509_0" data-filter-type="orderby" data-filter-id="0">
                 <span className="filter-title">Giá</span>
                 <div className="filter-content">
@@ -92,7 +151,6 @@ function ShopPage() {
                       "
                     >
                       Ceramic
-
                     </option>
 
                     <option
@@ -328,20 +386,48 @@ function ShopPage() {
             <div className="shop-container">
               <div className="woocommerce-notices-wrapper" />
               <div className="products row row-small large-columns-4 medium-columns-3 small-columns-2">
-                <ProductItem />
+                {products ? products.map((product) => <ProductItem key={product._id} product={product} isInWishlist={isInWishlist(product._id)} />) : ''}
               </div>
+
               <div className="container">
                 <nav className="woocommerce-pagination">
                   <ul className="page-numbers nav-pagination links text-center">
-                    <li><span aria-current="page" className="page-number current">1</span></li>
-                    <li><a className="page-number" href="cua-hang/page/2/index.html">2</a></li>
-                    <li><a className="page-number" href="cua-hang/page/3/index.html">3</a></li>
-                    <li><a className="page-number" href="cua-hang/page/4/index.html">4</a></li>
-                    <li><span className="page-number dots">&hellip;</span></li>
-                    <li><a className="page-number" href="cua-hang/page/19/index.html">19</a></li>
-                    <li><a className="page-number" href="cua-hang/page/20/index.html">20</a></li>
-                    <li><a className="page-number" href="cua-hang/page/21/index.html">21</a></li>
-                    <li><a aria-label="next page" className="next page-number" href="cua-hang/page/2/index.html"><i className="icon-angle-right" /></a></li>
+                    {pageNumber && totalPages && +pageNumber > 1 && (
+                    <li>
+                      <a
+                        className="prev page-number"
+                        href={`/cua-hang/page/${+pageNumber - 1}`}
+                      >
+                        <i className="icon-angle-left" />
+                      </a>
+                    </li>
+                    )}
+
+                    {pageNumber && totalPages && generatePageNumbers(pageNumber).map((page) => (
+                      <li key={page}>
+                        {page === '...' ? (
+                          <span className="page-number dots">{page}</span>
+                        ) : (
+                          <a
+                            className={`page-number ${page === +pageNumber ? 'current' : ''}`}
+                            href={`/cua-hang/page/${page}`}
+                          >
+                            {page}
+                          </a>
+                        )}
+                      </li>
+                    ))}
+
+                    {pageNumber && totalPages && +pageNumber < totalPages && (
+                    <li>
+                      <a
+                        className="next page-number"
+                        href={`/cua-hang/page/${+pageNumber + 1}`}
+                      >
+                        <i className="icon-angle-right" />
+                      </a>
+                    </li>
+                    )}
                   </ul>
                 </nav>
               </div>
@@ -350,18 +436,6 @@ function ShopPage() {
         </div>
 
         <hr />
-        <div className="row" id="row-1790742882">
-          <div id="col-1469881493" className="col small-12 large-12">
-            <div className="col-inner">
-              <div id="text-160565849" className="text product-section-title container-width product-section-title-related pt-half pb-half uppercase">
-                <p className="fs-d-40"><strong>Sản phẩm vừa xem</strong></p>
-              </div>
-
-              <div className="row  empty-post large-columns-4 medium-columns-3 small-columns-2 row-small show-viewed-recently slider row-slider slider-nav-reveal slider-nav-push" data-flickity-options='{"imagesLoaded": true, "groupCells": "100%", "dragThreshold" : 5, "cellAlign": "left","wrapAround": true,"prevNextButtons": true,"percentPosition": true,"pageDots": true, "rightToLeft": false, "autoPlay" : false}' data-rows="2" data-columns="4" />
-            </div>
-          </div>
-        </div>
-
         <section className="section" id="section_1269107064">
           <div className="bg section-bg fill bg-fill  bg-loaded" />
 

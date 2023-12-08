@@ -3,6 +3,8 @@ import { put, takeLeading, call } from 'redux-saga/effects';
 
 import cartAPI from 'apis/cart/cartAPI';
 
+import axiosClient from 'utils/axios';
+
 import {
   ADD_TO_CART,
   GET_CART,
@@ -23,6 +25,9 @@ import {
 
 function* getCart() {
   try {
+    const token = localStorage.getItem('accessToken');
+
+    axiosClient.defaults.headers.Authorization = `Bearer ${token}`;
     const response = yield call(cartAPI.getCart);
 
     yield put(actionGetCartSuccess(response.data.products));
@@ -33,6 +38,9 @@ function* getCart() {
 
 function* addToCart({ payload }) {
   try {
+    const token = localStorage.getItem('accessToken');
+
+    axiosClient.defaults.headers.Authorization = `Bearer ${token}`;
     const response = yield call(cartAPI.addToCart, payload);
 
     yield put(actionAddToCartSuccess(response.data.products));
@@ -47,6 +55,9 @@ function* addToCart({ payload }) {
 
 function* emptyCart() {
   try {
+    const token = localStorage.getItem('accessToken');
+
+    axiosClient.defaults.headers.Authorization = `Bearer ${token}`;
     const response = yield call(cartAPI.emptyCart);
 
     yield put(actionEmptyCartSuccess());
@@ -61,6 +72,9 @@ function* emptyCart() {
 
 function* updateCart({ payload }) {
   try {
+    const token = localStorage.getItem('accessToken');
+
+    axiosClient.defaults.headers.Authorization = `Bearer ${token}`;
     const response = yield call(cartAPI.updateCart, payload);
 
     yield put(actionUpdateCartSuccess(response.data.products));

@@ -1,17 +1,81 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
+import { useDispatch } from 'react-redux';
 
-function ProductItem() {
+import PropTypes from 'prop-types';
+
+import { formatPriceWithCommas } from 'utils';
+import { actionAddToCart, actionUpdateUserWishlist } from 'store/actions';
+
+function ProductItem({ product, isInWishlist }) {
+  const {
+    _id, name, slug, price, sale, priceSale, images,
+  } = product;
+  const dispatch = useDispatch();
+
+  const handleAddToCart = (event) => {
+    event.preventDefault();
+    dispatch(actionAddToCart({ productId: _id, quantity: 1 }));
+  };
+
+  const handleAddToWishlist = () => {
+    dispatch(actionUpdateUserWishlist({ prodId: _id }));
+  };
+
   return (
-    <div className="product-small col has-hover product type-product post-53151 status-publish last instock product_cat-binh-trang-tri product_cat-hang-trang-tri has-post-thumbnail taxable shipping-taxable purchasable product-type-simple">
+    <div className={`product-small col has-hover product type-product post-53151 status-publish last instock product_cat-binh-trang-tri product_cat-hang-trang-tri has-post-thumbnail taxable shipping-taxable purchasable product-type-simple ${sale ? 'sale' : ''}`}>
       <div className="col-inner">
-        <div className="badge-container absolute left top z-1" />
+        <div className="badge-container absolute left top z-1">
+          {sale ? (
+            <div className="callout badge badge-circle">
+              <div className="badge-inner secondary on-sale">
+                <span className="onsale">
+                  -
+                  {sale}
+                  %
+                </span>
+              </div>
+            </div>
+          )
+            : ''}
+        </div>
         <div className="product-small box ">
           <div className="box-image">
             <div className="image-fade_in_back">
-              <a href="san-pham/binh-trang-tri-face-l/index.html" aria-label="Bình trang trí Face L">
-                <img width="300" height="200" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20300%20200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://nhaxinh.com/wp-content/uploads/2023/08/Binh-hoa-trang-tri-face-L-300x200.jpg" className="lazy-load attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" decoding="async" srcSet="" data-srcset="https://nhaxinh.com/wp-content/uploads/2023/08/Binh-hoa-trang-tri-face-L-300x200.jpg 300w, https://nhaxinh.com/wp-content/uploads/2023/08/Binh-hoa-trang-tri-face-L-601x400.jpg 601w, https://nhaxinh.com/wp-content/uploads/2023/08/Binh-hoa-trang-tri-face-L-768x511.jpg 768w, https://nhaxinh.com/wp-content/uploads/2023/08/Binh-hoa-trang-tri-face-L-600x400.jpg 600w, https://nhaxinh.com/wp-content/uploads/2023/08/Binh-hoa-trang-tri-face-L.jpg 1000w" sizes="(max-width: 300px) 100vw, 300px" />
-                <img width="300" height="200" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20300%20200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://nhaxinh.com/wp-content/uploads/2023/08/Binh-hoa-trang-tri-face-L-1-300x200.jpg" className="lazy-load show-on-hover absolute fill hide-for-small back-image" alt="" decoding="async" srcSet="" data-srcset="https://nhaxinh.com/wp-content/uploads/2023/08/Binh-hoa-trang-tri-face-L-1-300x200.jpg 300w, https://nhaxinh.com/wp-content/uploads/2023/08/Binh-hoa-trang-tri-face-L-1-601x400.jpg 601w, https://nhaxinh.com/wp-content/uploads/2023/08/Binh-hoa-trang-tri-face-L-1-768x511.jpg 768w, https://nhaxinh.com/wp-content/uploads/2023/08/Binh-hoa-trang-tri-face-L-1-600x400.jpg 600w, https://nhaxinh.com/wp-content/uploads/2023/08/Binh-hoa-trang-tri-face-L-1.jpg 1000w" sizes="(max-width: 300px) 100vw, 300px" />
-                <img width="300" height="200" src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20300%20200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="https://nhaxinh.com/wp-content/uploads/2023/08/Binh-hoa-trang-tri-face-L-2-300x200.jpg" className="lazy-load show-on-hover absolute fill hide-for-small back-image" alt="" decoding="async" srcSet="" data-srcset="https://nhaxinh.com/wp-content/uploads/2023/08/Binh-hoa-trang-tri-face-L-2-300x200.jpg 300w, https://nhaxinh.com/wp-content/uploads/2023/08/Binh-hoa-trang-tri-face-L-2-601x400.jpg 601w, https://nhaxinh.com/wp-content/uploads/2023/08/Binh-hoa-trang-tri-face-L-2-768x511.jpg 768w, https://nhaxinh.com/wp-content/uploads/2023/08/Binh-hoa-trang-tri-face-L-2-600x400.jpg 600w, https://nhaxinh.com/wp-content/uploads/2023/08/Binh-hoa-trang-tri-face-L-2.jpg 1000w" sizes="(max-width: 300px) 100vw, 300px" />
+              <a href={`/san-pham/${slug}`} aria-label={name}>
+                {images
+                && images.map((image) => {
+                  const imageUrl = image.url && image.url.replace
+                    ? image.url.replace(/-\d+x\d+\./, '-601x400.')
+                    : '';
+
+                  return (
+                    <img
+                      key={image._id}
+                      width="300"
+                      height="200"
+                      src={image.url}
+                      data-src={image.url}
+                      className={`lazy-load ${
+                        image._id === images[0]._id
+                          ? 'attachment-woocommerce_thumbnail size-woocommerce_thumbnail'
+                          : 'show-on-hover absolute fill hide-for-small back-image'
+                      }`}
+                      alt=""
+                      decoding="async"
+                      srcSet=""
+                      data-srcset={`
+                        ${image.url} 300w,
+                        ${imageUrl} 601w,
+                        ${imageUrl.replace(/-\d+x\d+\./, '-768x511.')} 768w,
+                        ${imageUrl.replace(/-\d+x\d+\./, '-600x400.')} 600w,
+                        ${image.url} 1000w
+                      `}
+                      sizes="(max-width: 300px) 100vw, 300px"
+                    />
+                  );
+                })}
+
               </a>
             </div>
 
@@ -23,42 +87,74 @@ function ProductItem() {
           <div className="box-text box-text-products">
             <div className="title-wrapper">
               <a className="woocommerce-LoopProduct-link woocommerce-loop-product__link" href="san-pham/binh-trang-tri-face-l/index.html" aria-label="Bình trang trí Face L">
-                Bình trang trí Face L
+                {name}
               </a>
             </div>
 
             <div className="sub-title-wrapper">
               <div className="wishlist-icon">
-                <button type="button" className="wishlist-button button is-outline circle icon" aria-label="Wishlist">
+                <button
+                  type="button"
+                  onClick={handleAddToWishlist}
+                  className={`wishlist-button button is-outline circle icon ${isInWishlist ? 'wishlist-added' : ''}`}
+                  aria-label="Wishlist"
+                >
                   <i className="icon-heart-o" />
                 </button>
-
-                <div className="wishlist-popup dark">
-                  <div
-                    className="yith-wcwl-add-to-wishlist add-to-wishlist-53151  wishlist-fragment on-first-load"
-                    data-fragment-ref="53151"
-                    data-fragment-options="{&quot;base_url&quot;:&quot;&quot;,&quot;in_default_wishlist&quot;:false,&quot;is_single&quot;:false,&quot;show_exists&quot;:false,&quot;product_id&quot;:53151,&quot;parent_product_id&quot;:53151,&quot;product_type&quot;:&quot;simple&quot;,&quot;show_view&quot;:false,&quot;browse_wishlist_text&quot;:&quot;Browse wishlist&quot;,&quot;already_in_wishslist_text&quot;:&quot;The product is already in your wishlist!&quot;,&quot;product_added_text&quot;:&quot;Product added!&quot;,&quot;heading_icon&quot;:&quot;fa-heart-o&quot;,&quot;available_multi_wishlist&quot;:false,&quot;disable_wishlist&quot;:false,&quot;show_count&quot;:false,&quot;ajax_loading&quot;:false,&quot;loop_position&quot;:&quot;after_add_to_cart&quot;,&quot;item&quot;:&quot;add_to_wishlist&quot;}"
-                  />
-                </div>
               </div>
             </div>
 
             <div className="box-text-footer">
               <div className="price-wrapper">
-                <span className="price">
-                  <span className="woocommerce-Price-amount amount">
-                    <bdi>
-                      650,000
-                      <span className="woocommerce-Price-currencySymbol">&#8363;</span>
-                    </bdi>
+                {sale ? (
+                  <span className="price">
+                    <del aria-hidden="true">
+                      <span className="woocommerce-Price-amount amount">
+                        <bdi>
+                          {formatPriceWithCommas(price)}
+                          <span className="woocommerce-Price-currencySymbol">&#8363;</span>
+                        </bdi>
+                      </span>
+                    </del>
+
+                    <ins>
+                      <span className="woocommerce-Price-amount amount">
+                        <bdi>
+                          {formatPriceWithCommas(priceSale)}
+                          <span className="woocommerce-Price-currencySymbol">&#8363;</span>
+                        </bdi>
+                      </span>
+                    </ins>
                   </span>
-                </span>
+                ) : (
+                  <span className="price">
+                    <span className="woocommerce-Price-amount amount">
+                      <bdi>
+                        {formatPriceWithCommas(price)}
+                        <span className="woocommerce-Price-currencySymbol">&#8363;</span>
+                      </bdi>
+                    </span>
+                  </span>
+                )}
               </div>
 
               <div className="product-box-after">
-                <div className="add-to-cart-button"><a href="cua-hang0d76?add-to-cart=53151" data-quantity="1" className="primary is-small mb-0 button product_type_simple add_to_cart_button ajax_add_to_cart is-outline" data-product_id="53151" data-product_sku="3*111766" aria-label="Add &ldquo;Bình trang trí Face L&rdquo; to your cart" rel="nofollow">Thêm vào giỏ</a></div>
+                <div className="add-to-cart-button">
+                  <a
+                    href="/"
+                    data-quantity="1"
+                    className="primary is-small mb-0 button product_type_simple add_to_cart_button ajax_add_to_cart is-outline"
+                    data-product_id="53151"
+                    data-product_sku="3*111766"
+                    aria-label="Add &ldquo;Bình trang trí Face L&rdquo; to your cart"
+                    rel="nofollow"
+                    onClick={handleAddToCart}
+                  >
+                    Thêm vào giỏ
+                  </a>
+                </div>
 
-                <a href="san-pham/binh-trang-tri-face-l/index.html" className="buy-now button">Xem thêm</a>
+                <a href={`/san-pham/${slug}`} className="buy-now button">Xem thêm</a>
               </div>
             </div>
           </div>
@@ -67,5 +163,23 @@ function ProductItem() {
     </div>
   );
 }
+
+ProductItem.propTypes = {
+  product: PropTypes.shape({
+    _id: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    price: PropTypes.number.isRequired,
+    sale: PropTypes.number.isRequired,
+    priceSale: PropTypes.number.isRequired,
+    images: PropTypes.arrayOf(
+      PropTypes.shape({
+        url: PropTypes.string.isRequired,
+        _id: PropTypes.string.isRequired,
+      }),
+    ).isRequired,
+    slug: PropTypes.string.isRequired,
+  }).isRequired,
+  isInWishlist: PropTypes.bool.isRequired,
+};
 
 export default ProductItem;

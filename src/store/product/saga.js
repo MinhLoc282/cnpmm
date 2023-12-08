@@ -18,9 +18,9 @@ import {
   actionGetProductRoomFailed,
 } from './actions';
 
-function* getAllProduct() {
+function* getAllProduct({ payload }) {
   try {
-    const response = yield call(productAPI.getAllProduct);
+    const response = yield call(productAPI.getAllProduct, payload);
     yield put(actionGetAllProductSuccess(response.data));
   } catch (error) {
     yield put(actionGetAllProductFailed());

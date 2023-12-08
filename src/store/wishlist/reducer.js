@@ -42,11 +42,22 @@ const wishlist = (state = initialState, action) => {
       };
 
     case UPDATE_USER_WISHLIST_SUCCESS:
+    {
+      const isItemInWishlist = state.wishlist.some((item) => item._id === action.payload._id);
+
+      if (isItemInWishlist) {
+        return {
+          ...state,
+          loading: false,
+          wishlist: state.wishlist.filter((item) => item._id !== action.payload._id),
+        };
+      }
       return {
         ...state,
         loading: false,
-        wishlist: action.payload,
+        wishlist: [...state.wishlist, action.payload],
       };
+    }
 
     case UPDATE_USER_WISHLIST_FAILED:
       return {

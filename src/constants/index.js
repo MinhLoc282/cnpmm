@@ -10,7 +10,7 @@ export const LOCATION = {
   LIVING_ROOM: '/phong-khach',
   DINING_ROOM: '/phong-an',
   BEDROOM: '/phong-ngu',
-  PRODUCT_CATEGORY: '/danh-muc',
+  PRODUCT_CATEGORY: '/san-pham',
   PROMOTION: '/khuyen-mai',
   SHOWROOM: '/showroom-ao',
   ACCOUNT: '/tai-khoan',
