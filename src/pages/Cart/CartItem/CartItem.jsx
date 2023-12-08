@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 
 import PropTypes from 'prop-types';
 
-import { actionUpdateUserWishlist } from 'store/actions';
+import { actionUpdateUserWishlist, actionUpdateCart } from 'store/actions';
 
 import { convertToSlug, formatPriceWithCommas } from 'utils';
 
@@ -21,6 +21,21 @@ function CartItem({ item, isInWishlist }) {
     specs,
   } = product;
   const dispatch = useDispatch();
+
+  const handleDeleteProductInCart = (e) => {
+    e.preventDefault();
+
+    dispatch(actionUpdateCart({ productId: _id, quantity: 0 }));
+  };
+
+  const handleUpdateProductInCart = (newQuantity) => {
+    dispatch(actionUpdateCart({ productId: _id, quantity: newQuantity }));
+  };
+
+  const handleQuantityChange = (change) => {
+    const newQuantity = Math.max(0, quantity + change);
+    handleUpdateProductInCart(newQuantity);
+  };
 
   const handleAddToWishlist = (e) => {
     e.preventDefault();
@@ -120,9 +135,14 @@ function CartItem({ item, isInWishlist }) {
       </td>
 
       <td className="product-quantity">
-        <a href="/" className="remove" aria-label="remove"><i className="fal fa-times" /></a>
+        <a href="/" onClick={handleDeleteProductInCart} className="remove" aria-label="remove"><i className="fal fa-times" /></a>
         <div className="quantity buttons_added">
-          <input type="button" value="-" className="minus button is-form" />
+          <input
+            type="button"
+            value="-"
+            className="minus button is-form"
+            onClick={() => handleQuantityChange(-1)}
+          />
 
           <label className="screen-reader-text" htmlFor={`quantity_${_id}`}>
             {name}
@@ -143,7 +163,13 @@ function CartItem({ item, isInWishlist }) {
             placeholder=""
             inputMode="numeric"
           />
-          <input type="button" value="+" className="plus button is-form" />
+
+          <input
+            type="button"
+            value="+"
+            className="plus button is-form"
+            onClick={() => handleQuantityChange(1)}
+          />
         </div>
       </td>
     </tr>

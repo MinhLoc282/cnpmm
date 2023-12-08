@@ -14,6 +14,8 @@ function ShopPage() {
   const wishlist = useSelector((state) => state.Wishlist.wishlist);
   const totalProducts = useSelector((state) => state.Product.totalProducts);
 
+  console.log(products);
+
   const totalPages = Math.ceil(totalProducts / 20);
 
   const isInWishlist = (productId) => wishlist && wishlist.some((item) => item._id === productId);

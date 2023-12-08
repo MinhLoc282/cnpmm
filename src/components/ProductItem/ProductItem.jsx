@@ -86,7 +86,7 @@ function ProductItem({ product, isInWishlist }) {
 
           <div className="box-text box-text-products">
             <div className="title-wrapper">
-              <a className="woocommerce-LoopProduct-link woocommerce-loop-product__link" href="san-pham/binh-trang-tri-face-l/index.html" aria-label="Bình trang trí Face L">
+              <a className="woocommerce-LoopProduct-link woocommerce-loop-product__link" href={`/san-pham/${slug}`} aria-label={name}>
                 {name}
               </a>
             </div>

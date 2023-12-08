@@ -36,13 +36,14 @@ function* register({ payload }) {
 
     const response = yield call(authAPI.register, newData);
 
-    yield put(actionRegisterSuccess());
+    yield put(actionRegisterSuccess(response.data));
 
     toast.success(response.message);
 
     callback();
   } catch (error) {
-    toast.error(error.response.data);
+    console.log(error);
+    toast.error(error.response.data.message);
 
     yield put(actionRegisterFailed());
   }

@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { actionGetCart } from 'store/actions';
+import { actionGetCart, actionGetCoupon } from 'store/actions';
 import CartItem from './CartItem/CartItem';
 
 import { formatPriceWithCommas } from 'utils';
@@ -10,19 +10,28 @@ function CartPage() {
   const dispatch = useDispatch();
   const cart = useSelector((state) => state.Cart.cart);
   const wishlist = useSelector((state) => state.Wishlist.wishlist);
+  const coupon = useSelector((state) => state.Coupon.coupon);
 
   const isInWishlist = (productId) => wishlist && wishlist.some((item) => item._id === productId);
 
+  const [couponCode, setCouponCode] = useState('');
+
+  const handleApplyCoupon = (e) => {
+    e.preventDefault();
+
+    dispatch(actionGetCoupon({ code: couponCode }));
+  };
+
   useEffect(() => {
     dispatch(actionGetCart());
-  }, []);
+  }, [dispatch]);
 
   return (
     <main id="main" className="">
       <div className="checkout-page-title page-title">
         <h1 className="cart-title">
           Giỏ hàng
-          <span className="total_count">{cart.length > 0 ? cart.length : 0}</span>
+          <span className="total_count">{cart && cart.length > 0 ? cart.length : 0}</span>
         </h1>
       </div>
 
@@ -116,12 +125,20 @@ function CartPage() {
 
                           <tr className="coupon">
                             <td colSpan="2">
-                              <form className="checkout_coupon mb-0" method="post">
+                              <form className="checkout_coupon mb-0" onSubmit={handleApplyCoupon}>
                                 <h3 className="widget-title">
                                   <i className="icon-tag" />
                                   Coupon
                                 </h3>
-                                <input type="text" name="coupon_code" className="input-text" id="coupon_code" value="" placeholder="Mã giảm giá" />
+                                <input
+                                  type="text"
+                                  name="coupon_code"
+                                  className="input-text"
+                                  id="coupon_code"
+                                  value={couponCode}
+                                  onChange={(e) => setCouponCode(e.target.value)}
+                                  placeholder="Mã giảm giá"
+                                />
 
                                 <input type="submit" className="is-form expand" name="apply_coupon" value="Sử dụng" />
                               </form>
@@ -134,12 +151,20 @@ function CartPage() {
                               <strong>
                                 <span className="woocommerce-Price-amount amount">
                                   <bdi>
-                                    {formatPriceWithCommas(cart.reduce((accumulator, item) => {
-                                      const { totalPriceItem } = item;
-                                      const totalPrice = totalPriceItem;
+                                    {coupon && coupon.discount
+                                      ? formatPriceWithCommas((coupon.discount / 100)
+                                        * cart.reduce((accumulator, item) => {
+                                          const { totalPriceItem } = item;
+                                          const totalPrice = totalPriceItem;
 
-                                      return accumulator + totalPrice;
-                                    }, 0))}
+                                          return accumulator + totalPrice;
+                                        }, 0))
+                                      : formatPriceWithCommas(cart.reduce((accumulator, item) => {
+                                        const { totalPriceItem } = item;
+                                        const totalPrice = totalPriceItem;
+
+                                        return accumulator + totalPrice;
+                                      }, 0))}
                                     <span className="woocommerce-Price-currencySymbol">₫</span>
                                   </bdi>
                                 </span>
@@ -160,7 +185,6 @@ function CartPage() {
                         </p>
                         <p>Từ 2-6: 8:30 - 17:30</p>
                         <p>Thứ 7, CN: 9:30 - 16:30</p>
-                        <a href="/he-thong-cua-hang">Cửa hàng gần bạn</a>
                       </div>
 
                       <div className="wc-go-to-shopping">

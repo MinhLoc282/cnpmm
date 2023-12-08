@@ -16,6 +16,7 @@ export const LOCATION = {
   ACCOUNT: '/tai-khoan',
   WISHLIST: '/tai-khoan/wishlist',
   CART: '/gio-hang',
+  CHECKOUT: '/thanh-toan',
 
   LOGIN: '/login',
   REGISTER: '/register',
