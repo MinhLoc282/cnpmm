@@ -473,7 +473,7 @@ function CheckoutPage() {
                                     {cart && Array.isArray(cart) && cart.length > 0 ? (
                                       coupon && coupon.discount ? (
                                         formatPriceWithCommas(
-                                          (coupon.discount / 100)
+                                          (1 - (coupon.discount / 100))
                                           * cart?.reduce((accumulator, item) => {
                                             const { totalPriceItem } = item;
                                             const totalPrice = totalPriceItem;
